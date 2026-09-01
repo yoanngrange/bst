@@ -1,1 +1,32 @@
+name: Fetch Naolib data
 
+on:
+  schedule:
+    - cron: "*/5 * * * *"   # every 5 minutes
+  workflow_dispatch:         # lets you trigger it manually from the Actions tab, for testing
+
+permissions:
+  contents: write            # needed so the workflow can commit the updated JSON
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Fetch Naolib data
+        env:
+          NAOLIB_API_KEY: ${{ secrets.NAOLIB_API_KEY }}
+        run: node scripts/fetch-naolib.mjs
+
+      - name: Commit updated data
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Update Naolib data"
+          file_pattern: "data/naolib.json"
