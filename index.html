@@ -163,8 +163,11 @@ const MONITORED_POINTS = [
   { monitoringRef: "IDNA1", lineCode: "5",  direction: "Hangar à Bananes",stopName: "Île de Nantes"   },
   { monitoringRef: "GNRA4", lineCode: "38", direction: "Aéroport",        stopName: "Greneraie"       },
   { monitoringRef: "BENA1", lineCode: "4",  direction: "Foch - Cathédrale",stopName: "Beaulieu"       },
-  // Line 26 (→ Jonelière) pending: quay code not yet mapped — add here once known, e.g.:
-  // { monitoringRef: "XXXX1", lineCode: "26", direction: "Jonelière", stopName: "TBD" },
+  // Line 26 (→ Jonelière) at Monzie: line is currently diverted (works), so we
+  // don't yet know which quay is the Jonelière-bound platform. Both are added
+  // temporarily — drop whichever turns out wrong once real API data confirms it.
+  { monitoringRef: "MOZI1", lineCode: "26", direction: "Jonelière", stopName: "Monzie" },
+  { monitoringRef: "MOZI2", lineCode: "26", direction: "Jonelière", stopName: "Monzie" },
 ];
 
 // Official Naolib per-line colors (from line pictogram SVGs)
@@ -212,6 +215,14 @@ function mockResponseFor(monitoringRef) {
     BENA1: [
       { LineRef: "4", PublishedLineName: "4", DestinationName: "Foch - Cathédrale", ExpectedArrivalTime: mins(3) },
       { LineRef: "4", PublishedLineName: "4", DestinationName: "Foch - Cathédrale", ExpectedArrivalTime: mins(14) },
+    ],
+    // Both Monzie quays mocked temporarily — see comment in MONITORED_POINTS above.
+    MOZI1: [
+      { LineRef: "26", PublishedLineName: "26", DestinationName: "Jonelière", ExpectedArrivalTime: mins(9) },
+      { LineRef: "26", PublishedLineName: "26", DestinationName: "Jonelière", ExpectedArrivalTime: mins(24) },
+    ],
+    MOZI2: [
+      { LineRef: "26", PublishedLineName: "26", DestinationName: "Jonelière", ExpectedArrivalTime: mins(16) },
     ],
   };
 

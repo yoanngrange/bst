@@ -1,6 +1,6 @@
 const CACHE_NAME = "bst-v1";
 const APP_SHELL = [
-  "./naolib-countdown.html",
+  "./index.html",
   "./manifest.json",
   "./icon-192.png",
   "./icon-512.png",
