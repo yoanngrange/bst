@@ -3,7 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Prochains passages — Naolib</title>
+<title>BST — Prochains passages</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#082400">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" href="icon-32.png">
 <style>
   :root {
     --bg: #0f1115;
@@ -12,9 +16,13 @@
     --text: #f2f3f5;
     --muted: #8b93a5;
     --accent: #ffcc33;
-    --tram: #3fd0c9;
-    --bus: #ff8a5c;
-    --busway: #b58cff;
+    /* Official Naolib per-line colors */
+    --line-T2: #E30613;
+    --line-T3: #2581C4;
+    --line-4:  #FFCD1C;
+    --line-5:  #0BBBEF;
+    --line-38: #009640;
+    --line-26: #009640;
   }
   * { box-sizing: border-box; }
   body {
@@ -65,9 +73,28 @@
     border-radius: 8px;
     color: #10121a;
   }
-  .badge.tram { background: var(--tram); }
-  .badge.bus { background: var(--bus); }
-  .badge.busway { background: var(--busway); }
+  .filters {
+    max-width: 640px;
+    margin: 0 auto 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .filter-chip {
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 999px;
+    cursor: pointer;
+    opacity: 0.55;
+    transition: opacity 0.15s;
+  }
+  .filter-chip.active {
+    opacity: 1;
+  }
   .info {
     flex: 1;
     min-width: 0;
@@ -122,6 +149,8 @@
   Le format suit la structure réelle de l'API (StopMonitoringDelivery / MonitoredStopVisit) pour un remplacement facile.
 </div>
 
+<div class="filters" id="filters"></div>
+
 <div class="list" id="list"></div>
 
 <script>
@@ -129,15 +158,30 @@
    CONFIG: the 5 monitored points, mapped from your NeTEx investigation
 ------------------------------------------------------------------- */
 const MONITORED_POINTS = [
-  { monitoringRef: "MGIN1", lineCode: "T2", direction: "Orvault Grd-Val", stopName: "Mangin",         mode: "tram"   },
-  { monitoringRef: "MGIN1", lineCode: "T3", direction: "Marcel Paul",     stopName: "Mangin",         mode: "tram"   },
-  { monitoringRef: "IDNA1", lineCode: "5",  direction: "Hangar à Bananes",stopName: "Île de Nantes",  mode: "busway" },
-  { monitoringRef: "GNRA4", lineCode: "38", direction: "Aéroport",        stopName: "Greneraie",      mode: "bus"    },
-  { monitoringRef: "BENA1", lineCode: "4",  direction: "Foch - Cathédrale",stopName: "Beaulieu",      mode: "busway" },
+  { monitoringRef: "MGIN1", lineCode: "T2", direction: "Orvault Grd-Val", stopName: "Mangin"          },
+  { monitoringRef: "MGIN1", lineCode: "T3", direction: "Marcel Paul",     stopName: "Mangin"          },
+  { monitoringRef: "IDNA1", lineCode: "5",  direction: "Hangar à Bananes",stopName: "Île de Nantes"   },
+  { monitoringRef: "GNRA4", lineCode: "38", direction: "Aéroport",        stopName: "Greneraie"       },
+  { monitoringRef: "BENA1", lineCode: "4",  direction: "Foch - Cathédrale",stopName: "Beaulieu"       },
+  // Line 26 (→ Jonelière) pending: quay code not yet mapped — add here once known, e.g.:
+  // { monitoringRef: "XXXX1", lineCode: "26", direction: "Jonelière", stopName: "TBD" },
 ];
+
+// Official Naolib per-line colors (from line pictogram SVGs)
+const LINE_COLORS = {
+  T2: { bg: "#E30613", text: "#FFFFFF" },
+  T3: { bg: "#2581C4", text: "#FFFFFF" },
+  "4": { bg: "#FFCD1C", text: "#111111" },
+  "5": { bg: "#0BBBEF", text: "#111111" },
+  "38": { bg: "#009640", text: "#FFFFFF" },
+  "26": { bg: "#009640", text: "#FFFFFF" },
+};
 
 const WINDOW_MINUTES = 30;
 const REFRESH_SECONDS = 30;
+
+// Filter state: Set of active line codes. Empty Set = show all.
+const activeFilters = new Set();
 
 /* ------------------------------------------------------------------
    MOCK DATA — shaped exactly like a real SIRI-Lite StopMonitoring
@@ -259,30 +303,68 @@ async function loadAll() {
         line: point.lineCode,
         direction: point.direction,
         stopName: point.stopName,
-        mode: point.mode,
         minutes: mins,
       });
     }
   }
 
   rows.sort((a, b) => a.minutes - b.minutes);
+  renderFilters();
   render(rows);
+}
+
+function renderFilters() {
+  const container = document.getElementById("filters");
+  // Build the chip list once from the lines actually configured
+  const lines = [...new Set(MONITORED_POINTS.map(p => p.lineCode))];
+  if (container.dataset.built === "true") {
+    // just refresh active state
+    [...container.children].forEach(chip => {
+      chip.classList.toggle("active", activeFilters.size === 0 || activeFilters.has(chip.dataset.line));
+    });
+    return;
+  }
+  container.dataset.built = "true";
+  container.innerHTML = "";
+  for (const line of lines) {
+    const chip = document.createElement("button");
+    chip.className = "filter-chip active";
+    chip.textContent = line;
+    chip.dataset.line = line;
+    chip.style.borderColor = (LINE_COLORS[line] || {}).bg || "var(--border)";
+    chip.addEventListener("click", () => {
+      if (activeFilters.has(line)) {
+        activeFilters.delete(line);
+      } else {
+        activeFilters.add(line);
+      }
+      // If every line ends up selected, treat as "show all" (empty set)
+      if (activeFilters.size === lines.length) activeFilters.clear();
+      loadAll();
+    });
+    container.appendChild(chip);
+  }
 }
 
 function render(rows) {
   const list = document.getElementById("list");
   list.innerHTML = "";
 
-  if (rows.length === 0) {
+  const filtered = activeFilters.size === 0
+    ? rows
+    : rows.filter(r => activeFilters.has(r.line));
+
+  if (filtered.length === 0) {
     list.innerHTML = `<div class="empty">Aucun passage dans les ${WINDOW_MINUTES} prochaines minutes.</div>`;
     return;
   }
 
-  for (const r of rows) {
+  for (const r of filtered) {
+    const colors = LINE_COLORS[r.line] || { bg: "#666", text: "#fff" };
     const row = document.createElement("div");
     row.className = "row";
     row.innerHTML = `
-      <div class="badge ${r.mode}">${r.line}</div>
+      <div class="badge" style="background:${colors.bg};color:${colors.text}">${r.line}</div>
       <div class="info">
         <div class="direction">→ ${r.direction}</div>
         <div class="stop">${r.stopName}</div>
@@ -295,6 +377,12 @@ function render(rows) {
 
 loadAll();
 setInterval(loadAll, REFRESH_SECONDS * 1000);
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("sw.js").catch(() => {});
+  });
+}
 </script>
 
 </body>
