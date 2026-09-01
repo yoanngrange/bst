@@ -135,6 +135,56 @@
     padding: 8px 12px;
     border-radius: 8px;
   }
+  .install-banner {
+    max-width: 640px;
+    margin: 0 auto 16px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px 14px;
+    display: none;
+    align-items: center;
+    gap: 12px;
+  }
+  .install-banner.visible {
+    display: flex;
+  }
+  .install-banner img {
+    width: 36px;
+    height: 36px;
+    border-radius: 9px;
+    flex-shrink: 0;
+  }
+  .install-banner .text {
+    flex: 1;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+  .install-banner .text strong {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 2px;
+  }
+  .install-banner button.install-action {
+    background: #6CD100;
+    color: #082400;
+    border: none;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .install-banner button.dismiss {
+    background: none;
+    border: none;
+    color: var(--muted);
+    font-size: 18px;
+    cursor: pointer;
+    padding: 0 4px;
+    line-height: 1;
+  }
 </style>
 </head>
 <body>
@@ -143,6 +193,13 @@
   <h1>Prochains passages</h1>
   <div class="updated" id="updated">—</div>
 </header>
+
+<div class="install-banner" id="installBanner">
+  <img src="icon-192.png" alt="BST">
+  <div class="text" id="installText"><strong>Installer BST</strong></div>
+  <button class="install-action" id="installAction" style="display:none;">Installer</button>
+  <button class="dismiss" id="installDismiss" aria-label="Fermer">✕</button>
+</div>
 
 <div class="mock-notice">
   ⚠️ Données simulées (mock) — en attente de la clé API SIRI-Lite Naolib.
@@ -394,6 +451,74 @@ if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("sw.js").catch(() => {});
   });
 }
+
+/* ------------------------------------------------------------------
+   PWA install banner
+   - iOS/iPadOS Safari and macOS Safari have no native install prompt,
+     so we show manual "Add to Home Screen" / "Add to Dock" instructions.
+   - Chrome/Edge/Android expose beforeinstallprompt, so we show a real
+     "Install" button that triggers the native dialog.
+   - Hidden entirely once the app is already running standalone, or
+     if the person dismissed it (remembered for 14 days).
+------------------------------------------------------------------- */
+(function setupInstallBanner() {
+  const DISMISS_KEY = "bst-install-dismissed-until";
+  const DISMISS_DAYS = 14;
+
+  const isStandalone =
+    window.matchMedia("(display-mode: standalone)").matches ||
+    window.navigator.standalone === true; // iOS Safari flag
+
+  if (isStandalone) return;
+
+  const dismissedUntil = Number(localStorage.getItem(DISMISS_KEY) || 0);
+  if (Date.now() < dismissedUntil) return;
+
+  const ua = navigator.userAgent;
+  const isIOS = /iPad|iPhone|iPod/.test(ua) || (ua.includes("Macintosh") && navigator.maxTouchPoints > 1);
+  const isSafari = /^((?!chrome|android|crios|fxios).)*safari/i.test(ua);
+  const isMac = /Macintosh/.test(ua) && !isIOS;
+
+  const banner = document.getElementById("installBanner");
+  const textEl = document.getElementById("installText");
+  const actionBtn = document.getElementById("installAction");
+  const dismissBtn = document.getElementById("installDismiss");
+
+  let deferredPrompt = null;
+
+  function show(html) {
+    textEl.innerHTML = html;
+    banner.classList.add("visible");
+  }
+
+  dismissBtn.addEventListener("click", () => {
+    localStorage.setItem(DISMISS_KEY, String(Date.now() + DISMISS_DAYS * 86400000));
+    banner.classList.remove("visible");
+  });
+
+  if (isIOS && isSafari) {
+    show(`<strong>Installer BST</strong>Appuyez sur <strong>Partager</strong> (icône carrée avec flèche ↑) puis <strong>Sur l'écran d'accueil</strong>.`);
+  } else if (isMac && isSafari) {
+    show(`<strong>Installer BST</strong>Cliquez sur <strong>Partager</strong> dans la barre d'outils puis <strong>Ajouter au Dock</strong>.`);
+  } else {
+    // Chrome / Edge / other browsers supporting the native install prompt
+    window.addEventListener("beforeinstallprompt", (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      show(`<strong>Installer BST</strong>Ajoutez l'app à votre écran d'accueil pour un accès rapide.`);
+      actionBtn.style.display = "inline-block";
+    });
+
+    actionBtn.addEventListener("click", async () => {
+      if (!deferredPrompt) return;
+      deferredPrompt.prompt();
+      await deferredPrompt.userChoice;
+      deferredPrompt = null;
+      banner.classList.remove("visible");
+    });
+  }
+})();
+
 </script>
 
 </body>
