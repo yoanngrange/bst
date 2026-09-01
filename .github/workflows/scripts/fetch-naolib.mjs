@@ -10,8 +10,11 @@ const API_BASE_URL = "https://api.okina.fr/PUT_THE_REAL_PATH_HERE/stop-monitorin
 const API_KEY_HEADER = "X-Gravitee-Api-Key"; // check the API's doc/swagger tab if this isn't right
 // ---------------------------------------------------------------------
 
-const MONITORING_REFS = ["MGIN1", "IDNA1", "GNRA4", "BENA1"];
-// Line 26's quay code isn't confirmed yet — add it here once known.
+const MONITORING_REFS = ["MGIN1", "IDNA1", "GNRA4", "BENA1", "MOZI1", "MOZI2"];
+// MOZI1 and MOZI2 (Monzie, line 26 → Jonelière) are both included temporarily:
+// the line is currently diverted due to works, so we don't yet know which quay
+// is the correct Jonelière-bound platform. Drop whichever is wrong once real
+// data confirms it.
 
 const apiKey = process.env.NAOLIB_API_KEY;
 if (!apiKey) {
