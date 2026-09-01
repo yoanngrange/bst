@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prochains passages — Naolib</title>
+<style>
+  :root {
+    --bg: #0f1115;
+    --card: #171a21;
+    --border: #262b36;
+    --text: #f2f3f5;
+    --muted: #8b93a5;
+    --accent: #ffcc33;
+    --tram: #3fd0c9;
+    --bus: #ff8a5c;
+    --busway: #b58cff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    padding: 24px 16px 60px;
+  }
+  header {
+    max-width: 640px;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  h1 {
+    font-size: 20px;
+    margin: 0;
+    letter-spacing: 0.3px;
+  }
+  .updated {
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .list {
+    max-width: 640px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .row {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .badge {
+    min-width: 46px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 6px 8px;
+    border-radius: 8px;
+    color: #10121a;
+  }
+  .badge.tram { background: var(--tram); }
+  .badge.bus { background: var(--bus); }
+  .badge.busway { background: var(--busway); }
+  .info {
+    flex: 1;
+    min-width: 0;
+  }
+  .direction {
+    font-size: 15px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .stop {
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+  .time {
+    font-size: 20px;
+    font-weight: 700;
+    min-width: 58px;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+  .time.soon { color: var(--accent); }
+  .empty {
+    text-align: center;
+    color: var(--muted);
+    padding: 40px 0;
+    font-size: 14px;
+  }
+  .mock-notice {
+    max-width: 640px;
+    margin: 0 auto 16px;
+    font-size: 12px;
+    color: var(--muted);
+    background: #1d1a10;
+    border: 1px solid #3a300f;
+    padding: 8px 12px;
+    border-radius: 8px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Prochains passages</h1>
+  <div class="updated" id="updated">—</div>
+</header>
+
+<div class="mock-notice">
+  ⚠️ Données simulées (mock) — en attente de la clé API SIRI-Lite Naolib.
+  Le format suit la structure réelle de l'API (StopMonitoringDelivery / MonitoredStopVisit) pour un remplacement facile.
+</div>
+
+<div class="list" id="list"></div>
+
+<script>
+/* ------------------------------------------------------------------
+   CONFIG: the 5 monitored points, mapped from your NeTEx investigation
+------------------------------------------------------------------- */
+const MONITORED_POINTS = [
+  { monitoringRef: "MGIN1", lineCode: "T2", direction: "Orvault Grd-Val", stopName: "Mangin",         mode: "tram"   },
+  { monitoringRef: "MGIN1", lineCode: "T3", direction: "Marcel Paul",     stopName: "Mangin",         mode: "tram"   },
+  { monitoringRef: "IDNA1", lineCode: "5",  direction: "Hangar à Bananes",stopName: "Île de Nantes",  mode: "busway" },
+  { monitoringRef: "GNRA4", lineCode: "38", direction: "Aéroport",        stopName: "Greneraie",      mode: "bus"    },
+  { monitoringRef: "BENA1", lineCode: "4",  direction: "Foch - Cathédrale",stopName: "Beaulieu",      mode: "busway" },
+];
+
+const WINDOW_MINUTES = 30;
+const REFRESH_SECONDS = 30;
+
+/* ------------------------------------------------------------------
+   MOCK DATA — shaped exactly like a real SIRI-Lite StopMonitoring
+   response body (Siri.ServiceDelivery.StopMonitoringDelivery[0]
+   .MonitoredStopVisit[]), one fake payload per MonitoringRef.
+   Swap fetchStopMonitoring() below for a real call when the key
+   is ready — nothing else needs to change.
+------------------------------------------------------------------- */
+function mockResponseFor(monitoringRef) {
+  const now = Date.now();
+  const mins = (m) => new Date(now + m * 60000).toISOString();
+
+  const fakePassages = {
+    MGIN1: [
+      { LineRef: "T2", PublishedLineName: "T2", DestinationName: "Orvault Grand Val", ExpectedArrivalTime: mins(5) },
+      { LineRef: "T3", PublishedLineName: "T3", DestinationName: "Marcel Paul",       ExpectedArrivalTime: mins(6) },
+      { LineRef: "T2", PublishedLineName: "T2", DestinationName: "Orvault Grand Val", ExpectedArrivalTime: mins(12) },
+      { LineRef: "T3", PublishedLineName: "T3", DestinationName: "Marcel Paul",       ExpectedArrivalTime: mins(21) },
+      { LineRef: "T2", PublishedLineName: "T2", DestinationName: "Orvault Grand Val", ExpectedArrivalTime: mins(19) },
+    ],
+    IDNA1: [
+      { LineRef: "5", PublishedLineName: "5", DestinationName: "Hangar à Bananes", ExpectedArrivalTime: mins(5) },
+      { LineRef: "5", PublishedLineName: "5", DestinationName: "Hangar à Bananes", ExpectedArrivalTime: mins(17) },
+    ],
+    GNRA4: [
+      { LineRef: "38", PublishedLineName: "38", DestinationName: "Aéroport", ExpectedArrivalTime: mins(26) },
+    ],
+    BENA1: [
+      { LineRef: "4", PublishedLineName: "4", DestinationName: "Foch - Cathédrale", ExpectedArrivalTime: mins(3) },
+      { LineRef: "4", PublishedLineName: "4", DestinationName: "Foch - Cathédrale", ExpectedArrivalTime: mins(14) },
+    ],
+  };
+
+  const visits = (fakePassages[monitoringRef] || []).map((p, i) => ({
+    RecordedAtTime: new Date(now).toISOString(),
+    ItemIdentifier: `MOCK:${monitoringRef}:${i}`,
+    MonitoringRef: { value: monitoringRef },
+    MonitoredVehicleJourney: {
+      LineRef: { value: p.LineRef },
+      PublishedLineName: [{ value: p.PublishedLineName }],
+      DestinationName: [{ value: p.DestinationName }],
+      MonitoredCall: {
+        ExpectedArrivalTime: p.ExpectedArrivalTime,
+      },
+    },
+  }));
+
+  return {
+    Siri: {
+      ServiceDelivery: {
+        ResponseTimestamp: new Date(now).toISOString(),
+        StopMonitoringDelivery: [
+          { MonitoredStopVisit: visits },
+        ],
+      },
+    },
+  };
+}
+
+/* ------------------------------------------------------------------
+   REAL CALL (disabled until API key is available) — kept here so
+   swapping to live data later is a one-line change in loadAll().
+
+async function fetchStopMonitoring(monitoringRef) {
+  const url = `https://api.okina.fr/.../stop-monitoring.json?MonitoringRef=${monitoringRef}`;
+  const res = await fetch(url, {
+    headers: { "X-Gravitee-Api-Key": "YOUR_KEY_HERE" }
+  });
+  if (!res.ok) throw new Error(`SIRI request failed: ${res.status}`);
+  return res.json();
+}
+------------------------------------------------------------------- */
+
+async function fetchStopMonitoring(monitoringRef) {
+  // MOCK MODE — replace this line with the real fetchStopMonitoring above
+  return Promise.resolve(mockResponseFor(monitoringRef));
+}
+
+function extractVisits(siriResponse) {
+  try {
+    return siriResponse.Siri.ServiceDelivery.StopMonitoringDelivery[0].MonitoredStopVisit || [];
+  } catch (e) {
+    return [];
+  }
+}
+
+function minutesFromNow(isoTime) {
+  const diffMs = new Date(isoTime).getTime() - Date.now();
+  return Math.max(0, Math.round(diffMs / 60000));
+}
+
+async function loadAll() {
+  const now = new Date();
+  document.getElementById("updated").textContent =
+    "Mis à jour " + now.toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit", second: "2-digit" });
+
+  // Group config by monitoringRef to avoid duplicate calls (Mangin = T2 + T3, same quay)
+  const uniqueRefs = [...new Set(MONITORED_POINTS.map(p => p.monitoringRef))];
+  const responses = {};
+  await Promise.all(uniqueRefs.map(async (ref) => {
+    responses[ref] = extractVisits(await fetchStopMonitoring(ref));
+  }));
+
+  const rows = [];
+  for (const point of MONITORED_POINTS) {
+    const visits = responses[point.monitoringRef] || [];
+    for (const visitـ of visits) {
+      const mvj = visitـ.MonitoredVehicleJourney;
+      const lineRef = mvj.LineRef?.value || mvj.PublishedLineName?.[0]?.value;
+      if (lineRef !== point.lineCode) continue; // filter to the line we care about at this quay
+
+      const arrivalIso = mvj.MonitoredCall?.ExpectedArrivalTime;
+      if (!arrivalIso) continue;
+
+      const mins = minutesFromNow(arrivalIso);
+      if (mins > WINDOW_MINUTES) continue;
+
+      rows.push({
+        line: point.lineCode,
+        direction: point.direction,
+        stopName: point.stopName,
+        mode: point.mode,
+        minutes: mins,
+      });
+    }
+  }
+
+  rows.sort((a, b) => a.minutes - b.minutes);
+  render(rows);
+}
+
+function render(rows) {
+  const list = document.getElementById("list");
+  list.innerHTML = "";
+
+  if (rows.length === 0) {
+    list.innerHTML = `<div class="empty">Aucun passage dans les ${WINDOW_MINUTES} prochaines minutes.</div>`;
+    return;
+  }
+
+  for (const r of rows) {
+    const row = document.createElement("div");
+    row.className = "row";
+    row.innerHTML = `
+      <div class="badge ${r.mode}">${r.line}</div>
+      <div class="info">
+        <div class="direction">→ ${r.direction}</div>
+        <div class="stop">${r.stopName}</div>
+      </div>
+      <div class="time ${r.minutes <= 5 ? 'soon' : ''}">${r.minutes} min</div>
+    `;
+    list.appendChild(row);
+  }
+}
+
+loadAll();
+setInterval(loadAll, REFRESH_SECONDS * 1000);
+</script>
+
+</body>
+</html>
