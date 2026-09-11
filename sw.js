@@ -23,8 +23,16 @@ self.addEventListener("activate", (event) => {
 });
 
 self.addEventListener("fetch", (event) => {
-  // Network-first for data (JSON), cache-first for the app shell
   const url = new URL(event.request.url);
+
+  // Only manage our own origin's files. Let all cross-origin requests
+  // (the Naolib API, etc.) go straight to the network, untouched —
+  // the service worker has no business intercepting third-party APIs.
+  if (url.origin !== self.location.origin) {
+    return;
+  }
+
+  // Network-first for data (JSON), cache-first for the app shell
   if (url.pathname.endsWith(".json") && url.pathname.includes("data/")) {
     event.respondWith(
       fetch(event.request).catch(() => caches.match(event.request))

@@ -201,7 +201,7 @@
   <button class="dismiss" id="installDismiss" aria-label="Fermer">✕</button>
 </div>
 
-<div class="mock-notice">
+<div class="mock-notice" id="mockNotice">
   ⚠️ Données simulées (mock) — en attente de la clé API SIRI-Lite Naolib.
   Le format suit la structure réelle de l'API (StopMonitoringDelivery / MonitoredStopVisit) pour un remplacement facile.
 </div>
@@ -215,16 +215,16 @@
    CONFIG: the 5 monitored points, mapped from your NeTEx investigation
 ------------------------------------------------------------------- */
 const MONITORED_POINTS = [
-  { monitoringRef: "MGIN1", lineCode: "T2", direction: "Orvault Grd-Val", stopName: "Mangin"          },
-  { monitoringRef: "MGIN1", lineCode: "T3", direction: "Marcel Paul",     stopName: "Mangin"          },
-  { monitoringRef: "IDNA1", lineCode: "5",  direction: "Hangar à Bananes",stopName: "Île de Nantes"   },
-  { monitoringRef: "GNRA4", lineCode: "38", direction: "Aéroport",        stopName: "Greneraie"       },
-  { monitoringRef: "BENA1", lineCode: "4",  direction: "Foch - Cathédrale",stopName: "Beaulieu"       },
+  { monitoringRef: "MGIN1", apiLineRef: "2",  lineCode: "T2", direction: "Orvault Grd-Val", stopName: "Mangin"          },
+  { monitoringRef: "MGIN1", apiLineRef: "3",  lineCode: "T3", direction: "Marcel Paul",     stopName: "Mangin"          },
+  { monitoringRef: "IDNA1", apiLineRef: "5",  lineCode: "5",  direction: "Hangar à Bananes",stopName: "Île de Nantes"   },
+  { monitoringRef: "GNRA4", apiLineRef: "38", lineCode: "38", direction: "Aéroport",        stopName: "Greneraie"       },
+  { monitoringRef: "BENA1", apiLineRef: "4",  lineCode: "4",  direction: "Foch - Cathédrale",stopName: "Beaulieu"       },
   // Line 26 (→ Jonelière) at Monzie: line is currently diverted (works), so we
   // don't yet know which quay is the Jonelière-bound platform. Both are added
   // temporarily — drop whichever turns out wrong once real API data confirms it.
-  { monitoringRef: "MOZI1", lineCode: "26", direction: "Jonelière", stopName: "Monzie" },
-  { monitoringRef: "MOZI2", lineCode: "26", direction: "Jonelière", stopName: "Monzie" },
+  { monitoringRef: "MOZI1", apiLineRef: "26", lineCode: "26", direction: "Jonelière", stopName: "Monzie" },
+  { monitoringRef: "MOZI2", apiLineRef: "26", lineCode: "26", direction: "Jonelière", stopName: "Monzie" },
 ];
 
 // Official Naolib per-line colors (from line pictogram SVGs)
@@ -239,6 +239,9 @@ const LINE_COLORS = {
 
 const WINDOW_MINUTES = 30;
 const REFRESH_SECONDS = 30;
+
+// Flip this to false once your real API call is confirmed working.
+const USE_MOCK = false;
 
 // Filter state: Set of active line codes. Empty Set = show all.
 const activeFilters = new Set();
@@ -256,11 +259,11 @@ function mockResponseFor(monitoringRef) {
 
   const fakePassages = {
     MGIN1: [
-      { LineRef: "T2", PublishedLineName: "T2", DestinationName: "Orvault Grand Val", ExpectedArrivalTime: mins(5) },
-      { LineRef: "T3", PublishedLineName: "T3", DestinationName: "Marcel Paul",       ExpectedArrivalTime: mins(6) },
-      { LineRef: "T2", PublishedLineName: "T2", DestinationName: "Orvault Grand Val", ExpectedArrivalTime: mins(12) },
-      { LineRef: "T3", PublishedLineName: "T3", DestinationName: "Marcel Paul",       ExpectedArrivalTime: mins(21) },
-      { LineRef: "T2", PublishedLineName: "T2", DestinationName: "Orvault Grand Val", ExpectedArrivalTime: mins(19) },
+      { LineRef: "2", PublishedLineName: "T2", DestinationName: "Orvault Grand Val", ExpectedArrivalTime: mins(5) },
+      { LineRef: "3", PublishedLineName: "T3", DestinationName: "Marcel Paul",       ExpectedArrivalTime: mins(6) },
+      { LineRef: "2", PublishedLineName: "T2", DestinationName: "Orvault Grand Val", ExpectedArrivalTime: mins(12) },
+      { LineRef: "3", PublishedLineName: "T3", DestinationName: "Marcel Paul",       ExpectedArrivalTime: mins(21) },
+      { LineRef: "2", PublishedLineName: "T2", DestinationName: "Orvault Grand Val", ExpectedArrivalTime: mins(19) },
     ],
     IDNA1: [
       { LineRef: "5", PublishedLineName: "5", DestinationName: "Hangar à Bananes", ExpectedArrivalTime: mins(5) },
@@ -310,22 +313,23 @@ function mockResponseFor(monitoringRef) {
 }
 
 /* ------------------------------------------------------------------
-   REAL CALL (disabled until API key is available) — kept here so
-   swapping to live data later is a one-line change in loadAll().
-
+   Single fetch function, gated by the USE_MOCK flag above — no more
+   duplicate-function footgun. Fill in your real URL + key below;
+   they're simply unused while USE_MOCK stays true.
+------------------------------------------------------------------- */
 async function fetchStopMonitoring(monitoringRef) {
-  const url = `https://api.okina.fr/.../stop-monitoring.json?MonitoringRef=${monitoringRef}`;
-  const res = await fetch(url, {
-    headers: { "X-Gravitee-Api-Key": "YOUR_KEY_HERE" }
-  });
+  if (USE_MOCK) {
+    return mockResponseFor(monitoringRef);
+  }
+
+  // Using api-key as a query param (not a header) avoids a CORS preflight
+  // (OPTIONS) request entirely — custom headers trigger one, and Gravitee
+  // doesn't seem to handle that preflight cleanly for this API.
+  const API_KEY = "fd3a164f-3e5d-4394-b2ad-8f5959278796";
+  const url = `https://api.staging.okina.fr/gateway/sem/realtime/siri/2.0/stop-monitoring.json?MonitoringRef=${monitoringRef}&api-key=${API_KEY}`;
+  const res = await fetch(url);
   if (!res.ok) throw new Error(`SIRI request failed: ${res.status}`);
   return res.json();
-}
-------------------------------------------------------------------- */
-
-async function fetchStopMonitoring(monitoringRef) {
-  // MOCK MODE — replace this line with the real fetchStopMonitoring above
-  return Promise.resolve(mockResponseFor(monitoringRef));
 }
 
 function extractVisits(siriResponse) {
@@ -358,8 +362,8 @@ async function loadAll() {
     const visits = responses[point.monitoringRef] || [];
     for (const visitـ of visits) {
       const mvj = visitـ.MonitoredVehicleJourney;
-      const lineRef = mvj.LineRef?.value || mvj.PublishedLineName?.[0]?.value;
-      if (lineRef !== point.lineCode) continue; // filter to the line we care about at this quay
+      const lineRef = mvj.LineRef?.value;
+      if (lineRef !== point.apiLineRef) continue; // filter to the line we care about at this quay
 
       const arrivalIso = mvj.MonitoredCall?.ExpectedArrivalTime;
       if (!arrivalIso) continue;
@@ -445,6 +449,8 @@ function render(rows) {
 
 loadAll();
 setInterval(loadAll, REFRESH_SECONDS * 1000);
+
+document.getElementById("mockNotice").style.display = USE_MOCK ? "block" : "none";
 
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
