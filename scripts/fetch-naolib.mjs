@@ -9,11 +9,11 @@ import { writeFile, mkdir } from "node:fs/promises";
 const API_BASE_URL = "https://api.staging.okina.fr/gateway/sem/realtime/siri/2.0/stop-monitoring.json";
 // ---------------------------------------------------------------------
 
-const MONITORING_REFS = ["MGIN1", "IDNA1", "GNRA4", "BENA1", "MOZI1", "MOZI2"];
-// MOZI1 and MOZI2 (Monzie, line 26 → Jonelière) are both included temporarily:
-// the line is currently diverted due to works, so we don't yet know which quay
-// is the correct Jonelière-bound platform. Drop whichever is wrong once real
-// data confirms it.
+const MONITORING_REFS = ["MGIN1", "IDNA1", "GNRA4", "BENA1"];
+// Line 26 (→ Jonelière) is currently tracked via IDNA1 (see index.html comment):
+// confirmed by real data that the ongoing works diversion routes it through
+// Île de Nantes instead of its normal Monzie stop. IDNA1 is already covered
+// above (also serves lines 4 and 5), so no separate quay call is needed for it.
 
 const apiKey = process.env.NAOLIB_API_KEY;
 if (!apiKey) {

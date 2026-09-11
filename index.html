@@ -220,11 +220,11 @@ const MONITORED_POINTS = [
   { monitoringRef: "IDNA1", apiLineRef: "5",  lineCode: "5",  direction: "Hangar à Bananes",stopName: "Île de Nantes"   },
   { monitoringRef: "GNRA4", apiLineRef: "38", lineCode: "38", direction: "Aéroport",        stopName: "Greneraie"       },
   { monitoringRef: "BENA1", apiLineRef: "4",  lineCode: "4",  direction: "Foch - Cathédrale",stopName: "Beaulieu"       },
-  // Line 26 (→ Jonelière) at Monzie: line is currently diverted (works), so we
-  // don't yet know which quay is the Jonelière-bound platform. Both are added
-  // temporarily — drop whichever turns out wrong once real API data confirms it.
-  { monitoringRef: "MOZI1", apiLineRef: "26", lineCode: "26", direction: "Jonelière", stopName: "Monzie" },
-  { monitoringRef: "MOZI2", apiLineRef: "26", lineCode: "26", direction: "Jonelière", stopName: "Monzie" },
+  // Line 26 (→ Jonelière): confirmed via real API data (2026-09-11) that the
+  // ongoing works diversion currently routes it through Île de Nantes (IDNA1),
+  // not its normal Monzie stop. Switch back to Monzie (MOZI1 or MOZI2 — still
+  // unconfirmed which) once the diversion ends and line 26 disappears from IDNA1.
+  { monitoringRef: "IDNA1", apiLineRef: "26", lineCode: "26", direction: "Jonelière", stopName: "Île de Nantes (déviation)" },
 ];
 
 // Official Naolib per-line colors (from line pictogram SVGs)
@@ -240,7 +240,7 @@ const LINE_COLORS = {
 const WINDOW_MINUTES = 30;
 const REFRESH_SECONDS = 30;
 
-// Flip this to false once your real API call is confirmed working.
+// Flip this to true only for local UI development without live data.
 const USE_MOCK = false;
 
 // Filter state: Set of active line codes. Empty Set = show all.
@@ -313,23 +313,23 @@ function mockResponseFor(monitoringRef) {
 }
 
 /* ------------------------------------------------------------------
-   Single fetch function, gated by the USE_MOCK flag above — no more
-   duplicate-function footgun. Fill in your real URL + key below;
-   they're simply unused while USE_MOCK stays true.
+   Reads data/naolib.json, generated periodically by the GitHub Action
+   (scripts/fetch-naolib.mjs). No direct API calls from the browser —
+   no CORS/preflight concerns, no exposed API key.
 ------------------------------------------------------------------- */
-async function fetchStopMonitoring(monitoringRef) {
+async function fetchStopMonitoring(monitoringRef, dataFile) {
   if (USE_MOCK) {
     return mockResponseFor(monitoringRef);
   }
 
-  // Using api-key as a query param (not a header) avoids a CORS preflight
-  // (OPTIONS) request entirely — custom headers trigger one, and Gravitee
-  // doesn't seem to handle that preflight cleanly for this API.
-  const API_KEY = "fd3a164f-3e5d-4394-b2ad-8f5959278796";
-  const url = `https://api.staging.okina.fr/gateway/sem/realtime/siri/2.0/stop-monitoring.json?MonitoringRef=${monitoringRef}&api-key=${API_KEY}`;
-  const res = await fetch(url);
-  if (!res.ok) throw new Error(`SIRI request failed: ${res.status}`);
-  return res.json();
+  const visits = dataFile?.stops?.[monitoringRef] ?? [];
+  return {
+    Siri: {
+      ServiceDelivery: {
+        StopMonitoringDelivery: [{ MonitoredStopVisit: visits }],
+      },
+    },
+  };
 }
 
 function extractVisits(siriResponse) {
@@ -350,11 +350,27 @@ async function loadAll() {
   document.getElementById("updated").textContent =
     "Mis à jour " + now.toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit", second: "2-digit" });
 
-  // Group config by monitoringRef to avoid duplicate calls (Mangin = T2 + T3, same quay)
+  // In real mode, fetch the generated data file once per refresh (covers
+  // every quay in one request) instead of one call per quay.
+  let dataFile = null;
+  if (!USE_MOCK) {
+    try {
+      const res = await fetch("data/naolib.json", { cache: "no-store" });
+      if (!res.ok) throw new Error(`Failed to load data/naolib.json: ${res.status}`);
+      dataFile = await res.json();
+    } catch (err) {
+      console.error(err);
+      document.getElementById("list").innerHTML =
+        `<div class="empty">Impossible de charger les données (data/naolib.json).</div>`;
+      return;
+    }
+  }
+
+  // Group config by monitoringRef to avoid duplicate lookups (Mangin = T2 + T3, same quay)
   const uniqueRefs = [...new Set(MONITORED_POINTS.map(p => p.monitoringRef))];
   const responses = {};
   await Promise.all(uniqueRefs.map(async (ref) => {
-    responses[ref] = extractVisits(await fetchStopMonitoring(ref));
+    responses[ref] = extractVisits(await fetchStopMonitoring(ref, dataFile));
   }));
 
   const rows = [];
