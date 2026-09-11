@@ -342,7 +342,7 @@ function extractVisits(siriResponse) {
 
 function minutesFromNow(isoTime) {
   const diffMs = new Date(isoTime).getTime() - Date.now();
-  return Math.max(0, Math.round(diffMs / 60000));
+  return Math.round(diffMs / 60000); // can be negative — caller decides what to do with that
 }
 
 async function loadAll() {
@@ -385,6 +385,7 @@ async function loadAll() {
       if (!arrivalIso) continue;
 
       const mins = minutesFromNow(arrivalIso);
+      if (mins < 0) continue;   // already departed — hide it
       if (mins > WINDOW_MINUTES) continue;
 
       rows.push({
