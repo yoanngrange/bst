@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-12T22:35:28.282Z",
+  "fetchedAt": "2026-09-12T22:40:34.590Z",
   "stops": {
     "MGIN1": [
       {
@@ -225,17 +225,17 @@
               }
             ],
             "AimedArrivalTime": "2026-09-13T00:52:00+02:00",
-            "ExpectedArrivalTime": "2026-09-13T00:55:04+02:00",
+            "ExpectedArrivalTime": "2026-09-13T00:52:54+02:00",
             "ArrivalStatus": "delayed",
             "AimedDepartureTime": "2026-09-13T00:52:00+02:00",
-            "ExpectedDepartureTime": "2026-09-13T00:55:04+02:00",
+            "ExpectedDepartureTime": "2026-09-13T00:52:54+02:00",
             "StopPointRef": {
               "value": "MGIN1"
             },
             "Order": 11
           }
         },
-        "RecordedAtTime": "2026-09-13T00:35:21.097995837+02:00",
+        "RecordedAtTime": "2026-09-13T00:40:31.133398328+02:00",
         "ItemIdentifier": "3-MGIN1-A-2026-09-13T00:52+02:00[Europe/Paris]"
       },
       {
@@ -457,7 +457,7 @@
             }
           ],
           "FirstOrLastJourney": "unspecified",
-          "Monitored": false,
+          "Monitored": true,
           "MonitoredCall": {
             "DestinationDisplay": [
               {
@@ -476,7 +476,7 @@
             "Order": 12
           }
         },
-        "RecordedAtTime": "2026-09-13T00:03:32.795573731+02:00",
+        "RecordedAtTime": "2026-09-13T00:37:34.036717891+02:00",
         "ItemIdentifier": "4-IDNA1-A-2026-09-13T01:48+02:00[Europe/Paris]"
       },
       {
@@ -525,17 +525,17 @@
               }
             ],
             "AimedArrivalTime": "2026-09-13T00:48:00+02:00",
-            "ExpectedArrivalTime": "2026-09-13T00:47:59+02:00",
-            "ArrivalStatus": "early",
+            "ExpectedArrivalTime": "2026-09-13T00:51:53+02:00",
+            "ArrivalStatus": "delayed",
             "AimedDepartureTime": "2026-09-13T00:48:00+02:00",
-            "ExpectedDepartureTime": "2026-09-13T00:47:59+02:00",
+            "ExpectedDepartureTime": "2026-09-13T00:51:53+02:00",
             "StopPointRef": {
               "value": "IDNA1"
             },
             "Order": 12
           }
         },
-        "RecordedAtTime": "2026-09-12T23:33:32.558432356+02:00",
+        "RecordedAtTime": "2026-09-13T00:39:04.044650968+02:00",
         "ItemIdentifier": "4-IDNA1-A-2026-09-13T00:48+02:00[Europe/Paris]"
       },
       {
@@ -603,6 +603,65 @@
         },
         "MonitoredVehicleJourney": {
           "LineRef": {
+            "value": "5"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
+            "DatedVehicleJourneyRef": "49431839-CR_26_27-HT27OR16-Samedi-00"
+          },
+          "VehicleMode": [
+            "bus"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Hangar à Bananes - Gare Sud"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "A"
+            }
+          ],
+          "DestinationRef": {
+            "value": "HBAN1"
+          },
+          "DestinationName": [
+            {
+              "value": "Hangar à Bananes",
+              "lang": "FR"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": true,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "Hangar à Bananes",
+                "lang": "FR"
+              }
+            ],
+            "AimedArrivalTime": "2026-09-13T02:21:00+02:00",
+            "ExpectedArrivalTime": "2026-09-13T02:20:51+02:00",
+            "ArrivalStatus": "early",
+            "AimedDepartureTime": "2026-09-13T02:21:00+02:00",
+            "ExpectedDepartureTime": "2026-09-13T02:20:51+02:00",
+            "StopPointRef": {
+              "value": "IDNA1"
+            },
+            "Order": 9
+          }
+        },
+        "RecordedAtTime": "2026-09-13T00:38:04.035043354+02:00",
+        "ItemIdentifier": "5-IDNA1-A-2026-09-13T02:21+02:00[Europe/Paris]"
+      },
+      {
+        "MonitoringRef": {
+          "value": "IDNA1"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
             "value": "4"
           },
           "FramedVehicleJourneyRef": {
@@ -658,65 +717,6 @@
         },
         "RecordedAtTime": "2026-09-13T00:29:03.976671498+02:00",
         "ItemIdentifier": "4-IDNA1-A-2026-09-13T02:18+02:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "IDNA1"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "5"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "49431846-CR_26_27-HT27OR16-Samedi-00"
-          },
-          "VehicleMode": [
-            "bus"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Hangar à Bananes - Gare Sud"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "A"
-            }
-          ],
-          "DestinationRef": {
-            "value": "HBAN1"
-          },
-          "DestinationName": [
-            {
-              "value": "Hangar à Bananes",
-              "lang": "FR"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Hangar à Bananes",
-                "lang": "FR"
-              }
-            ],
-            "AimedArrivalTime": "2026-09-13T00:38:00+02:00",
-            "ExpectedArrivalTime": "2026-09-13T00:37:53+02:00",
-            "ArrivalStatus": "early",
-            "AimedDepartureTime": "2026-09-13T00:38:00+02:00",
-            "ExpectedDepartureTime": "2026-09-13T00:37:53+02:00",
-            "StopPointRef": {
-              "value": "IDNA1"
-            },
-            "Order": 9
-          }
-        },
-        "RecordedAtTime": "2026-09-12T23:38:02.587529027+02:00",
-        "ItemIdentifier": "5-IDNA1-A-2026-09-13T00:38+02:00[Europe/Paris]"
       },
       {
         "MonitoringRef": {
@@ -945,17 +945,17 @@
               }
             ],
             "AimedArrivalTime": "2026-09-13T00:47:00+02:00",
-            "ExpectedArrivalTime": "2026-09-13T00:47:00+02:00",
-            "ArrivalStatus": "onTime",
+            "ExpectedArrivalTime": "2026-09-13T00:50:54+02:00",
+            "ArrivalStatus": "delayed",
             "AimedDepartureTime": "2026-09-13T00:47:00+02:00",
-            "ExpectedDepartureTime": "2026-09-13T00:47:00+02:00",
+            "ExpectedDepartureTime": "2026-09-13T00:50:54+02:00",
             "StopPointRef": {
               "value": "BENA1"
             },
             "Order": 11
           }
         },
-        "RecordedAtTime": "2026-09-12T23:32:32.555968033+02:00",
+        "RecordedAtTime": "2026-09-13T00:39:04.052355866+02:00",
         "ItemIdentifier": "4-BENA1-A-2026-09-13T00:47+02:00[Europe/Paris]"
       },
       {
@@ -995,7 +995,7 @@
             }
           ],
           "FirstOrLastJourney": "unspecified",
-          "Monitored": false,
+          "Monitored": true,
           "MonitoredCall": {
             "DestinationDisplay": [
               {
@@ -1014,7 +1014,7 @@
             "Order": 11
           }
         },
-        "RecordedAtTime": "2026-09-13T00:02:32.794549621+02:00",
+        "RecordedAtTime": "2026-09-13T00:35:34.030349314+02:00",
         "ItemIdentifier": "4-BENA1-A-2026-09-13T01:47+02:00[Europe/Paris]"
       },
       {
