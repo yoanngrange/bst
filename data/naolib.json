@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-12T03:01:05.297Z",
+  "fetchedAt": "2026-09-12T03:05:28.426Z",
   "stops": {
     "MGIN1": [
       {
@@ -343,17 +343,17 @@
               }
             ],
             "AimedArrivalTime": "2026-09-12T05:17:00+02:00",
-            "ExpectedArrivalTime": "2026-09-12T05:17:00+02:00",
-            "ArrivalStatus": "onTime",
+            "ExpectedArrivalTime": "2026-09-12T05:18:02+02:00",
+            "ArrivalStatus": "delayed",
             "AimedDepartureTime": "2026-09-12T05:17:00+02:00",
-            "ExpectedDepartureTime": "2026-09-12T05:17:00+02:00",
+            "ExpectedDepartureTime": "2026-09-12T05:18:02+02:00",
             "StopPointRef": {
               "value": "MGIN1"
             },
             "Order": 12
           }
         },
-        "RecordedAtTime": "2026-09-12T04:34:27.605735191+02:00",
+        "RecordedAtTime": "2026-09-12T05:05:17.799267994+02:00",
         "ItemIdentifier": "2-MGIN1-A-2026-09-12T05:17+02:00[Europe/Paris]"
       },
       {
@@ -414,27 +414,29 @@
         },
         "RecordedAtTime": "2026-09-12T04:13:56.534136984+02:00",
         "ItemIdentifier": "3-MGIN1-A-2026-09-12T05:37+02:00[Europe/Paris]"
-      },
+      }
+    ],
+    "IDNA1": [
       {
         "MonitoringRef": {
-          "value": "MGIN1"
+          "value": "IDNA1"
         },
         "MonitoredVehicleJourney": {
           "LineRef": {
-            "value": "3"
+            "value": "4"
           },
           "FramedVehicleJourneyRef": {
             "DataFrameRef": {
               "value": "any"
             },
-            "DatedVehicleJourneyRef": "51807205-CR_26_27-HW27OR16-Samedi-00"
+            "DatedVehicleJourneyRef": "49665580-CR_26_27-HT27OR16-Samedi-00"
           },
           "VehicleMode": [
-            "tram"
+            "bus"
           ],
           "PublishedLineName": [
             {
-              "value": "Marcel Paul - Neustrie"
+              "value": "Foch - Cathédrale - Porte de Vertou"
             }
           ],
           "DirectionName": [
@@ -443,39 +445,37 @@
             }
           ],
           "DestinationRef": {
-            "value": "MPAU2"
+            "value": "FOCH1"
           },
           "DestinationName": [
             {
-              "value": "Marcel Paul",
+              "value": "Foch - Cathédrale",
               "lang": "FR"
             }
           ],
           "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
+          "Monitored": false,
           "MonitoredCall": {
             "DestinationDisplay": [
               {
-                "value": "Marcel Paul",
+                "value": "Foch - Cathédrale",
                 "lang": "FR"
               }
             ],
-            "AimedArrivalTime": "2026-09-12T06:24:00+02:00",
-            "ExpectedArrivalTime": "2026-09-12T06:24:00+02:00",
+            "AimedArrivalTime": "2026-09-12T06:09:00+02:00",
+            "ExpectedArrivalTime": "2026-09-12T06:09:00+02:00",
             "ArrivalStatus": "onTime",
-            "AimedDepartureTime": "2026-09-12T06:24:00+02:00",
-            "ExpectedDepartureTime": "2026-09-12T06:24:00+02:00",
+            "AimedDepartureTime": "2026-09-12T06:09:00+02:00",
+            "ExpectedDepartureTime": "2026-09-12T06:09:00+02:00",
             "StopPointRef": {
-              "value": "MGIN1"
+              "value": "IDNA1"
             },
-            "Order": 11
+            "Order": 12
           }
         },
-        "RecordedAtTime": "2026-09-12T05:00:08.846556838+02:00",
-        "ItemIdentifier": "3-MGIN1-A-2026-09-12T06:24+02:00[Europe/Paris]"
-      }
-    ],
-    "IDNA1": [
+        "RecordedAtTime": "2026-09-12T05:03:07.57996537+02:00",
+        "ItemIdentifier": "4-IDNA1-A-2026-09-12T06:09+02:00[Europe/Paris]"
+      },
       {
         "MonitoringRef": {
           "value": "IDNA1"
@@ -777,6 +777,65 @@
         },
         "MonitoredVehicleJourney": {
           "LineRef": {
+            "value": "26"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
+            "DatedVehicleJourneyRef": "49639558-CR_26_27-HT27OR16-Samedi-00"
+          },
+          "VehicleMode": [
+            "bus"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Jonelière - Hôtel de Région"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "A"
+            }
+          ],
+          "DestinationRef": {
+            "value": "JNLI2"
+          },
+          "DestinationName": [
+            {
+              "value": "EmptyDestination",
+              "lang": "EN"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": false,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "EmptyDestination",
+                "lang": "EN"
+              }
+            ],
+            "AimedArrivalTime": "2026-09-12T07:04:00+02:00",
+            "ExpectedArrivalTime": "2026-09-12T07:03:50+02:00",
+            "ArrivalStatus": "early",
+            "AimedDepartureTime": "2026-09-12T07:04:00+02:00",
+            "ExpectedDepartureTime": "2026-09-12T07:03:50+02:00",
+            "StopPointRef": {
+              "value": "IDNA1"
+            },
+            "Order": 7
+          }
+        },
+        "RecordedAtTime": "2026-09-12T05:04:07.590382452+02:00",
+        "ItemIdentifier": "26-IDNA1-A-2026-09-12T07:04+02:00[Europe/Paris]"
+      },
+      {
+        "MonitoringRef": {
+          "value": "IDNA1"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
             "value": "5"
           },
           "FramedVehicleJourneyRef": {
@@ -829,65 +888,6 @@
         },
         "RecordedAtTime": "2026-09-12T03:48:11.078654599+02:00",
         "ItemIdentifier": "5-IDNA1-A-2026-09-12T05:48+02:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "IDNA1"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "4"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "49665578-CR_26_27-HT27OR16-Samedi-00"
-          },
-          "VehicleMode": [
-            "bus"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Foch - Cathédrale - Porte de Vertou"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "A"
-            }
-          ],
-          "DestinationRef": {
-            "value": "FOCH1"
-          },
-          "DestinationName": [
-            {
-              "value": "Foch - Cathédrale",
-              "lang": "FR"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Foch - Cathédrale",
-                "lang": "FR"
-              }
-            ],
-            "AimedArrivalTime": "2026-09-12T05:04:00+02:00",
-            "ExpectedArrivalTime": "2026-09-12T05:04:00+02:00",
-            "ArrivalStatus": "onTime",
-            "AimedDepartureTime": "2026-09-12T05:04:00+02:00",
-            "ExpectedDepartureTime": "2026-09-12T05:04:00+02:00",
-            "StopPointRef": {
-              "value": "IDNA1"
-            },
-            "Order": 12
-          }
-        },
-        "RecordedAtTime": "2026-09-12T04:59:37.558674428+02:00",
-        "ItemIdentifier": "4-IDNA1-A-2026-09-12T05:04+02:00[Europe/Paris]"
       },
       {
         "MonitoringRef": {
@@ -1436,65 +1436,6 @@
             "DataFrameRef": {
               "value": "any"
             },
-            "DatedVehicleJourneyRef": "49665578-CR_26_27-HT27OR16-Samedi-00"
-          },
-          "VehicleMode": [
-            "bus"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Foch - Cathédrale - Porte de Vertou"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "A"
-            }
-          ],
-          "DestinationRef": {
-            "value": "FOCH1"
-          },
-          "DestinationName": [
-            {
-              "value": "Foch - Cathédrale",
-              "lang": "FR"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Foch - Cathédrale",
-                "lang": "FR"
-              }
-            ],
-            "AimedArrivalTime": "2026-09-12T05:03:00+02:00",
-            "ExpectedArrivalTime": "2026-09-12T05:03:00+02:00",
-            "ArrivalStatus": "onTime",
-            "AimedDepartureTime": "2026-09-12T05:03:00+02:00",
-            "ExpectedDepartureTime": "2026-09-12T05:03:00+02:00",
-            "StopPointRef": {
-              "value": "BENA1"
-            },
-            "Order": 11
-          }
-        },
-        "RecordedAtTime": "2026-09-12T04:59:37.563970984+02:00",
-        "ItemIdentifier": "4-BENA1-A-2026-09-12T05:03+02:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "BENA1"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "4"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
             "DatedVehicleJourneyRef": "49665586-CR_26_27-HT27OR16-Samedi-00"
           },
           "VehicleMode": [
@@ -1659,6 +1600,65 @@
         },
         "RecordedAtTime": "2026-09-12T04:51:07.511369914+02:00",
         "ItemIdentifier": "4-BENA1-A-2026-09-12T05:23+02:00[Europe/Paris]"
+      },
+      {
+        "MonitoringRef": {
+          "value": "BENA1"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
+            "value": "4"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
+            "DatedVehicleJourneyRef": "49665580-CR_26_27-HT27OR16-Samedi-00"
+          },
+          "VehicleMode": [
+            "bus"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Foch - Cathédrale - Porte de Vertou"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "A"
+            }
+          ],
+          "DestinationRef": {
+            "value": "FOCH1"
+          },
+          "DestinationName": [
+            {
+              "value": "Foch - Cathédrale",
+              "lang": "FR"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": false,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "Foch - Cathédrale",
+                "lang": "FR"
+              }
+            ],
+            "AimedArrivalTime": "2026-09-12T06:08:00+02:00",
+            "ExpectedArrivalTime": "2026-09-12T06:08:00+02:00",
+            "ArrivalStatus": "onTime",
+            "AimedDepartureTime": "2026-09-12T06:08:00+02:00",
+            "ExpectedDepartureTime": "2026-09-12T06:08:00+02:00",
+            "StopPointRef": {
+              "value": "BENA1"
+            },
+            "Order": 11
+          }
+        },
+        "RecordedAtTime": "2026-09-12T05:02:07.584476074+02:00",
+        "ItemIdentifier": "4-BENA1-A-2026-09-12T06:08+02:00[Europe/Paris]"
       }
     ]
   }
