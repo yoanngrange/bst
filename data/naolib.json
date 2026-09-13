@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-13T05:25:25.289Z",
+  "fetchedAt": "2026-09-13T05:30:47.745Z",
   "stops": {
     "MGIN1": [
       {
@@ -277,6 +277,7 @@
           "FirstOrLastJourney": "unspecified",
           "Monitored": true,
           "MonitoredCall": {
+            "VehicleAtStop": true,
             "DestinationDisplay": [
               {
                 "value": "Marcel Paul",
@@ -284,17 +285,20 @@
               }
             ],
             "AimedArrivalTime": "2026-09-13T07:28:00+02:00",
-            "ExpectedArrivalTime": "2026-09-13T07:30:08+02:00",
+            "ExpectedArrivalTime": "2026-09-13T07:30:34+02:00",
             "ArrivalStatus": "delayed",
+            "ArrivalProximityText": {
+              "value": "Départ proche"
+            },
             "AimedDepartureTime": "2026-09-13T07:28:00+02:00",
-            "ExpectedDepartureTime": "2026-09-13T07:30:08+02:00",
+            "ExpectedDepartureTime": "2026-09-13T07:30:34+02:00",
             "StopPointRef": {
               "value": "MGIN1"
             },
             "Order": 11
           }
         },
-        "RecordedAtTime": "2026-09-13T07:21:13.706094293+02:00",
+        "RecordedAtTime": "2026-09-13T07:30:33.764608856+02:00",
         "ItemIdentifier": "3-MGIN1-A-2026-09-13T07:28+02:00[Europe/Paris]"
       },
       {
@@ -777,6 +781,65 @@
         },
         "MonitoredVehicleJourney": {
           "LineRef": {
+            "value": "5"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
+            "DatedVehicleJourneyRef": "49432803-CR_26_27-HT27BA17-Dimanche-00"
+          },
+          "VehicleMode": [
+            "bus"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Hangar à Bananes - Gare Sud"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "A"
+            }
+          ],
+          "DestinationRef": {
+            "value": "HBAN1"
+          },
+          "DestinationName": [
+            {
+              "value": "Hangar à Bananes",
+              "lang": "FR"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": true,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "Hangar à Bananes",
+                "lang": "FR"
+              }
+            ],
+            "AimedArrivalTime": "2026-09-13T09:07:00+02:00",
+            "ExpectedArrivalTime": "2026-09-13T09:06:50+02:00",
+            "ArrivalStatus": "early",
+            "AimedDepartureTime": "2026-09-13T09:07:00+02:00",
+            "ExpectedDepartureTime": "2026-09-13T09:06:50+02:00",
+            "StopPointRef": {
+              "value": "IDNA1"
+            },
+            "Order": 9
+          }
+        },
+        "RecordedAtTime": "2026-09-13T07:27:10.82038781+02:00",
+        "ItemIdentifier": "5-IDNA1-A-2026-09-13T09:07+02:00[Europe/Paris]"
+      },
+      {
+        "MonitoringRef": {
+          "value": "IDNA1"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
             "value": "4"
           },
           "FramedVehicleJourneyRef": {
@@ -888,65 +951,6 @@
         },
         "RecordedAtTime": "2026-09-13T07:16:10.755248073+02:00",
         "ItemIdentifier": "4-IDNA1-A-2026-09-13T07:44+02:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "IDNA1"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "5"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "49432799-CR_26_27-HT27BA17-Dimanche-00"
-          },
-          "VehicleMode": [
-            "bus"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Hangar à Bananes - Gare Sud"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "A"
-            }
-          ],
-          "DestinationRef": {
-            "value": "HBAN1"
-          },
-          "DestinationName": [
-            {
-              "value": "Hangar à Bananes",
-              "lang": "FR"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Hangar à Bananes",
-                "lang": "FR"
-              }
-            ],
-            "AimedArrivalTime": "2026-09-13T07:27:00+02:00",
-            "ExpectedArrivalTime": "2026-09-13T07:26:50+02:00",
-            "ArrivalStatus": "early",
-            "AimedDepartureTime": "2026-09-13T07:27:00+02:00",
-            "ExpectedDepartureTime": "2026-09-13T07:26:50+02:00",
-            "StopPointRef": {
-              "value": "IDNA1"
-            },
-            "Order": 9
-          }
-        },
-        "RecordedAtTime": "2026-09-13T05:42:39.193823273+02:00",
-        "ItemIdentifier": "5-IDNA1-A-2026-09-13T07:27+02:00[Europe/Paris]"
       },
       {
         "MonitoringRef": {
