@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-13T20:50:34.623Z",
+  "fetchedAt": "2026-09-13T20:55:26.583Z",
   "stops": {
     "MGIN1": [
       {
@@ -166,17 +166,17 @@
               }
             ],
             "AimedArrivalTime": "2026-09-13T22:52:00+02:00",
-            "ExpectedArrivalTime": "2026-09-13T22:54:22+02:00",
+            "ExpectedArrivalTime": "2026-09-13T22:56:31+02:00",
             "ArrivalStatus": "delayed",
             "AimedDepartureTime": "2026-09-13T22:52:00+02:00",
-            "ExpectedDepartureTime": "2026-09-13T22:54:22+02:00",
+            "ExpectedDepartureTime": "2026-09-13T22:56:31+02:00",
             "StopPointRef": {
               "value": "MGIN1"
             },
             "Order": 12
           }
         },
-        "RecordedAtTime": "2026-09-13T22:46:32.491630009+02:00",
+        "RecordedAtTime": "2026-09-13T22:54:43.541880213+02:00",
         "ItemIdentifier": "2-MGIN1-A-2026-09-13T22:52+02:00[Europe/Paris]"
       }
     ],
@@ -279,6 +279,7 @@
           "FirstOrLastJourney": "unspecified",
           "Monitored": true,
           "MonitoredCall": {
+            "VehicleAtStop": true,
             "DestinationDisplay": [
               {
                 "value": "Hangar à Bananes",
@@ -286,17 +287,20 @@
               }
             ],
             "AimedArrivalTime": "2026-09-13T22:51:00+02:00",
-            "ExpectedArrivalTime": "2026-09-13T22:53:52+02:00",
+            "ExpectedArrivalTime": "2026-09-13T22:55:19+02:00",
             "ArrivalStatus": "delayed",
+            "ArrivalProximityText": {
+              "value": "Départ proche"
+            },
             "AimedDepartureTime": "2026-09-13T22:51:00+02:00",
-            "ExpectedDepartureTime": "2026-09-13T22:53:52+02:00",
+            "ExpectedDepartureTime": "2026-09-13T22:55:19+02:00",
             "StopPointRef": {
               "value": "IDNA1"
             },
             "Order": 9
           }
         },
-        "RecordedAtTime": "2026-09-13T22:48:39.508154085+02:00",
+        "RecordedAtTime": "2026-09-13T22:55:09.550022815+02:00",
         "ItemIdentifier": "5-IDNA1-A-2026-09-13T22:51+02:00[Europe/Paris]"
       },
       {
@@ -638,6 +642,7 @@
           "FirstOrLastJourney": "unspecified",
           "Monitored": true,
           "MonitoredCall": {
+            "VehicleAtStop": true,
             "DestinationDisplay": [
               {
                 "value": "Aéroport",
@@ -645,21 +650,83 @@
               }
             ],
             "AimedArrivalTime": "2026-09-13T22:54:00+02:00",
-            "ExpectedArrivalTime": "2026-09-13T22:54:00+02:00",
-            "ArrivalStatus": "onTime",
+            "ExpectedArrivalTime": "2026-09-13T22:55:06+02:00",
+            "ArrivalStatus": "delayed",
             "ArrivalProximityText": {
               "value": "Dernier départ"
             },
             "AimedDepartureTime": "2026-09-13T22:54:00+02:00",
-            "ExpectedDepartureTime": "2026-09-13T22:54:00+02:00",
+            "ExpectedDepartureTime": "2026-09-13T22:55:06+02:00",
             "StopPointRef": {
               "value": "GNRA4"
             },
             "Order": 1
           }
         },
-        "RecordedAtTime": "2026-09-13T20:54:21.795482225+02:00",
+        "RecordedAtTime": "2026-09-13T22:55:09.553223119+02:00",
         "ItemIdentifier": "38-GNRA4-R-2026-09-13T22:54+02:00[Europe/Paris]"
+      },
+      {
+        "MonitoringRef": {
+          "value": "GNRA4"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
+            "value": "36"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
+            "DatedVehicleJourneyRef": "49677814-CR_26_27-HT27BA17-Dimanche-00"
+          },
+          "VehicleMode": [
+            "bus"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Greneraie - Croix Jeannette"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "R"
+            }
+          ],
+          "DestinationRef": {
+            "value": "XJAN1"
+          },
+          "DestinationName": [
+            {
+              "value": "Croix Jeannette",
+              "lang": "FR"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": true,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "Croix Jeannette",
+                "lang": "FR"
+              }
+            ],
+            "AimedArrivalTime": "2026-09-14T00:51:00+02:00",
+            "ExpectedArrivalTime": "2026-09-14T00:51:00+02:00",
+            "ArrivalStatus": "onTime",
+            "ArrivalProximityText": {
+              "value": "Dernier départ"
+            },
+            "AimedDepartureTime": "2026-09-14T00:51:00+02:00",
+            "ExpectedDepartureTime": "2026-09-14T00:51:00+02:00",
+            "StopPointRef": {
+              "value": "GNRA4"
+            },
+            "Order": 1
+          }
+        },
+        "RecordedAtTime": "2026-09-13T22:51:08.527986703+02:00",
+        "ItemIdentifier": "36-GNRA4-R-2026-09-14T00:51+02:00[Europe/Paris]"
       },
       {
         "MonitoringRef": {
@@ -719,69 +786,6 @@
         },
         "RecordedAtTime": "2026-09-13T22:28:52.395420709+02:00",
         "ItemIdentifier": "36-GNRA4-R-2026-09-13T23:51+02:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "GNRA4"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "36"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "49677816-CR_26_27-HT27BA17-Dimanche-00"
-          },
-          "VehicleMode": [
-            "bus"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Greneraie - Croix Jeannette"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "R"
-            }
-          ],
-          "DestinationRef": {
-            "value": "XJAN1"
-          },
-          "DestinationName": [
-            {
-              "value": "Croix Jeannette",
-              "lang": "FR"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "VehicleAtStop": true,
-            "DestinationDisplay": [
-              {
-                "value": "Croix Jeannette",
-                "lang": "FR"
-              }
-            ],
-            "AimedArrivalTime": "2026-09-13T22:51:00+02:00",
-            "ExpectedArrivalTime": "2026-09-13T22:51:00+02:00",
-            "ArrivalStatus": "onTime",
-            "ArrivalProximityText": {
-              "value": "Départ proche"
-            },
-            "AimedDepartureTime": "2026-09-13T22:51:00+02:00",
-            "ExpectedDepartureTime": "2026-09-13T22:51:00+02:00",
-            "StopPointRef": {
-              "value": "GNRA4"
-            },
-            "Order": 1
-          }
-        },
-        "RecordedAtTime": "2026-09-13T22:50:09.51916764+02:00",
-        "ItemIdentifier": "36-GNRA4-R-2026-09-13T22:51+02:00[Europe/Paris]"
       }
     ],
     "BENA1": [
