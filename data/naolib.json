@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-15T02:25:26.092Z",
+  "fetchedAt": "2026-09-15T02:30:51.138Z",
   "stops": {
     "MGIN1": [
       {
@@ -107,17 +107,17 @@
               }
             ],
             "AimedArrivalTime": "2026-09-15T04:57:00+02:00",
-            "ExpectedArrivalTime": "2026-09-15T04:58:05+02:00",
-            "ArrivalStatus": "delayed",
+            "ExpectedArrivalTime": "2026-09-15T04:57:00+02:00",
+            "ArrivalStatus": "onTime",
             "AimedDepartureTime": "2026-09-15T04:57:00+02:00",
-            "ExpectedDepartureTime": "2026-09-15T04:58:05+02:00",
+            "ExpectedDepartureTime": "2026-09-15T04:57:00+02:00",
             "StopPointRef": {
               "value": "MGIN1"
             },
             "Order": 12
           }
         },
-        "RecordedAtTime": "2026-09-15T04:23:20.134427467+02:00",
+        "RecordedAtTime": "2026-09-15T04:30:00.178887348+02:00",
         "ItemIdentifier": "2-MGIN1-A-2026-09-15T04:57+02:00[Europe/Paris]"
       },
       {
@@ -284,17 +284,17 @@
               }
             ],
             "AimedArrivalTime": "2026-09-15T04:47:00+02:00",
-            "ExpectedArrivalTime": "2026-09-15T04:47:00+02:00",
-            "ArrivalStatus": "onTime",
+            "ExpectedArrivalTime": "2026-09-15T04:48:11+02:00",
+            "ArrivalStatus": "delayed",
             "AimedDepartureTime": "2026-09-15T04:47:00+02:00",
-            "ExpectedDepartureTime": "2026-09-15T04:47:00+02:00",
+            "ExpectedDepartureTime": "2026-09-15T04:48:11+02:00",
             "StopPointRef": {
               "value": "MGIN1"
             },
             "Order": 12
           }
         },
-        "RecordedAtTime": "2026-09-15T04:20:30.121268951+02:00",
+        "RecordedAtTime": "2026-09-15T04:30:21.181180569+02:00",
         "ItemIdentifier": "2-MGIN1-A-2026-09-15T04:47+02:00[Europe/Paris]"
       },
       {
@@ -690,7 +690,7 @@
             }
           ],
           "FirstOrLastJourney": "unspecified",
-          "Monitored": false,
+          "Monitored": true,
           "MonitoredCall": {
             "DestinationDisplay": [
               {
@@ -709,7 +709,7 @@
             "Order": 12
           }
         },
-        "RecordedAtTime": "2026-09-15T03:59:10.98290735+02:00",
+        "RecordedAtTime": "2026-09-15T04:29:14.188867318+02:00",
         "ItemIdentifier": "4-IDNA1-A-2026-09-15T05:59+02:00[Europe/Paris]"
       },
       {
@@ -985,7 +985,7 @@
             }
           ],
           "FirstOrLastJourney": "unspecified",
-          "Monitored": false,
+          "Monitored": true,
           "MonitoredCall": {
             "DestinationDisplay": [
               {
@@ -1004,7 +1004,7 @@
             "Order": 12
           }
         },
-        "RecordedAtTime": "2026-09-15T03:46:10.894097088+02:00",
+        "RecordedAtTime": "2026-09-15T04:29:14.188850684+02:00",
         "ItemIdentifier": "4-IDNA1-A-2026-09-15T05:04+02:00[Europe/Paris]"
       }
     ],
@@ -1192,6 +1192,65 @@
         },
         "MonitoredVehicleJourney": {
           "LineRef": {
+            "value": "36"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
+            "DatedVehicleJourneyRef": "49908511-CR_26_27-HT27BE11-Lu-Ma-Je-00"
+          },
+          "VehicleMode": [
+            "bus"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Greneraie - Croix Jeannette"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "R"
+            }
+          ],
+          "DestinationRef": {
+            "value": "XJAN1"
+          },
+          "DestinationName": [
+            {
+              "value": "Croix Jeannette",
+              "lang": "FR"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": false,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "Croix Jeannette",
+                "lang": "FR"
+              }
+            ],
+            "AimedArrivalTime": "2026-09-15T06:30:00+02:00",
+            "ExpectedArrivalTime": "2026-09-15T06:30:00+02:00",
+            "ArrivalStatus": "onTime",
+            "AimedDepartureTime": "2026-09-15T06:30:00+02:00",
+            "ExpectedDepartureTime": "2026-09-15T06:30:00+02:00",
+            "StopPointRef": {
+              "value": "GNRA4"
+            },
+            "Order": 1
+          }
+        },
+        "RecordedAtTime": "2026-09-15T04:30:14.19986489+02:00",
+        "ItemIdentifier": "36-GNRA4-R-2026-09-15T06:30+02:00[Europe/Paris]"
+      },
+      {
+        "MonitoringRef": {
+          "value": "GNRA4"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
             "value": "38"
           },
           "FramedVehicleJourneyRef": {
@@ -1343,7 +1402,7 @@
             }
           ],
           "FirstOrLastJourney": "unspecified",
-          "Monitored": false,
+          "Monitored": true,
           "MonitoredCall": {
             "DestinationDisplay": [
               {
@@ -1362,7 +1421,7 @@
             "Order": 11
           }
         },
-        "RecordedAtTime": "2026-09-15T03:46:10.895755821+02:00",
+        "RecordedAtTime": "2026-09-15T04:29:14.195310649+02:00",
         "ItemIdentifier": "4-BENA1-A-2026-09-15T05:03+02:00[Europe/Paris]"
       },
       {
@@ -1461,7 +1520,7 @@
             }
           ],
           "FirstOrLastJourney": "unspecified",
-          "Monitored": false,
+          "Monitored": true,
           "MonitoredCall": {
             "DestinationDisplay": [
               {
@@ -1480,7 +1539,7 @@
             "Order": 11
           }
         },
-        "RecordedAtTime": "2026-09-15T03:58:10.979345409+02:00",
+        "RecordedAtTime": "2026-09-15T04:29:14.195326492+02:00",
         "ItemIdentifier": "4-BENA1-A-2026-09-15T05:58+02:00[Europe/Paris]"
       }
     ]
