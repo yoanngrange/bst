@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-17T18:00:59.151Z",
+  "fetchedAt": "2026-09-17T18:05:28.345Z",
   "stops": {
     "MGIN1": [
       {
@@ -343,17 +343,17 @@
               }
             ],
             "AimedArrivalTime": "2026-09-17T20:04:00+02:00",
-            "ExpectedArrivalTime": "2026-09-17T20:05:54+02:00",
+            "ExpectedArrivalTime": "2026-09-17T20:07:00+02:00",
             "ArrivalStatus": "delayed",
             "AimedDepartureTime": "2026-09-17T20:04:00+02:00",
-            "ExpectedDepartureTime": "2026-09-17T20:05:54+02:00",
+            "ExpectedDepartureTime": "2026-09-17T20:07:00+02:00",
             "StopPointRef": {
               "value": "MGIN1"
             },
             "Order": 11
           }
         },
-        "RecordedAtTime": "2026-09-17T20:00:48.838883258+02:00",
+        "RecordedAtTime": "2026-09-17T20:05:08.866305335+02:00",
         "ItemIdentifier": "3-MGIN1-A-2026-09-17T20:04+02:00[Europe/Paris]"
       }
     ],
@@ -692,6 +692,7 @@
           "FirstOrLastJourney": "unspecified",
           "Monitored": true,
           "MonitoredCall": {
+            "VehicleAtStop": true,
             "DestinationDisplay": [
               {
                 "value": "Hangar à Bananes",
@@ -699,17 +700,20 @@
               }
             ],
             "AimedArrivalTime": "2026-09-17T20:06:00+02:00",
-            "ExpectedArrivalTime": "2026-09-17T20:07:23+02:00",
-            "ArrivalStatus": "delayed",
+            "ExpectedArrivalTime": "2026-09-17T20:05:46+02:00",
+            "ArrivalStatus": "early",
+            "ArrivalProximityText": {
+              "value": "Départ proche"
+            },
             "AimedDepartureTime": "2026-09-17T20:06:00+02:00",
-            "ExpectedDepartureTime": "2026-09-17T20:07:23+02:00",
+            "ExpectedDepartureTime": "2026-09-17T20:05:46+02:00",
             "StopPointRef": {
               "value": "IDNA1"
             },
             "Order": 9
           }
         },
-        "RecordedAtTime": "2026-09-17T19:59:35.007646075+02:00",
+        "RecordedAtTime": "2026-09-17T20:05:05.138586627+02:00",
         "ItemIdentifier": "5-IDNA1-A-2026-09-17T20:06+02:00[Europe/Paris]"
       },
       {
@@ -953,65 +957,6 @@
       }
     ],
     "GNRA4": [
-      {
-        "MonitoringRef": {
-          "value": "GNRA4"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "36"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "49908585-CR_26_27-HT27BE11-Lu-Ma-Je-00"
-          },
-          "VehicleMode": [
-            "bus"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Greneraie - Croix Jeannette"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "R"
-            }
-          ],
-          "DestinationRef": {
-            "value": "XJAN1"
-          },
-          "DestinationName": [
-            {
-              "value": "Croix Jeannette",
-              "lang": "FR"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Croix Jeannette",
-                "lang": "FR"
-              }
-            ],
-            "AimedArrivalTime": "2026-09-17T20:04:00+02:00",
-            "ExpectedArrivalTime": "2026-09-17T20:04:00+02:00",
-            "ArrivalStatus": "onTime",
-            "AimedDepartureTime": "2026-09-17T20:04:00+02:00",
-            "ExpectedDepartureTime": "2026-09-17T20:04:00+02:00",
-            "StopPointRef": {
-              "value": "GNRA4"
-            },
-            "Order": 1
-          }
-        },
-        "RecordedAtTime": "2026-09-17T19:42:03.893010799+02:00",
-        "ItemIdentifier": "36-GNRA4-R-2026-09-17T20:04+02:00[Europe/Paris]"
-      },
       {
         "MonitoringRef": {
           "value": "GNRA4"
@@ -1403,7 +1348,7 @@
             }
           ],
           "FirstOrLastJourney": "unspecified",
-          "Monitored": false,
+          "Monitored": true,
           "MonitoredCall": {
             "DestinationDisplay": [
               {
@@ -1422,7 +1367,7 @@
             "Order": 1
           }
         },
-        "RecordedAtTime": "2026-09-17T20:00:35.025688529+02:00",
+        "RecordedAtTime": "2026-09-17T20:02:35.026349227+02:00",
         "ItemIdentifier": "36-GNRA4-R-2026-09-17T20:34+02:00[Europe/Paris]"
       }
     ],
