@@ -16,10 +16,8 @@ const MONITORING_REFS = ["MGIN1", "MGIN2", "IDNA1", "GNRA4", "BENA1"];
 // above (also serves lines 4 and 5), so no separate quay call is needed for it.
 //
 // MGIN2 (→ Neustrie, line T3) is Marie's added commute direction, alongside
-// the existing MGIN1 (→ Orvault Grd-Val / Marcel Paul). MGIN2 is inferred
-// from TAN's usual two-quay-per-stop numbering and not yet confirmed by real
-// data — check data/naolib.json after the next run; try another ref if MGIN2
-// comes back empty or with the wrong DestinationName.
+// the existing MGIN1 (→ Orvault Grd-Val / Marcel Paul). Confirmed via real
+// API data (2026-09-21).
 
 const apiKey = process.env.NAOLIB_API_KEY;
 if (!apiKey) {
