@@ -215,8 +215,13 @@
    CONFIG: the 5 monitored points, mapped from your NeTEx investigation
 ------------------------------------------------------------------- */
 const MONITORED_POINTS = [
-  { monitoringRef: "MGIN1", apiLineRef: "2",  lineCode: "T2", direction: "Orvault Grd-Val", stopName: "Mangin"          },
-  { monitoringRef: "MGIN1", apiLineRef: "3",  lineCode: "T3", direction: "Marcel Paul",     stopName: "Mangin"          },
+  // Marie's commute switched to T3 → Neustrie (she no longer needs the
+  // Orvault Grd-Val / Marcel Paul directions previously tracked here).
+  // MGIN2 is the opposite-platform quay at Mangin, inferred from TAN's usual
+  // two-quay-per-stop numbering (MGIN1 = confirmed Orvault/Marcel Paul side).
+  // Not yet confirmed against real data — check data/naolib.json after the
+  // next fetch: DestinationName should read "Neustrie" for LineRef 3.
+  { monitoringRef: "MGIN2", apiLineRef: "3",  lineCode: "T3", direction: "Neustrie",        stopName: "Mangin"          },
   { monitoringRef: "IDNA1", apiLineRef: "5",  lineCode: "5",  direction: "Hangar à Bananes",stopName: "Île de Nantes"   },
   { monitoringRef: "GNRA4", apiLineRef: "38", lineCode: "38", direction: "Aéroport",        stopName: "Greneraie"       },
   { monitoringRef: "BENA1", apiLineRef: "4",  lineCode: "4",  direction: "Foch - Cathédrale",stopName: "Beaulieu"       },
@@ -258,12 +263,9 @@ function mockResponseFor(monitoringRef) {
   const mins = (m) => new Date(now + m * 60000).toISOString();
 
   const fakePassages = {
-    MGIN1: [
-      { LineRef: "2", PublishedLineName: "T2", DestinationName: "Orvault Grand Val", ExpectedArrivalTime: mins(5) },
-      { LineRef: "3", PublishedLineName: "T3", DestinationName: "Marcel Paul",       ExpectedArrivalTime: mins(6) },
-      { LineRef: "2", PublishedLineName: "T2", DestinationName: "Orvault Grand Val", ExpectedArrivalTime: mins(12) },
-      { LineRef: "3", PublishedLineName: "T3", DestinationName: "Marcel Paul",       ExpectedArrivalTime: mins(21) },
-      { LineRef: "2", PublishedLineName: "T2", DestinationName: "Orvault Grand Val", ExpectedArrivalTime: mins(19) },
+    MGIN2: [
+      { LineRef: "3", PublishedLineName: "T3", DestinationName: "Neustrie", ExpectedArrivalTime: mins(6) },
+      { LineRef: "3", PublishedLineName: "T3", DestinationName: "Neustrie", ExpectedArrivalTime: mins(21) },
     ],
     IDNA1: [
       { LineRef: "5", PublishedLineName: "5", DestinationName: "Hangar à Bananes", ExpectedArrivalTime: mins(5) },

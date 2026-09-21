@@ -9,11 +9,17 @@ import { writeFile, mkdir } from "node:fs/promises";
 const API_BASE_URL = "https://api.staging.okina.fr/gateway/sem/realtime/siri/2.0/stop-monitoring.json";
 // ---------------------------------------------------------------------
 
-const MONITORING_REFS = ["MGIN1", "IDNA1", "GNRA4", "BENA1"];
+const MONITORING_REFS = ["MGIN2", "IDNA1", "GNRA4", "BENA1"];
 // Line 26 (→ Jonelière) is currently tracked via IDNA1 (see index.html comment):
 // confirmed by real data that the ongoing works diversion routes it through
 // Île de Nantes instead of its normal Monzie stop. IDNA1 is already covered
 // above (also serves lines 4 and 5), so no separate quay call is needed for it.
+//
+// MGIN2 (→ Neustrie, line T3) replaces MGIN1 (→ Orvault Grd-Val / Marcel Paul):
+// Marie's commute now needs the opposite platform at Mangin. MGIN2 is inferred
+// from TAN's usual two-quay-per-stop numbering and not yet confirmed by real
+// data — check data/naolib.json after the next run; revert to MGIN1 (and try
+// another ref) if MGIN2 comes back empty or with the wrong DestinationName.
 
 const apiKey = process.env.NAOLIB_API_KEY;
 if (!apiKey) {
