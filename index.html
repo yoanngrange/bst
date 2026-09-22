@@ -115,8 +115,13 @@
     font-size: 20px;
     font-weight: 700;
     min-width: 58px;
+    max-width: 40%;
     text-align: right;
     font-variant-numeric: tabular-nums;
+  }
+  .time.multi {
+    font-size: 15px;
+    line-height: 1.4;
   }
   .time.soon { color: var(--accent); }
   .empty {
@@ -478,19 +483,27 @@ function render(rows) {
 
   const pointIds = selectedUser ? USER_POINT_IDS[selectedUser] : null;
 
+  // Group by point (line + direction + stop are one-to-one with a
+  // MONITORED_POINTS entry, so grouping by id groups by exactly those three
+  // fields) — one row per point, with every upcoming timer instead of one
+  // row per passage. Applies whether or not a user is selected.
+  const groups = new Map();
+  for (const row of rows) {
+    if (!groups.has(row.id)) {
+      groups.set(row.id, { line: row.line, direction: row.direction, stopName: row.stopName, times: [] });
+    }
+    groups.get(row.id).times.push(row.minutes);
+  }
+  for (const g of groups.values()) g.times.sort((a, b) => a - b);
+
   let ordered;
   if (!pointIds) {
-    // No user selected (or Yoann): everything, soonest first — original behavior.
-    ordered = [...rows].sort((a, b) => a.minutes - b.minutes);
+    // No user selected (or Yoann): every point, soonest-arriving group first.
+    ordered = [...groups.values()].sort((a, b) => a.times[0] - b.times[0]);
   } else {
-    // Grouped by the user's configured priority order; soonest first within
-    // each group, so "my line first" holds even when another line is closer.
-    const byId = new Map();
-    for (const id of pointIds) byId.set(id, []);
-    for (const row of rows) {
-      if (byId.has(row.id)) byId.get(row.id).push(row);
-    }
-    ordered = pointIds.flatMap(id => byId.get(id).sort((a, b) => a.minutes - b.minutes));
+    // The user's configured priority order — "my line first" holds even
+    // when another line's next bus is closer.
+    ordered = pointIds.map(id => groups.get(id)).filter(Boolean);
   }
 
   if (ordered.length === 0) {
@@ -498,17 +511,18 @@ function render(rows) {
     return;
   }
 
-  for (const r of ordered) {
-    const colors = LINE_COLORS[r.line] || { bg: "#666", text: "#fff" };
+  for (const g of ordered) {
+    const colors = LINE_COLORS[g.line] || { bg: "#666", text: "#fff" };
     const row = document.createElement("div");
     row.className = "row";
+    const timesText = g.times.map(m => `${m} min`).join(", ");
     row.innerHTML = `
-      <div class="badge" style="background:${colors.bg};color:${colors.text}">${r.line}</div>
+      <div class="badge" style="background:${colors.bg};color:${colors.text}">${g.line}</div>
       <div class="info">
-        <div class="direction">→ ${r.direction}</div>
-        <div class="stop">${r.stopName}</div>
+        <div class="direction">→ ${g.direction}</div>
+        <div class="stop">${g.stopName}</div>
       </div>
-      <div class="time ${r.minutes <= 5 ? 'soon' : ''}">${r.minutes} min</div>
+      <div class="time ${g.times.length > 1 ? 'multi' : ''} ${g.times[0] <= 5 ? 'soon' : ''}">${timesText}</div>
     `;
     list.appendChild(row);
   }
