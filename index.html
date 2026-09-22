@@ -459,9 +459,13 @@ async function loadAll() {
   render(rows);
 }
 
+// Display order for the line filter chips (not the fetch/color config order).
+const LINE_DISPLAY_ORDER = ["T2", "T3", "4", "5", "26", "30", "38"];
+
 function renderLineFilters() {
   const container = document.getElementById("lineFilters");
-  const lines = [...new Set(MONITORED_POINTS.map(p => p.lineCode))];
+  const configured = new Set(MONITORED_POINTS.map(p => p.lineCode));
+  const lines = LINE_DISPLAY_ORDER.filter(l => configured.has(l));
   if (container.dataset.built === "true") {
     [...container.children].forEach(chip => {
       chip.classList.toggle("active", activeLineFilters.size === 0 || activeLineFilters.has(chip.dataset.line));
