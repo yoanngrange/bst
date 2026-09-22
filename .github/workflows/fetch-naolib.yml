@@ -20,6 +20,12 @@ jobs:
         with:
           node-version: "22"
 
+      - name: TEMP debug discovery endpoints
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          NAOLIB_API_KEY: ${{ secrets.NAOLIB_API_KEY }}
+        run: node scripts/debug-discovery.mjs
+
       - name: Fetch Naolib data
         env:
           NAOLIB_API_KEY: ${{ secrets.NAOLIB_API_KEY }}
