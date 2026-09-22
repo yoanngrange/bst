@@ -123,7 +123,7 @@
     font-size: 15px;
     line-height: 1.4;
   }
-  .time.soon { color: var(--accent); }
+  .time .soon { color: var(--accent); }
   .empty {
     text-align: center;
     color: var(--muted);
@@ -559,14 +559,16 @@ function render(rows) {
     const colors = LINE_COLORS[g.line] || { bg: "#666", text: "#fff" };
     const row = document.createElement("div");
     row.className = "row";
-    const timesText = g.times.map(m => `${m} min`).join(", ");
+    // Each timer is highlighted individually — only the ones actually ≤5 min
+    // turn yellow, not the whole group just because the soonest one qualifies.
+    const timesHtml = g.times.map(m => `<span class="${m <= 5 ? 'soon' : ''}">${m} min</span>`).join(", ");
     row.innerHTML = `
       <div class="badge" style="background:${colors.bg};color:${colors.text}">${g.line}</div>
       <div class="info">
         <div class="direction">→ ${g.direction}</div>
         <div class="stop">${g.stopName}</div>
       </div>
-      <div class="time ${g.times.length > 1 ? 'multi' : ''} ${g.times[0] <= 5 ? 'soon' : ''}">${timesText}</div>
+      <div class="time ${g.times.length > 1 ? 'multi' : ''}">${timesHtml}</div>
     `;
     list.appendChild(row);
   }
