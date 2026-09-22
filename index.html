@@ -212,6 +212,7 @@
 </div>
 
 <div class="filters" id="filters"></div>
+<div class="filters" id="lineFilters"></div>
 
 <div class="list" id="list"></div>
 
@@ -288,6 +289,11 @@ const USER_POINT_IDS = {
 const SELECTED_USER_KEY = "bst-selected-user";
 let selectedUser = localStorage.getItem(SELECTED_USER_KEY);
 if (selectedUser && !USERS.includes(selectedUser)) selectedUser = null;
+
+// Line filter — independent of the user filter, so a line can be isolated
+// (or everything shown) without scoping to any one person. Empty set = all
+// lines. Combines with the user filter by intersection when both are set.
+const activeLineFilters = new Set();
 
 /* ------------------------------------------------------------------
    MOCK DATA — shaped exactly like a real SIRI-Lite StopMonitoring
@@ -446,7 +452,39 @@ async function loadAll() {
   }
 
   renderUserSelector();
+  renderLineFilters();
   render(rows);
+}
+
+function renderLineFilters() {
+  const container = document.getElementById("lineFilters");
+  const lines = [...new Set(MONITORED_POINTS.map(p => p.lineCode))];
+  if (container.dataset.built === "true") {
+    [...container.children].forEach(chip => {
+      chip.classList.toggle("active", activeLineFilters.size === 0 || activeLineFilters.has(chip.dataset.line));
+    });
+    return;
+  }
+  container.dataset.built = "true";
+  container.innerHTML = "";
+  for (const line of lines) {
+    const chip = document.createElement("button");
+    chip.className = "filter-chip active";
+    chip.textContent = line;
+    chip.dataset.line = line;
+    chip.style.borderColor = (LINE_COLORS[line] || {}).bg || "var(--border)";
+    chip.addEventListener("click", () => {
+      if (activeLineFilters.has(line)) {
+        activeLineFilters.delete(line);
+      } else {
+        activeLineFilters.add(line);
+      }
+      // If every line ends up selected, treat as "show all" (empty set)
+      if (activeLineFilters.size === lines.length) activeLineFilters.clear();
+      loadAll();
+    });
+    container.appendChild(chip);
+  }
 }
 
 function renderUserSelector() {
@@ -483,12 +521,18 @@ function render(rows) {
 
   const pointIds = selectedUser ? USER_POINT_IDS[selectedUser] : null;
 
+  // Line filter is independent of, and combines with, the user filter —
+  // a line can be isolated (or everything shown) without scoping to anyone.
+  const lineFiltered = activeLineFilters.size === 0
+    ? rows
+    : rows.filter(r => activeLineFilters.has(r.line));
+
   // Group by point (line + direction + stop are one-to-one with a
   // MONITORED_POINTS entry, so grouping by id groups by exactly those three
   // fields) — one row per point, with every upcoming timer instead of one
   // row per passage. Applies whether or not a user is selected.
   const groups = new Map();
-  for (const row of rows) {
+  for (const row of lineFiltered) {
     if (!groups.has(row.id)) {
       groups.set(row.id, { line: row.line, direction: row.direction, stopName: row.stopName, times: [] });
     }
