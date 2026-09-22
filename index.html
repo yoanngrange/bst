@@ -212,25 +212,43 @@
 
 <script>
 /* ------------------------------------------------------------------
-   CONFIG: the 5 monitored points, mapped from your NeTEx investigation
+   CONFIG: monitored points, mapped from your NeTEx investigation.
+   Each has a stable `id`, referenced by USER_POINT_IDS below to build
+   the per-user filtered + ordered view.
 ------------------------------------------------------------------- */
 const MONITORED_POINTS = [
-  { monitoringRef: "MGIN1", apiLineRef: "2",  lineCode: "T2", direction: "Orvault Grd-Val", stopName: "Mangin"          },
-  { monitoringRef: "MGIN1", apiLineRef: "3",  lineCode: "T3", direction: "Marcel Paul",     stopName: "Mangin"          },
-  // Marie also takes T3 → Neustrie (opposite platform from the Marcel Paul
-  // side above). MGIN2 confirmed via real API data (2026-09-21).
-  { monitoringRef: "MGIN2", apiLineRef: "3",  lineCode: "T3", direction: "Neustrie",        stopName: "Mangin"          },
-  { monitoringRef: "IDNA1", apiLineRef: "5",  lineCode: "5",  direction: "Hangar à Bananes",stopName: "Île de Nantes"   },
-  { monitoringRef: "GNRA4", apiLineRef: "38", lineCode: "38", direction: "Aéroport",        stopName: "Greneraie"       },
-  { monitoringRef: "BENA1", apiLineRef: "4",  lineCode: "4",  direction: "Foch - Cathédrale",stopName: "Beaulieu"       },
+  { id: "mgin-t2",           monitoringRef: "MGIN1", apiLineRef: "2",  lineCode: "T2", direction: "Orvault Grd-Val", stopName: "Mangin"          },
+  { id: "mgin-t3-marcelpaul",monitoringRef: "MGIN1", apiLineRef: "3",  lineCode: "T3", direction: "Marcel Paul",     stopName: "Mangin"          },
+  // Marie & Martine also take T3 → Neustrie (opposite platform from the
+  // Marcel Paul side above). MGIN2 confirmed via real API data (2026-09-21).
+  { id: "mgin-t3-neustrie",  monitoringRef: "MGIN2", apiLineRef: "3",  lineCode: "T3", direction: "Neustrie",        stopName: "Mangin"          },
+  { id: "idna-5",            monitoringRef: "IDNA1", apiLineRef: "5",  lineCode: "5",  direction: "Hangar à Bananes",stopName: "Île de Nantes"   },
+  { id: "gnra-38-aeroport",  monitoringRef: "GNRA4", apiLineRef: "38", lineCode: "38", direction: "Aéroport",        stopName: "Greneraie"       },
+  { id: "bena-4",            monitoringRef: "BENA1", apiLineRef: "4",  lineCode: "4",  direction: "Foch - Cathédrale",stopName: "Beaulieu"       },
   // Line 26 (→ Jonelière): confirmed via real API data (2026-09-11) that the
   // ongoing works diversion currently routes it through Île de Nantes (IDNA1),
-  // not its normal Monzie stop. Switch back to Monzie (MOZI1 or MOZI2 — still
-  // unconfirmed which) once the diversion ends and line 26 disappears from IDNA1.
-  { monitoringRef: "IDNA1", apiLineRef: "26", lineCode: "26", direction: "Jonelière", stopName: "Île de Nantes (déviation)" },
+  // not its normal Monzie stop. Re-checked 2026-09-22 via stoppoints-discovery:
+  // no stop named "Monzie" exists in the API at all right now — genuinely
+  // unavailable during the works. Switch to a real Monzie quay once the
+  // diversion ends and one reappears in discovery.
+  { id: "idna-26-jonelière", monitoringRef: "IDNA1", apiLineRef: "26", lineCode: "26", direction: "Jonelière", stopName: "Île de Nantes (déviation)" },
+
+  // Added 2026-09-22 for the per-user filter feature. Confirmed via the
+  // SIRI-Lite stoppoints-discovery.json endpoint plus a live stop-monitoring
+  // call to check the actual LineRef/DestinationName served by each quay —
+  // several quays can share a stop name, one per direction/line.
+  { id: "rpbl-5-garesud",       monitoringRef: "RPBL4", apiLineRef: "5",  lineCode: "5",  direction: "Gare Sud",         stopName: "République"     },
+  { id: "rpbl-26-hoteldereg",   monitoringRef: "RPBL1", apiLineRef: "26", lineCode: "26", direction: "Hôtel de Région",  stopName: "République"     },
+  { id: "galh-38-greneraie",    monitoringRef: "GALH2", apiLineRef: "38", lineCode: "38", direction: "Greneraie",        stopName: "Galheur"        },
+  { id: "dide-t3-marcelpaul",   monitoringRef: "DIDE1", apiLineRef: "3",  lineCode: "T3", direction: "Marcel Paul",      stopName: "Espace Diderot" },
+  { id: "lhou-30-trentemoult",  monitoringRef: "LHOU1", apiLineRef: "30", lineCode: "30", direction: "Trentemoult",      stopName: "La Houssais"    },
+  { id: "dide-30-ilesdeloire",  monitoringRef: "DIDE5", apiLineRef: "30", lineCode: "30", direction: "Îles de Loire",    stopName: "Espace Diderot" },
+  { id: "netr-t3-marcelpaul",   monitoringRef: "NETR1", apiLineRef: "3",  lineCode: "T3", direction: "Marcel Paul",      stopName: "Neustrie"       },
 ];
 
-// Official Naolib per-line colors (from line pictogram SVGs)
+// Official Naolib per-line colors (from line pictogram SVGs).
+// Line 30's color is a placeholder (not verified against an official source
+// — couldn't confirm it) — adjust if you know the real one.
 const LINE_COLORS = {
   T2: { bg: "#E30613", text: "#FFFFFF" },
   T3: { bg: "#2581C4", text: "#FFFFFF" },
@@ -238,6 +256,7 @@ const LINE_COLORS = {
   "5": { bg: "#0BBBEF", text: "#111111" },
   "38": { bg: "#009640", text: "#FFFFFF" },
   "26": { bg: "#009640", text: "#FFFFFF" },
+  "30": { bg: "#8E44AD", text: "#FFFFFF" },
 };
 
 const WINDOW_MINUTES = 30;
@@ -246,8 +265,26 @@ const REFRESH_SECONDS = 30;
 // Flip this to true only for local UI development without live data.
 const USE_MOCK = false;
 
-// Filter state: Set of active line codes. Empty Set = show all.
-const activeFilters = new Set();
+/* ------------------------------------------------------------------
+   USERS: each user's monitored points, in display-priority order.
+   Rows are grouped by this order (soonest-first within each point),
+   not a single global soonest-first sort — so "my line first" holds
+   even when a later line's bus happens to be closer.
+   `null` (Yoann) means no restriction: every point, sorted purely by
+   soonest time, same as the app's original default behavior.
+------------------------------------------------------------------- */
+const USERS = ["Valentin", "Marie", "Yoann", "Martine"];
+
+const USER_POINT_IDS = {
+  Valentin: ["idna-5", "rpbl-5-garesud", "idna-26-jonelière", "rpbl-26-hoteldereg", "gnra-38-aeroport", "galh-38-greneraie"],
+  Marie: ["mgin-t3-neustrie", "dide-t3-marcelpaul", "lhou-30-trentemoult", "dide-30-ilesdeloire"],
+  Yoann: null,
+  Martine: ["netr-t3-marcelpaul", "mgin-t3-neustrie", "galh-38-greneraie", "gnra-38-aeroport"],
+};
+
+const SELECTED_USER_KEY = "bst-selected-user";
+let selectedUser = localStorage.getItem(SELECTED_USER_KEY);
+if (selectedUser && !USERS.includes(selectedUser)) selectedUser = null;
 
 /* ------------------------------------------------------------------
    MOCK DATA — shaped exactly like a real SIRI-Lite StopMonitoring
@@ -396,6 +433,7 @@ async function loadAll() {
       if (mins > WINDOW_MINUTES) continue;
 
       rows.push({
+        id: point.id,
         line: point.lineCode,
         direction: point.direction,
         stopName: point.stopName,
@@ -404,38 +442,32 @@ async function loadAll() {
     }
   }
 
-  rows.sort((a, b) => a.minutes - b.minutes);
-  renderFilters();
+  renderUserSelector();
   render(rows);
 }
 
-function renderFilters() {
+function renderUserSelector() {
   const container = document.getElementById("filters");
-  // Build the chip list once from the lines actually configured
-  const lines = [...new Set(MONITORED_POINTS.map(p => p.lineCode))];
   if (container.dataset.built === "true") {
-    // just refresh active state
     [...container.children].forEach(chip => {
-      chip.classList.toggle("active", activeFilters.size === 0 || activeFilters.has(chip.dataset.line));
+      chip.classList.toggle("active", chip.dataset.user === (selectedUser || ""));
     });
     return;
   }
   container.dataset.built = "true";
   container.innerHTML = "";
-  for (const line of lines) {
+  for (const user of USERS) {
     const chip = document.createElement("button");
-    chip.className = "filter-chip active";
-    chip.textContent = line;
-    chip.dataset.line = line;
-    chip.style.borderColor = (LINE_COLORS[line] || {}).bg || "var(--border)";
+    chip.className = "filter-chip" + (selectedUser === user ? " active" : "");
+    chip.textContent = user;
+    chip.dataset.user = user;
     chip.addEventListener("click", () => {
-      if (activeFilters.has(line)) {
-        activeFilters.delete(line);
+      selectedUser = (selectedUser === user) ? null : user;
+      if (selectedUser) {
+        localStorage.setItem(SELECTED_USER_KEY, selectedUser);
       } else {
-        activeFilters.add(line);
+        localStorage.removeItem(SELECTED_USER_KEY);
       }
-      // If every line ends up selected, treat as "show all" (empty set)
-      if (activeFilters.size === lines.length) activeFilters.clear();
       loadAll();
     });
     container.appendChild(chip);
@@ -446,16 +478,29 @@ function render(rows) {
   const list = document.getElementById("list");
   list.innerHTML = "";
 
-  const filtered = activeFilters.size === 0
-    ? rows
-    : rows.filter(r => activeFilters.has(r.line));
+  const pointIds = selectedUser ? USER_POINT_IDS[selectedUser] : null;
 
-  if (filtered.length === 0) {
+  let ordered;
+  if (!pointIds) {
+    // No user selected (or Yoann): everything, soonest first — original behavior.
+    ordered = [...rows].sort((a, b) => a.minutes - b.minutes);
+  } else {
+    // Grouped by the user's configured priority order; soonest first within
+    // each group, so "my line first" holds even when another line is closer.
+    const byId = new Map();
+    for (const id of pointIds) byId.set(id, []);
+    for (const row of rows) {
+      if (byId.has(row.id)) byId.get(row.id).push(row);
+    }
+    ordered = pointIds.flatMap(id => byId.get(id).sort((a, b) => a.minutes - b.minutes));
+  }
+
+  if (ordered.length === 0) {
     list.innerHTML = `<div class="empty">Aucun passage dans les ${WINDOW_MINUTES} prochaines minutes.</div>`;
     return;
   }
 
-  for (const r of filtered) {
+  for (const r of ordered) {
     const colors = LINE_COLORS[r.line] || { bg: "#666", text: "#fff" };
     const row = document.createElement("div");
     row.className = "row";

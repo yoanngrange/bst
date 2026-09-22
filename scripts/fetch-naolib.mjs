@@ -9,11 +9,29 @@ import { writeFile, mkdir } from "node:fs/promises";
 const API_BASE_URL = "https://api.staging.okina.fr/gateway/sem/realtime/siri/2.0/stop-monitoring.json";
 // ---------------------------------------------------------------------
 
-const MONITORING_REFS = ["MGIN1", "MGIN2", "IDNA1", "GNRA4", "BENA1"];
+const MONITORING_REFS = [
+  "MGIN1", "MGIN2", "IDNA1", "GNRA4", "BENA1",
+  // Added 2026-09-22 for the per-user filter feature (Valentin/Marie/Martine).
+  // All confirmed via the SIRI-Lite stoppoints-discovery.json endpoint plus a
+  // live stop-monitoring call to check the actual LineRef/DestinationName
+  // served by each quay (multiple quays can share a stop name — one per
+  // direction/line, not one per stop).
+  "RPBL4", // République → Gare Sud (line 5) — Valentin
+  "RPBL1", // République → Hôtel de Région (line 26) — Valentin
+  "GALH2", // Galheur → Greneraie (line 38) — Valentin & Martine
+  "DIDE1", // Espace Diderot → Marcel Paul (T3) — Marie
+  "LHOU1", // La Houssais → Trentemoult (line 30) — Marie
+  "DIDE5", // Espace Diderot → Îles de Loire (line 30) — Marie
+  "NETR1", // Neustrie → Marcel Paul (T3) — Martine
+];
 // Line 26 (→ Jonelière) is currently tracked via IDNA1 (see index.html comment):
 // confirmed by real data that the ongoing works diversion routes it through
 // Île de Nantes instead of its normal Monzie stop. IDNA1 is already covered
 // above (also serves lines 4 and 5), so no separate quay call is needed for it.
+// Re-checked 2026-09-22 via stoppoints-discovery.json: no stop named "Monzie"
+// (or close spelling) exists in the API at all right now — genuinely
+// unavailable during the works, not just an unconfirmed code. Revisit once
+// the diversion ends and a real Monzie quay reappears in discovery.
 //
 // MGIN2 (→ Neustrie, line T3) is Marie's added commute direction, alongside
 // the existing MGIN1 (→ Orvault Grd-Val / Marcel Paul). Confirmed via real
