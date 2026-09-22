@@ -249,7 +249,10 @@ const MONITORED_POINTS = [
   { id: "dide-t3-marcelpaul",   monitoringRef: "DIDE1", apiLineRef: "3",  lineCode: "T3", direction: "Marcel Paul",      stopName: "Espace Diderot" },
   { id: "lhou-30-trentemoult",  monitoringRef: "LHOU1", apiLineRef: "30", lineCode: "30", direction: "Trentemoult",      stopName: "La Houssais"    },
   { id: "dide-30-ilesdeloire",  monitoringRef: "DIDE5", apiLineRef: "30", lineCode: "30", direction: "Îles de Loire",    stopName: "Espace Diderot" },
-  { id: "netr-t3-marcelpaul",   monitoringRef: "NETR1", apiLineRef: "3",  lineCode: "T3", direction: "Marcel Paul",      stopName: "Neustrie"       },
+  // Replaced 2026-09-22: Martine's stop for this direction is Trocardière,
+  // not Neustrie. Confirmed via stoppoints-discovery + a live stop-monitoring
+  // check (TROC1 -> line 3, destination "Marcel Paul").
+  { id: "troc-t3-marcelpaul",   monitoringRef: "TROC1", apiLineRef: "3",  lineCode: "T3", direction: "Marcel Paul",      stopName: "Trocardière"    },
 ];
 
 // Official Naolib per-line colors (from line pictogram SVGs)
@@ -283,7 +286,7 @@ const USER_POINT_IDS = {
   Valentin: ["idna-5", "rpbl-5-garesud", "idna-26-jonelière", "rpbl-26-hoteldereg", "gnra-38-aeroport", "galh-38-greneraie"],
   Marie: ["mgin-t3-neustrie", "dide-t3-marcelpaul", "lhou-30-trentemoult", "dide-30-ilesdeloire"],
   Yoann: null,
-  Martine: ["netr-t3-marcelpaul", "mgin-t3-neustrie", "galh-38-greneraie", "gnra-38-aeroport"],
+  Martine: ["troc-t3-marcelpaul", "mgin-t3-neustrie", "galh-38-greneraie", "gnra-38-aeroport"],
 };
 
 const SELECTED_USER_KEY = "bst-selected-user";

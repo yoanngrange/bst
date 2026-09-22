@@ -22,7 +22,7 @@ const MONITORING_REFS = [
   "DIDE1", // Espace Diderot → Marcel Paul (T3) — Marie
   "LHOU1", // La Houssais → Trentemoult (line 30) — Marie
   "DIDE5", // Espace Diderot → Îles de Loire (line 30) — Marie
-  "NETR1", // Neustrie → Marcel Paul (T3) — Martine
+  "TROC1", // Trocardière → Marcel Paul (T3) — Martine (replaced Neustrie 2026-09-22)
 ];
 // Line 26 (→ Jonelière) is currently tracked via IDNA1 (see index.html comment):
 // confirmed by real data that the ongoing works diversion routes it through
