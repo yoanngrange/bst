@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-23T21:15:35.021Z",
+  "fetchedAt": "2026-09-23T21:21:13.213Z",
   "stops": {
     "MGIN1": [
       {
@@ -58,7 +58,7 @@
             "Order": 11
           }
         },
-        "RecordedAtTime": "2026-09-23T23:15:28.336093379+02:00",
+        "RecordedAtTime": "2026-09-23T23:20:58.375892736+02:00",
         "ItemIdentifier": "3-MGIN1-A-2026-09-23T23:37+02:00[Europe/Paris]"
       },
       {
@@ -107,17 +107,17 @@
               }
             ],
             "AimedArrivalTime": "2026-09-23T23:22:00+02:00",
-            "ExpectedArrivalTime": "2026-09-23T23:22:00+02:00",
-            "ArrivalStatus": "onTime",
+            "ExpectedArrivalTime": "2026-09-23T23:22:50+02:00",
+            "ArrivalStatus": "delayed",
             "AimedDepartureTime": "2026-09-23T23:22:00+02:00",
-            "ExpectedDepartureTime": "2026-09-23T23:22:00+02:00",
+            "ExpectedDepartureTime": "2026-09-23T23:22:50+02:00",
             "StopPointRef": {
               "value": "MGIN1"
             },
             "Order": 11
           }
         },
-        "RecordedAtTime": "2026-09-23T23:15:28.336072516+02:00",
+        "RecordedAtTime": "2026-09-23T23:20:58.375882487+02:00",
         "ItemIdentifier": "3-MGIN1-A-2026-09-23T23:22+02:00[Europe/Paris]"
       }
     ],
@@ -226,17 +226,17 @@
               }
             ],
             "AimedArrivalTime": "2026-09-23T23:38:00+02:00",
-            "ExpectedArrivalTime": "2026-09-23T23:38:00+02:00",
-            "ArrivalStatus": "onTime",
+            "ExpectedArrivalTime": "2026-09-23T23:39:04+02:00",
+            "ArrivalStatus": "delayed",
             "AimedDepartureTime": "2026-09-23T23:38:00+02:00",
-            "ExpectedDepartureTime": "2026-09-23T23:38:00+02:00",
+            "ExpectedDepartureTime": "2026-09-23T23:39:04+02:00",
             "StopPointRef": {
               "value": "MGIN2"
             },
             "Order": 22
           }
         },
-        "RecordedAtTime": "2026-09-23T22:57:27.097905074+02:00",
+        "RecordedAtTime": "2026-09-23T23:20:28.373028781+02:00",
         "ItemIdentifier": "3-MGIN2-R-2026-09-23T23:38+02:00[Europe/Paris]"
       }
     ],
@@ -463,6 +463,7 @@
           "FirstOrLastJourney": "unspecified",
           "Monitored": true,
           "MonitoredCall": {
+            "VehicleAtStop": true,
             "DestinationDisplay": [
               {
                 "value": "Foch - Cathédrale",
@@ -470,17 +471,20 @@
               }
             ],
             "AimedArrivalTime": "2026-09-23T23:19:00+02:00",
-            "ExpectedArrivalTime": "2026-09-23T23:22:09+02:00",
+            "ExpectedArrivalTime": "2026-09-23T23:21:39+02:00",
             "ArrivalStatus": "delayed",
+            "ArrivalProximityText": {
+              "value": "Départ proche"
+            },
             "AimedDepartureTime": "2026-09-23T23:19:00+02:00",
-            "ExpectedDepartureTime": "2026-09-23T23:22:09+02:00",
+            "ExpectedDepartureTime": "2026-09-23T23:21:39+02:00",
             "StopPointRef": {
               "value": "IDNA1"
             },
             "Order": 12
           }
         },
-        "RecordedAtTime": "2026-09-23T23:09:12.244331257+02:00",
+        "RecordedAtTime": "2026-09-23T23:20:42.317710177+02:00",
         "ItemIdentifier": "4-IDNA1-A-2026-09-23T23:19+02:00[Europe/Paris]"
       },
       {
@@ -541,65 +545,6 @@
         },
         "RecordedAtTime": "2026-09-23T22:20:41.864825971+02:00",
         "ItemIdentifier": "5-IDNA1-A-2026-09-24T00:20+02:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "IDNA1"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "5"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "49764584-CR_26_27-HT27BE13-Mercredi-00-0010000"
-          },
-          "VehicleMode": [
-            "bus"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Hangar à Bananes - Gare Sud"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "A"
-            }
-          ],
-          "DestinationRef": {
-            "value": "HBAN1"
-          },
-          "DestinationName": [
-            {
-              "value": "Hangar à Bananes",
-              "lang": "FR"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Hangar à Bananes",
-                "lang": "FR"
-              }
-            ],
-            "AimedArrivalTime": "2026-09-23T23:20:00+02:00",
-            "ExpectedArrivalTime": "2026-09-23T23:20:19+02:00",
-            "ArrivalStatus": "delayed",
-            "AimedDepartureTime": "2026-09-23T23:20:00+02:00",
-            "ExpectedDepartureTime": "2026-09-23T23:20:19+02:00",
-            "StopPointRef": {
-              "value": "IDNA1"
-            },
-            "Order": 9
-          }
-        },
-        "RecordedAtTime": "2026-09-23T21:51:40.65176388+02:00",
-        "ItemIdentifier": "5-IDNA1-A-2026-09-23T23:20+02:00[Europe/Paris]"
       },
       {
         "MonitoringRef": {
@@ -785,65 +730,6 @@
       }
     ],
     "BENA1": [
-      {
-        "MonitoringRef": {
-          "value": "BENA1"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "4"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "49761793-CR_26_27-HT27BE13-Mercredi-00-0010000"
-          },
-          "VehicleMode": [
-            "bus"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Foch - Cathédrale - Porte de Vertou"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "A"
-            }
-          ],
-          "DestinationRef": {
-            "value": "FOCH1"
-          },
-          "DestinationName": [
-            {
-              "value": "Foch - Cathédrale",
-              "lang": "FR"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Foch - Cathédrale",
-                "lang": "FR"
-              }
-            ],
-            "AimedArrivalTime": "2026-09-23T23:18:00+02:00",
-            "ExpectedArrivalTime": "2026-09-23T23:21:09+02:00",
-            "ArrivalStatus": "delayed",
-            "AimedDepartureTime": "2026-09-23T23:18:00+02:00",
-            "ExpectedDepartureTime": "2026-09-23T23:21:09+02:00",
-            "StopPointRef": {
-              "value": "BENA1"
-            },
-            "Order": 11
-          }
-        },
-        "RecordedAtTime": "2026-09-23T23:09:12.253915636+02:00",
-        "ItemIdentifier": "4-BENA1-A-2026-09-23T23:18+02:00[Europe/Paris]"
-      },
       {
         "MonitoringRef": {
           "value": "BENA1"
@@ -1196,20 +1082,20 @@
               }
             ],
             "AimedArrivalTime": "2026-09-23T23:20:00+02:00",
-            "ExpectedArrivalTime": "2026-09-23T23:21:29+02:00",
+            "ExpectedArrivalTime": "2026-09-23T23:21:46+02:00",
             "ArrivalStatus": "delayed",
             "ArrivalProximityText": {
               "value": "Dernier départ"
             },
             "AimedDepartureTime": "2026-09-23T23:20:00+02:00",
-            "ExpectedDepartureTime": "2026-09-23T23:21:29+02:00",
+            "ExpectedDepartureTime": "2026-09-23T23:21:46+02:00",
             "StopPointRef": {
               "value": "GALH2"
             },
             "Order": 10
           }
         },
-        "RecordedAtTime": "2026-09-23T23:15:12.293203683+02:00",
+        "RecordedAtTime": "2026-09-23T23:20:42.324865743+02:00",
         "ItemIdentifier": "38-GALH2-A-2026-09-23T23:20+02:00[Europe/Paris]"
       }
     ],
