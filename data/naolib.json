@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-24T22:15:34.969Z",
+  "fetchedAt": "2026-09-24T22:20:35.737Z",
   "stops": {
     "MGIN1": [
       {
@@ -124,28 +124,27 @@
         "ItemIdentifier": "3-MGIN1-A-2026-09-25T00:52+02:00[Europe/Paris]"
       }
     ],
-    "MGIN2": [],
-    "IDNA1": [
+    "MGIN2": [
       {
         "MonitoringRef": {
-          "value": "IDNA1"
+          "value": "MGIN2"
         },
         "MonitoredVehicleJourney": {
           "LineRef": {
-            "value": "4"
+            "value": "3"
           },
           "FramedVehicleJourneyRef": {
             "DataFrameRef": {
               "value": "any"
             },
-            "DatedVehicleJourneyRef": "49762570-CR_26_27-CT27BE11-Lu-Ma-Je-02-1101000"
+            "DatedVehicleJourneyRef": "VJ_Renfort_3_PIRB2_DEFAULT_0"
           },
           "VehicleMode": [
-            "bus"
+            "tram"
           ],
           "PublishedLineName": [
             {
-              "value": "Foch - Cathédrale - Porte de Vertou"
+              "value": "Marcel Paul - Neustrie"
             }
           ],
           "DirectionName": [
@@ -154,11 +153,11 @@
             }
           ],
           "DestinationRef": {
-            "value": "FOCH1"
+            "value": "PIRB2"
           },
           "DestinationName": [
             {
-              "value": "Foch - Cathédrale",
+              "value": "Pirmil",
               "lang": "FR"
             }
           ],
@@ -167,27 +166,90 @@
           "MonitoredCall": {
             "DestinationDisplay": [
               {
-                "value": "Foch - Cathédrale",
+                "value": "Pirmil",
                 "lang": "FR"
               }
             ],
-            "AimedArrivalTime": "2026-09-25T00:19:00+02:00",
-            "ExpectedArrivalTime": "2026-09-25T00:20:28+02:00",
+            "AimedArrivalTime": "2026-09-25T00:38:00+02:00",
+            "ExpectedArrivalTime": "2026-09-25T00:38:21+02:00",
             "ArrivalStatus": "delayed",
             "ArrivalProximityText": {
               "value": "Dernier départ"
             },
-            "AimedDepartureTime": "2026-09-25T00:19:00+02:00",
-            "ExpectedDepartureTime": "2026-09-25T00:20:28+02:00",
+            "AimedDepartureTime": "2026-09-25T00:38:00+02:00",
+            "ExpectedDepartureTime": "2026-09-25T00:38:21+02:00",
             "StopPointRef": {
-              "value": "IDNA1"
-            },
-            "Order": 11
+              "value": "MGIN2"
+            }
           }
         },
-        "RecordedAtTime": "2026-09-25T00:15:26.440531036+02:00",
-        "ItemIdentifier": "4-IDNA1-A-2026-09-25T00:19+02:00[Europe/Paris]"
+        "RecordedAtTime": "2026-09-25T00:20:29.861243752+02:00",
+        "ItemIdentifier": "3-MGIN2-A-2026-09-25T00:38+02:00[Europe/Paris]"
       },
+      {
+        "MonitoringRef": {
+          "value": "MGIN2"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
+            "value": "2"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
+            "DatedVehicleJourneyRef": "52322383-CR_26_27-CW27BE11-Lu-Ma-Je-01-1101000"
+          },
+          "VehicleMode": [
+            "tram"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Orvault Grand Val - Gare de Pont Rousseau"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "R"
+            }
+          ],
+          "DestinationRef": {
+            "value": "PIRB2"
+          },
+          "DestinationName": [
+            {
+              "value": "Pirmil",
+              "lang": "FR"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": true,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "Pirmil",
+                "lang": "FR"
+              }
+            ],
+            "AimedArrivalTime": "2026-09-25T01:05:00+02:00",
+            "ExpectedArrivalTime": "2026-09-25T01:05:00+02:00",
+            "ArrivalStatus": "onTime",
+            "ArrivalProximityText": {
+              "value": "Dernier départ"
+            },
+            "AimedDepartureTime": "2026-09-25T01:05:00+02:00",
+            "ExpectedDepartureTime": "2026-09-25T01:05:00+02:00",
+            "StopPointRef": {
+              "value": "MGIN2"
+            },
+            "Order": 23
+          }
+        },
+        "RecordedAtTime": "2026-09-25T00:18:09.362493082+02:00",
+        "ItemIdentifier": "2-MGIN2-R-2026-09-25T01:05+02:00[Europe/Paris]"
+      }
+    ],
+    "IDNA1": [
       {
         "MonitoringRef": {
           "value": "IDNA1"
@@ -289,6 +351,7 @@
           "FirstOrLastJourney": "unspecified",
           "Monitored": true,
           "MonitoredCall": {
+            "VehicleAtStop": true,
             "DestinationDisplay": [
               {
                 "value": "Hangar à Bananes",
@@ -296,17 +359,20 @@
               }
             ],
             "AimedArrivalTime": "2026-09-25T00:20:00+02:00",
-            "ExpectedArrivalTime": "2026-09-25T00:21:37+02:00",
+            "ExpectedArrivalTime": "2026-09-25T00:20:52+02:00",
             "ArrivalStatus": "delayed",
+            "ArrivalProximityText": {
+              "value": "Départ proche"
+            },
             "AimedDepartureTime": "2026-09-25T00:20:00+02:00",
-            "ExpectedDepartureTime": "2026-09-25T00:21:37+02:00",
+            "ExpectedDepartureTime": "2026-09-25T00:20:52+02:00",
             "StopPointRef": {
               "value": "IDNA1"
             },
             "Order": 7
           }
         },
-        "RecordedAtTime": "2026-09-25T00:13:26.431845698+02:00",
+        "RecordedAtTime": "2026-09-25T00:20:26.472336417+02:00",
         "ItemIdentifier": "5-IDNA1-A-2026-09-25T00:20+02:00[Europe/Paris]"
       }
     ],
@@ -374,70 +440,7 @@
         "ItemIdentifier": "36-GNRA4-R-2026-09-25T00:52+02:00[Europe/Paris]"
       }
     ],
-    "BENA1": [
-      {
-        "MonitoringRef": {
-          "value": "BENA1"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "4"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "49762570-CR_26_27-CT27BE11-Lu-Ma-Je-02-1101000"
-          },
-          "VehicleMode": [
-            "bus"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Foch - Cathédrale - Porte de Vertou"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "A"
-            }
-          ],
-          "DestinationRef": {
-            "value": "FOCH1"
-          },
-          "DestinationName": [
-            {
-              "value": "Foch - Cathédrale",
-              "lang": "FR"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Foch - Cathédrale",
-                "lang": "FR"
-              }
-            ],
-            "AimedArrivalTime": "2026-09-25T00:18:00+02:00",
-            "ExpectedArrivalTime": "2026-09-25T00:19:29+02:00",
-            "ArrivalStatus": "delayed",
-            "ArrivalProximityText": {
-              "value": "Dernier départ"
-            },
-            "AimedDepartureTime": "2026-09-25T00:18:00+02:00",
-            "ExpectedDepartureTime": "2026-09-25T00:19:29+02:00",
-            "StopPointRef": {
-              "value": "BENA1"
-            },
-            "Order": 10
-          }
-        },
-        "RecordedAtTime": "2026-09-25T00:15:26.444355893+02:00",
-        "ItemIdentifier": "4-BENA1-A-2026-09-25T00:18+02:00[Europe/Paris]"
-      }
-    ],
+    "BENA1": [],
     "RPBL4": [
       {
         "MonitoringRef": {
