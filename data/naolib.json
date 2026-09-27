@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-27T07:05:28.392Z",
+  "fetchedAt": "2026-09-27T07:10:36.683Z",
   "stops": {
     "MGIN1": [
       {
@@ -41,6 +41,7 @@
           "FirstOrLastJourney": "unspecified",
           "Monitored": true,
           "MonitoredCall": {
+            "VehicleAtStop": true,
             "DestinationDisplay": [
               {
                 "value": "Marcel Paul",
@@ -48,17 +49,20 @@
               }
             ],
             "AimedArrivalTime": "2026-09-27T09:08:00+02:00",
-            "ExpectedArrivalTime": "2026-09-27T09:09:14+02:00",
+            "ExpectedArrivalTime": "2026-09-27T09:10:28+02:00",
             "ArrivalStatus": "delayed",
+            "ArrivalProximityText": {
+              "value": "Départ proche"
+            },
             "AimedDepartureTime": "2026-09-27T09:08:00+02:00",
-            "ExpectedDepartureTime": "2026-09-27T09:09:14+02:00",
+            "ExpectedDepartureTime": "2026-09-27T09:10:28+02:00",
             "StopPointRef": {
               "value": "MGIN1"
             },
             "Order": 12
           }
         },
-        "RecordedAtTime": "2026-09-27T09:03:14.101242386+02:00",
+        "RecordedAtTime": "2026-09-27T09:10:25.148722152+02:00",
         "ItemIdentifier": "3-MGIN1-A-2026-09-27T09:08+02:00[Europe/Paris]"
       },
       {
@@ -581,17 +585,17 @@
               }
             ],
             "AimedArrivalTime": "2026-09-27T09:37:00+02:00",
-            "ExpectedArrivalTime": "2026-09-27T09:37:00+02:00",
-            "ArrivalStatus": "onTime",
+            "ExpectedArrivalTime": "2026-09-27T09:36:55+02:00",
+            "ArrivalStatus": "early",
             "AimedDepartureTime": "2026-09-27T09:37:00+02:00",
-            "ExpectedDepartureTime": "2026-09-27T09:37:00+02:00",
+            "ExpectedDepartureTime": "2026-09-27T09:36:55+02:00",
             "StopPointRef": {
               "value": "MGIN2"
             },
             "Order": 23
           }
         },
-        "RecordedAtTime": "2026-09-27T08:18:23.106349928+02:00",
+        "RecordedAtTime": "2026-09-27T09:10:24.459679086+02:00",
         "ItemIdentifier": "2-MGIN2-R-2026-09-27T09:37+02:00[Europe/Paris]"
       },
       {
@@ -652,6 +656,65 @@
         },
         "RecordedAtTime": "2026-09-27T08:38:03.239861764+02:00",
         "ItemIdentifier": "2-MGIN2-R-2026-09-27T09:57+02:00[Europe/Paris]"
+      },
+      {
+        "MonitoringRef": {
+          "value": "MGIN2"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
+            "value": "3"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
+            "DatedVehicleJourneyRef": "50601648-CR_26_27-HW27BA17-Dimanche-00"
+          },
+          "VehicleMode": [
+            "tram"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Marcel Paul - Neustrie"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "R"
+            }
+          ],
+          "DestinationRef": {
+            "value": "NETR2"
+          },
+          "DestinationName": [
+            {
+              "value": "Neustrie",
+              "lang": "FR"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": true,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "Neustrie",
+                "lang": "FR"
+              }
+            ],
+            "AimedArrivalTime": "2026-09-27T10:27:00+02:00",
+            "ExpectedArrivalTime": "2026-09-27T10:27:00+02:00",
+            "ArrivalStatus": "onTime",
+            "AimedDepartureTime": "2026-09-27T10:27:00+02:00",
+            "ExpectedDepartureTime": "2026-09-27T10:27:00+02:00",
+            "StopPointRef": {
+              "value": "MGIN2"
+            },
+            "Order": 22
+          }
+        },
+        "RecordedAtTime": "2026-09-27T09:06:54.127516681+02:00",
+        "ItemIdentifier": "3-MGIN2-R-2026-09-27T10:27+02:00[Europe/Paris]"
       },
       {
         "MonitoringRef": {
@@ -829,65 +892,6 @@
         },
         "RecordedAtTime": "2026-09-27T08:28:12.849269178+02:00",
         "ItemIdentifier": "3-MGIN2-R-2026-09-27T09:47+02:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "MGIN2"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "3"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "50601640-CR_26_27-HW27BA17-Dimanche-00"
-          },
-          "VehicleMode": [
-            "tram"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Marcel Paul - Neustrie"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "R"
-            }
-          ],
-          "DestinationRef": {
-            "value": "NETR2"
-          },
-          "DestinationName": [
-            {
-              "value": "Neustrie",
-              "lang": "FR"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Neustrie",
-                "lang": "FR"
-              }
-            ],
-            "AimedArrivalTime": "2026-09-27T09:07:00+02:00",
-            "ExpectedArrivalTime": "2026-09-27T09:05:58+02:00",
-            "ArrivalStatus": "early",
-            "AimedDepartureTime": "2026-09-27T09:07:00+02:00",
-            "ExpectedDepartureTime": "2026-09-27T09:05:58+02:00",
-            "StopPointRef": {
-              "value": "MGIN2"
-            },
-            "Order": 22
-          }
-        },
-        "RecordedAtTime": "2026-09-27T09:04:14.109360152+02:00",
-        "ItemIdentifier": "3-MGIN2-R-2026-09-27T09:07+02:00[Europe/Paris]"
       },
       {
         "MonitoringRef": {
@@ -1185,65 +1189,6 @@
         },
         "RecordedAtTime": "2026-09-27T07:53:10.713341581+02:00",
         "ItemIdentifier": "5-IDNA1-A-2026-09-27T09:32+02:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "IDNA1"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "5"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "49432803-CR_26_27-AT27BA17-Dimanche-04"
-          },
-          "VehicleMode": [
-            "bus"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Hangar à Bananes - Gare Sud"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "A"
-            }
-          ],
-          "DestinationRef": {
-            "value": "HBAN1"
-          },
-          "DestinationName": [
-            {
-              "value": "Hangar à Bananes",
-              "lang": "FR"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Hangar à Bananes",
-                "lang": "FR"
-              }
-            ],
-            "AimedArrivalTime": "2026-09-27T09:07:00+02:00",
-            "ExpectedArrivalTime": "2026-09-27T09:06:50+02:00",
-            "ArrivalStatus": "early",
-            "AimedDepartureTime": "2026-09-27T09:07:00+02:00",
-            "ExpectedDepartureTime": "2026-09-27T09:06:50+02:00",
-            "StopPointRef": {
-              "value": "IDNA1"
-            },
-            "Order": 7
-          }
-        },
-        "RecordedAtTime": "2026-09-27T07:27:09.47866157+02:00",
-        "ItemIdentifier": "5-IDNA1-A-2026-09-27T09:07+02:00[Europe/Paris]"
       },
       {
         "MonitoringRef": {
@@ -1552,6 +1497,65 @@
             "DataFrameRef": {
               "value": "any"
             },
+            "DatedVehicleJourneyRef": "49432808-CR_26_27-AT27BA17-Dimanche-04"
+          },
+          "VehicleMode": [
+            "bus"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Hangar à Bananes - Gare Sud"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "A"
+            }
+          ],
+          "DestinationRef": {
+            "value": "HBAN1"
+          },
+          "DestinationName": [
+            {
+              "value": "Hangar à Bananes",
+              "lang": "FR"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": true,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "Hangar à Bananes",
+                "lang": "FR"
+              }
+            ],
+            "AimedArrivalTime": "2026-09-27T10:48:00+02:00",
+            "ExpectedArrivalTime": "2026-09-27T10:47:50+02:00",
+            "ArrivalStatus": "early",
+            "AimedDepartureTime": "2026-09-27T10:48:00+02:00",
+            "ExpectedDepartureTime": "2026-09-27T10:47:50+02:00",
+            "StopPointRef": {
+              "value": "IDNA1"
+            },
+            "Order": 7
+          }
+        },
+        "RecordedAtTime": "2026-09-27T09:07:41.214458671+02:00",
+        "ItemIdentifier": "5-IDNA1-A-2026-09-27T10:48+02:00[Europe/Paris]"
+      },
+      {
+        "MonitoringRef": {
+          "value": "IDNA1"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
+            "value": "5"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
             "DatedVehicleJourneyRef": "49432807-CR_26_27-AT27BA17-Dimanche-04"
           },
           "VehicleMode": [
@@ -1836,6 +1840,65 @@
         },
         "RecordedAtTime": "2026-09-27T09:01:40.181070911+02:00",
         "ItemIdentifier": "36-GNRA4-R-2026-09-27T10:21+02:00[Europe/Paris]"
+      },
+      {
+        "MonitoringRef": {
+          "value": "GNRA4"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
+            "value": "36"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
+            "DatedVehicleJourneyRef": "49823603-CR_26_27-AT27BA17-Dimanche-04"
+          },
+          "VehicleMode": [
+            "bus"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Greneraie - Croix Jeannette"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "R"
+            }
+          ],
+          "DestinationRef": {
+            "value": "XJAN1"
+          },
+          "DestinationName": [
+            {
+              "value": "Croix Jeannette",
+              "lang": "FR"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": true,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "Croix Jeannette",
+                "lang": "FR"
+              }
+            ],
+            "AimedArrivalTime": "2026-09-27T11:06:00+02:00",
+            "ExpectedArrivalTime": "2026-09-27T11:06:00+02:00",
+            "ArrivalStatus": "onTime",
+            "AimedDepartureTime": "2026-09-27T11:06:00+02:00",
+            "ExpectedDepartureTime": "2026-09-27T11:06:00+02:00",
+            "StopPointRef": {
+              "value": "GNRA4"
+            },
+            "Order": 1
+          }
+        },
+        "RecordedAtTime": "2026-09-27T09:06:10.210620537+02:00",
+        "ItemIdentifier": "36-GNRA4-R-2026-09-27T11:06+02:00[Europe/Paris]"
       }
     ],
     "BENA1": [
