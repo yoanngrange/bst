@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-30T18:10:35.727Z",
+  "fetchedAt": "2026-09-30T18:15:34.812Z",
   "stops": {
     "MGIN1": [
       {
@@ -365,65 +365,6 @@
         },
         "MonitoredVehicleJourney": {
           "LineRef": {
-            "value": "3"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "53185232-CR_26_27-CW27BE13-Mercredi-04-0010000"
-          },
-          "VehicleMode": [
-            "tram"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Marcel Paul - Neustrie"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "A"
-            }
-          ],
-          "DestinationRef": {
-            "value": "MPAU2"
-          },
-          "DestinationName": [
-            {
-              "value": "Marcel Paul",
-              "lang": "FR"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Marcel Paul",
-                "lang": "FR"
-              }
-            ],
-            "AimedArrivalTime": "2026-09-30T20:13:00+02:00",
-            "ExpectedArrivalTime": "2026-09-30T20:13:00+02:00",
-            "ArrivalStatus": "onTime",
-            "AimedDepartureTime": "2026-09-30T20:13:00+02:00",
-            "ExpectedDepartureTime": "2026-09-30T20:13:00+02:00",
-            "StopPointRef": {
-              "value": "MGIN1"
-            },
-            "Order": 13
-          }
-        },
-        "RecordedAtTime": "2026-09-30T19:49:20.862191467+02:00",
-        "ItemIdentifier": "3-MGIN1-A-2026-09-30T20:13+02:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "MGIN1"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
             "value": "2"
           },
           "FramedVehicleJourneyRef": {
@@ -457,6 +398,7 @@
           "FirstOrLastJourney": "unspecified",
           "Monitored": true,
           "MonitoredCall": {
+            "VehicleAtStop": true,
             "DestinationDisplay": [
               {
                 "value": "Orvault Grand Val",
@@ -464,17 +406,20 @@
               }
             ],
             "AimedArrivalTime": "2026-09-30T20:13:00+02:00",
-            "ExpectedArrivalTime": "2026-09-30T20:14:03+02:00",
+            "ExpectedArrivalTime": "2026-09-30T20:15:51+02:00",
             "ArrivalStatus": "delayed",
+            "ArrivalProximityText": {
+              "value": "Départ proche"
+            },
             "AimedDepartureTime": "2026-09-30T20:13:00+02:00",
-            "ExpectedDepartureTime": "2026-09-30T20:14:03+02:00",
+            "ExpectedDepartureTime": "2026-09-30T20:15:51+02:00",
             "StopPointRef": {
               "value": "MGIN1"
             },
             "Order": 12
           }
         },
-        "RecordedAtTime": "2026-09-30T20:10:12.882866629+02:00",
+        "RecordedAtTime": "2026-09-30T20:15:32.911394959+02:00",
         "ItemIdentifier": "2-MGIN1-A-2026-09-30T20:13+02:00[Europe/Paris]"
       }
     ],
@@ -525,17 +470,17 @@
               }
             ],
             "AimedArrivalTime": "2026-09-30T20:15:00+02:00",
-            "ExpectedArrivalTime": "2026-09-30T20:22:03+02:00",
+            "ExpectedArrivalTime": "2026-09-30T20:23:07+02:00",
             "ArrivalStatus": "delayed",
             "AimedDepartureTime": "2026-09-30T20:15:00+02:00",
-            "ExpectedDepartureTime": "2026-09-30T20:22:03+02:00",
+            "ExpectedDepartureTime": "2026-09-30T20:23:07+02:00",
             "StopPointRef": {
               "value": "MGIN2"
             },
             "Order": 22
           }
         },
-        "RecordedAtTime": "2026-09-30T20:06:11.951657302+02:00",
+        "RecordedAtTime": "2026-09-30T20:15:11.999912614+02:00",
         "ItemIdentifier": "3-MGIN2-R-2026-09-30T20:15+02:00[Europe/Paris]"
       },
       {
@@ -584,17 +529,17 @@
               }
             ],
             "AimedArrivalTime": "2026-09-30T20:10:00+02:00",
-            "ExpectedArrivalTime": "2026-09-30T20:17:28+02:00",
+            "ExpectedArrivalTime": "2026-09-30T20:15:38+02:00",
             "ArrivalStatus": "delayed",
             "AimedDepartureTime": "2026-09-30T20:10:00+02:00",
-            "ExpectedDepartureTime": "2026-09-30T20:17:28+02:00",
+            "ExpectedDepartureTime": "2026-09-30T20:15:38+02:00",
             "StopPointRef": {
               "value": "MGIN2"
             },
             "Order": 22
           }
         },
-        "RecordedAtTime": "2026-09-30T20:01:51.92985066+02:00",
+        "RecordedAtTime": "2026-09-30T20:13:51.997032257+02:00",
         "ItemIdentifier": "3-MGIN2-R-2026-09-30T20:10+02:00[Europe/Paris]"
       },
       {
@@ -702,21 +647,142 @@
               }
             ],
             "AimedArrivalTime": "2026-09-30T20:26:00+02:00",
-            "ExpectedArrivalTime": "2026-09-30T20:26:59+02:00",
+            "ExpectedArrivalTime": "2026-09-30T20:27:24+02:00",
             "ArrivalStatus": "delayed",
             "ArrivalProximityText": {
               "value": "Dernier départ"
             },
             "AimedDepartureTime": "2026-09-30T20:26:00+02:00",
-            "ExpectedDepartureTime": "2026-09-30T20:26:59+02:00",
+            "ExpectedDepartureTime": "2026-09-30T20:27:24+02:00",
             "StopPointRef": {
               "value": "MGIN2"
             },
             "Order": 22
           }
         },
-        "RecordedAtTime": "2026-09-30T20:10:31.975558299+02:00",
+        "RecordedAtTime": "2026-09-30T20:15:32.001758872+02:00",
         "ItemIdentifier": "3-MGIN2-R-2026-09-30T20:26+02:00[Europe/Paris]"
+      },
+      {
+        "MonitoringRef": {
+          "value": "MGIN2"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
+            "value": "2"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
+            "DatedVehicleJourneyRef": "52615963-CR_26_27-CW27BE13-Mercredi-04-0010000"
+          },
+          "VehicleMode": [
+            "tram"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Orvault Grand Val - Gare de Pont Rousseau"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "R"
+            }
+          ],
+          "DestinationRef": {
+            "value": "DIDE2"
+          },
+          "DestinationName": [
+            {
+              "value": "Espace Diderot",
+              "lang": "FR"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": true,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "Espace Diderot",
+                "lang": "FR"
+              }
+            ],
+            "AimedArrivalTime": "2026-09-30T20:57:00+02:00",
+            "ExpectedArrivalTime": "2026-09-30T20:58:22+02:00",
+            "ArrivalStatus": "delayed",
+            "ArrivalProximityText": {
+              "value": "Dernier départ"
+            },
+            "AimedDepartureTime": "2026-09-30T20:57:00+02:00",
+            "ExpectedDepartureTime": "2026-09-30T20:58:22+02:00",
+            "StopPointRef": {
+              "value": "MGIN2"
+            },
+            "Order": 23
+          }
+        },
+        "RecordedAtTime": "2026-09-30T20:15:32.911120707+02:00",
+        "ItemIdentifier": "2-MGIN2-R-2026-09-30T20:57+02:00[Europe/Paris]"
+      },
+      {
+        "MonitoringRef": {
+          "value": "MGIN2"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
+            "value": "2"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
+            "DatedVehicleJourneyRef": "52615959-CR_26_27-CW27BE13-Mercredi-04-0010000"
+          },
+          "VehicleMode": [
+            "tram"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Orvault Grand Val - Gare de Pont Rousseau"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "R"
+            }
+          ],
+          "DestinationRef": {
+            "value": "DIDE2"
+          },
+          "DestinationName": [
+            {
+              "value": "Espace Diderot",
+              "lang": "FR"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": true,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "Espace Diderot",
+                "lang": "FR"
+              }
+            ],
+            "AimedArrivalTime": "2026-09-30T20:26:00+02:00",
+            "ExpectedArrivalTime": "2026-09-30T20:32:46+02:00",
+            "ArrivalStatus": "delayed",
+            "AimedDepartureTime": "2026-09-30T20:26:00+02:00",
+            "ExpectedDepartureTime": "2026-09-30T20:32:46+02:00",
+            "StopPointRef": {
+              "value": "MGIN2"
+            },
+            "Order": 23
+          }
+        },
+        "RecordedAtTime": "2026-09-30T20:13:02.897905642+02:00",
+        "ItemIdentifier": "2-MGIN2-R-2026-09-30T20:26+02:00[Europe/Paris]"
       },
       {
         "MonitoringRef": {
@@ -764,140 +830,18 @@
               }
             ],
             "AimedArrivalTime": "2026-09-30T20:19:00+02:00",
-            "ExpectedArrivalTime": "2026-09-30T20:20:41+02:00",
+            "ExpectedArrivalTime": "2026-09-30T20:21:45+02:00",
             "ArrivalStatus": "delayed",
             "AimedDepartureTime": "2026-09-30T20:19:00+02:00",
-            "ExpectedDepartureTime": "2026-09-30T20:20:41+02:00",
+            "ExpectedDepartureTime": "2026-09-30T20:21:45+02:00",
             "StopPointRef": {
               "value": "MGIN2"
             },
             "Order": 23
           }
         },
-        "RecordedAtTime": "2026-09-30T20:08:52.875253325+02:00",
+        "RecordedAtTime": "2026-09-30T20:12:12.893619365+02:00",
         "ItemIdentifier": "2-MGIN2-R-2026-09-30T20:19+02:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "MGIN2"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "2"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "52615957-CR_26_27-CW27BE13-Mercredi-04-0010000"
-          },
-          "VehicleMode": [
-            "tram"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Orvault Grand Val - Gare de Pont Rousseau"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "R"
-            }
-          ],
-          "DestinationRef": {
-            "value": "DIDE2"
-          },
-          "DestinationName": [
-            {
-              "value": "Espace Diderot",
-              "lang": "FR"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Espace Diderot",
-                "lang": "FR"
-              }
-            ],
-            "AimedArrivalTime": "2026-09-30T20:12:00+02:00",
-            "ExpectedArrivalTime": "2026-09-30T20:15:19+02:00",
-            "ArrivalStatus": "delayed",
-            "AimedDepartureTime": "2026-09-30T20:12:00+02:00",
-            "ExpectedDepartureTime": "2026-09-30T20:15:19+02:00",
-            "StopPointRef": {
-              "value": "MGIN2"
-            },
-            "Order": 23
-          }
-        },
-        "RecordedAtTime": "2026-09-30T20:09:22.877658922+02:00",
-        "ItemIdentifier": "2-MGIN2-R-2026-09-30T20:12+02:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "MGIN2"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "2"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "52615948-CR_26_27-CW27BE13-Mercredi-04-0010000"
-          },
-          "VehicleMode": [
-            "tram"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Orvault Grand Val - Gare de Pont Rousseau"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "R"
-            }
-          ],
-          "DestinationRef": {
-            "value": "DIDE2"
-          },
-          "DestinationName": [
-            {
-              "value": "Espace Diderot",
-              "lang": "FR"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "VehicleAtStop": true,
-            "DestinationDisplay": [
-              {
-                "value": "Espace Diderot",
-                "lang": "FR"
-              }
-            ],
-            "AimedArrivalTime": "2026-09-30T19:32:00+02:00",
-            "ExpectedArrivalTime": "2026-09-30T20:11:16+02:00",
-            "ArrivalStatus": "delayed",
-            "ArrivalProximityText": {
-              "value": "Départ proche"
-            },
-            "AimedDepartureTime": "2026-09-30T19:32:00+02:00",
-            "ExpectedDepartureTime": "2026-09-30T20:11:16+02:00",
-            "StopPointRef": {
-              "value": "MGIN2"
-            },
-            "Order": 23
-          }
-        },
-        "RecordedAtTime": "2026-09-30T20:10:32.884336394+02:00",
-        "ItemIdentifier": "2-MGIN2-R-2026-09-30T19:32+02:00[Europe/Paris]"
       }
     ],
     "IDNA1": [
@@ -947,17 +891,17 @@
               }
             ],
             "AimedArrivalTime": "2026-09-30T20:19:00+02:00",
-            "ExpectedArrivalTime": "2026-09-30T20:19:00+02:00",
-            "ArrivalStatus": "onTime",
+            "ExpectedArrivalTime": "2026-09-30T20:20:04+02:00",
+            "ArrivalStatus": "delayed",
             "AimedDepartureTime": "2026-09-30T20:19:00+02:00",
-            "ExpectedDepartureTime": "2026-09-30T20:19:00+02:00",
+            "ExpectedDepartureTime": "2026-09-30T20:20:04+02:00",
             "StopPointRef": {
               "value": "IDNA1"
             },
             "Order": 11
           }
         },
-        "RecordedAtTime": "2026-09-30T19:43:14.973159264+02:00",
+        "RecordedAtTime": "2026-09-30T20:12:15.131602715+02:00",
         "ItemIdentifier": "4-IDNA1-A-2026-09-30T20:19+02:00[Europe/Paris]"
       },
       {
@@ -1077,65 +1021,6 @@
         },
         "RecordedAtTime": "2026-09-30T20:01:14.08249699+02:00",
         "ItemIdentifier": "4-IDNA1-A-2026-09-30T20:39+02:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "IDNA1"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "5"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "49764314-CR_26_27-CT27BE13-Mercredi-02-0010000"
-          },
-          "VehicleMode": [
-            "bus"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Hangar à Bananes - Gare Sud"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "A"
-            }
-          ],
-          "DestinationRef": {
-            "value": "HBAN1"
-          },
-          "DestinationName": [
-            {
-              "value": "Hangar à Bananes",
-              "lang": "FR"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Hangar à Bananes",
-                "lang": "FR"
-              }
-            ],
-            "AimedArrivalTime": "2026-09-30T20:15:00+02:00",
-            "ExpectedArrivalTime": "2026-09-30T20:15:18+02:00",
-            "ArrivalStatus": "delayed",
-            "AimedDepartureTime": "2026-09-30T20:15:00+02:00",
-            "ExpectedDepartureTime": "2026-09-30T20:15:18+02:00",
-            "StopPointRef": {
-              "value": "IDNA1"
-            },
-            "Order": 7
-          }
-        },
-        "RecordedAtTime": "2026-09-30T19:41:14.963468667+02:00",
-        "ItemIdentifier": "5-IDNA1-A-2026-09-30T20:15+02:00[Europe/Paris]"
       },
       {
         "MonitoringRef": {
@@ -1434,6 +1319,65 @@
         },
         "RecordedAtTime": "2026-09-30T20:06:15.101431883+02:00",
         "ItemIdentifier": "5-IDNA1-A-2026-09-30T20:45+02:00[Europe/Paris]"
+      },
+      {
+        "MonitoringRef": {
+          "value": "IDNA1"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
+            "value": "5"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
+            "DatedVehicleJourneyRef": "49764319-CR_26_27-CT27BE13-Mercredi-02-0010000"
+          },
+          "VehicleMode": [
+            "bus"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Hangar à Bananes - Gare Sud"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "A"
+            }
+          ],
+          "DestinationRef": {
+            "value": "HBAN1"
+          },
+          "DestinationName": [
+            {
+              "value": "Hangar à Bananes",
+              "lang": "FR"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": true,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "Hangar à Bananes",
+                "lang": "FR"
+              }
+            ],
+            "AimedArrivalTime": "2026-09-30T20:55:00+02:00",
+            "ExpectedArrivalTime": "2026-09-30T20:55:19+02:00",
+            "ArrivalStatus": "delayed",
+            "AimedDepartureTime": "2026-09-30T20:55:00+02:00",
+            "ExpectedDepartureTime": "2026-09-30T20:55:19+02:00",
+            "StopPointRef": {
+              "value": "IDNA1"
+            },
+            "Order": 7
+          }
+        },
+        "RecordedAtTime": "2026-09-30T20:15:14.150207112+02:00",
+        "ItemIdentifier": "5-IDNA1-A-2026-09-30T20:55+02:00[Europe/Paris]"
       }
     ],
     "GNRA4": [
@@ -1493,7 +1437,7 @@
             "Order": 1
           }
         },
-        "RecordedAtTime": "2026-09-30T19:52:14.027825619+02:00",
+        "RecordedAtTime": "2026-09-30T20:14:15.160003978+02:00",
         "ItemIdentifier": "36-GNRA4-R-2026-09-30T21:52+02:00[Europe/Paris]"
       },
       {
@@ -1898,17 +1842,17 @@
               }
             ],
             "AimedArrivalTime": "2026-09-30T20:18:00+02:00",
-            "ExpectedArrivalTime": "2026-09-30T20:18:00+02:00",
-            "ArrivalStatus": "onTime",
+            "ExpectedArrivalTime": "2026-09-30T20:19:04+02:00",
+            "ArrivalStatus": "delayed",
             "AimedDepartureTime": "2026-09-30T20:18:00+02:00",
-            "ExpectedDepartureTime": "2026-09-30T20:18:00+02:00",
+            "ExpectedDepartureTime": "2026-09-30T20:19:04+02:00",
             "StopPointRef": {
               "value": "BENA1"
             },
             "Order": 10
           }
         },
-        "RecordedAtTime": "2026-09-30T19:42:13.98094391+02:00",
+        "RecordedAtTime": "2026-09-30T20:12:15.140649946+02:00",
         "ItemIdentifier": "4-BENA1-A-2026-09-30T20:18+02:00[Europe/Paris]"
       },
       {
@@ -2374,17 +2318,17 @@
               }
             ],
             "AimedArrivalTime": "2026-09-30T20:34:00+02:00",
-            "ExpectedArrivalTime": "2026-09-30T20:35:11+02:00",
+            "ExpectedArrivalTime": "2026-09-30T20:37:16+02:00",
             "ArrivalStatus": "delayed",
             "AimedDepartureTime": "2026-09-30T20:34:00+02:00",
-            "ExpectedDepartureTime": "2026-09-30T20:35:11+02:00",
+            "ExpectedDepartureTime": "2026-09-30T20:37:16+02:00",
             "StopPointRef": {
               "value": "RPBL1"
             },
             "Order": 28
           }
         },
-        "RecordedAtTime": "2026-09-30T20:08:44.129190485+02:00",
+        "RecordedAtTime": "2026-09-30T20:13:45.153577023+02:00",
         "ItemIdentifier": "26-RPBL1-R-2026-09-30T20:34+02:00[Europe/Paris]"
       },
       {
@@ -2433,17 +2377,17 @@
               }
             ],
             "AimedArrivalTime": "2026-09-30T20:15:00+02:00",
-            "ExpectedArrivalTime": "2026-09-30T20:17:15+02:00",
+            "ExpectedArrivalTime": "2026-09-30T20:18:28+02:00",
             "ArrivalStatus": "delayed",
             "AimedDepartureTime": "2026-09-30T20:15:00+02:00",
-            "ExpectedDepartureTime": "2026-09-30T20:17:15+02:00",
+            "ExpectedDepartureTime": "2026-09-30T20:18:28+02:00",
             "StopPointRef": {
               "value": "RPBL1"
             },
             "Order": 28
           }
         },
-        "RecordedAtTime": "2026-09-30T20:08:44.129181278+02:00",
+        "RecordedAtTime": "2026-09-30T20:13:45.153562253+02:00",
         "ItemIdentifier": "26-RPBL1-R-2026-09-30T20:15+02:00[Europe/Paris]"
       },
       {
@@ -2760,7 +2704,7 @@
             "DataFrameRef": {
               "value": "any"
             },
-            "DatedVehicleJourneyRef": "53185468-CR_26_27-CW27BE13-Mercredi-04-0010000"
+            "DatedVehicleJourneyRef": "53181400-CR_26_27-CW27BE13-Mercredi-04-0010000"
           },
           "VehicleMode": [
             "tram"
@@ -2776,7 +2720,7 @@
             }
           ],
           "DestinationRef": {
-            "value": "MPAU2"
+            "value": "MPAU1"
           },
           "DestinationName": [
             {
@@ -2793,137 +2737,19 @@
                 "lang": "FR"
               }
             ],
-            "AimedArrivalTime": "2026-09-30T20:13:00+02:00",
-            "ExpectedArrivalTime": "2026-09-30T20:14:08+02:00",
-            "ArrivalStatus": "delayed",
-            "AimedDepartureTime": "2026-09-30T20:13:00+02:00",
-            "ExpectedDepartureTime": "2026-09-30T20:14:08+02:00",
-            "StopPointRef": {
-              "value": "DIDE1"
-            },
-            "Order": 7
-          }
-        },
-        "RecordedAtTime": "2026-09-30T20:07:21.959176444+02:00",
-        "ItemIdentifier": "3-DIDE1-A-2026-09-30T20:13+02:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "DIDE1"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "3"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "53185491-CR_26_27-CW27BE13-Mercredi-04-0010000"
-          },
-          "VehicleMode": [
-            "tram"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Marcel Paul - Neustrie"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "A"
-            }
-          ],
-          "DestinationRef": {
-            "value": "MPAU2"
-          },
-          "DestinationName": [
-            {
-              "value": "Marcel Paul",
-              "lang": "FR"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Marcel Paul",
-                "lang": "FR"
-              }
-            ],
-            "AimedArrivalTime": "2026-09-30T20:29:00+02:00",
-            "ExpectedArrivalTime": "2026-09-30T20:29:00+02:00",
+            "AimedArrivalTime": "2026-09-30T20:45:00+02:00",
+            "ExpectedArrivalTime": "2026-09-30T20:45:00+02:00",
             "ArrivalStatus": "onTime",
-            "AimedDepartureTime": "2026-09-30T20:29:00+02:00",
-            "ExpectedDepartureTime": "2026-09-30T20:29:00+02:00",
+            "AimedDepartureTime": "2026-09-30T20:45:00+02:00",
+            "ExpectedDepartureTime": "2026-09-30T20:45:00+02:00",
             "StopPointRef": {
               "value": "DIDE1"
             },
             "Order": 7
           }
         },
-        "RecordedAtTime": "2026-09-30T19:57:20.905900913+02:00",
-        "ItemIdentifier": "3-DIDE1-A-2026-09-30T20:29+02:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "DIDE1"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "3"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "53185271-CR_26_27-CW27BE13-Mercredi-04-0010000"
-          },
-          "VehicleMode": [
-            "tram"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Marcel Paul - Neustrie"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "A"
-            }
-          ],
-          "DestinationRef": {
-            "value": "MPAU2"
-          },
-          "DestinationName": [
-            {
-              "value": "Marcel Paul",
-              "lang": "FR"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Marcel Paul",
-                "lang": "FR"
-              }
-            ],
-            "AimedArrivalTime": "2026-09-30T20:21:00+02:00",
-            "ExpectedArrivalTime": "2026-09-30T20:21:00+02:00",
-            "ArrivalStatus": "onTime",
-            "AimedDepartureTime": "2026-09-30T20:21:00+02:00",
-            "ExpectedDepartureTime": "2026-09-30T20:21:00+02:00",
-            "StopPointRef": {
-              "value": "DIDE1"
-            },
-            "Order": 7
-          }
-        },
-        "RecordedAtTime": "2026-09-30T19:43:00.830461243+02:00",
-        "ItemIdentifier": "3-DIDE1-A-2026-09-30T20:21+02:00[Europe/Paris]"
+        "RecordedAtTime": "2026-09-30T20:15:32.003057596+02:00",
+        "ItemIdentifier": "3-DIDE1-A-2026-09-30T20:45+02:00[Europe/Paris]"
       }
     ],
     "LHOU1": [
@@ -3063,7 +2889,7 @@
             "DataFrameRef": {
               "value": "any"
             },
-            "DatedVehicleJourneyRef": "53185271-CR_26_27-CW27BE13-Mercredi-04-0010000"
+            "DatedVehicleJourneyRef": "53181400-CR_26_27-CW27BE13-Mercredi-04-0010000"
           },
           "VehicleMode": [
             "tram"
@@ -3079,7 +2905,7 @@
             }
           ],
           "DestinationRef": {
-            "value": "MPAU2"
+            "value": "MPAU1"
           },
           "DestinationName": [
             {
@@ -3096,137 +2922,19 @@
                 "lang": "FR"
               }
             ],
-            "AimedArrivalTime": "2026-09-30T20:19:00+02:00",
-            "ExpectedArrivalTime": "2026-09-30T20:19:00+02:00",
+            "AimedArrivalTime": "2026-09-30T20:43:00+02:00",
+            "ExpectedArrivalTime": "2026-09-30T20:43:00+02:00",
             "ArrivalStatus": "onTime",
-            "AimedDepartureTime": "2026-09-30T20:19:00+02:00",
-            "ExpectedDepartureTime": "2026-09-30T20:19:00+02:00",
+            "AimedDepartureTime": "2026-09-30T20:43:00+02:00",
+            "ExpectedDepartureTime": "2026-09-30T20:43:00+02:00",
             "StopPointRef": {
               "value": "TROC1"
             },
             "Order": 6
           }
         },
-        "RecordedAtTime": "2026-09-30T19:41:30.822960562+02:00",
-        "ItemIdentifier": "3-TROC1-A-2026-09-30T20:19+02:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "TROC1"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "3"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "53185491-CR_26_27-CW27BE13-Mercredi-04-0010000"
-          },
-          "VehicleMode": [
-            "tram"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Marcel Paul - Neustrie"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "A"
-            }
-          ],
-          "DestinationRef": {
-            "value": "MPAU2"
-          },
-          "DestinationName": [
-            {
-              "value": "Marcel Paul",
-              "lang": "FR"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Marcel Paul",
-                "lang": "FR"
-              }
-            ],
-            "AimedArrivalTime": "2026-09-30T20:27:00+02:00",
-            "ExpectedArrivalTime": "2026-09-30T20:27:00+02:00",
-            "ArrivalStatus": "onTime",
-            "AimedDepartureTime": "2026-09-30T20:27:00+02:00",
-            "ExpectedDepartureTime": "2026-09-30T20:27:00+02:00",
-            "StopPointRef": {
-              "value": "TROC1"
-            },
-            "Order": 6
-          }
-        },
-        "RecordedAtTime": "2026-09-30T19:55:50.897076034+02:00",
-        "ItemIdentifier": "3-TROC1-A-2026-09-30T20:27+02:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "TROC1"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "3"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "53185468-CR_26_27-CW27BE13-Mercredi-04-0010000"
-          },
-          "VehicleMode": [
-            "tram"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Marcel Paul - Neustrie"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "A"
-            }
-          ],
-          "DestinationRef": {
-            "value": "MPAU2"
-          },
-          "DestinationName": [
-            {
-              "value": "Marcel Paul",
-              "lang": "FR"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Marcel Paul",
-                "lang": "FR"
-              }
-            ],
-            "AimedArrivalTime": "2026-09-30T20:11:00+02:00",
-            "ExpectedArrivalTime": "2026-09-30T20:12:08+02:00",
-            "ArrivalStatus": "delayed",
-            "AimedDepartureTime": "2026-09-30T20:11:00+02:00",
-            "ExpectedDepartureTime": "2026-09-30T20:12:08+02:00",
-            "StopPointRef": {
-              "value": "TROC1"
-            },
-            "Order": 6
-          }
-        },
-        "RecordedAtTime": "2026-09-30T20:07:21.958564827+02:00",
-        "ItemIdentifier": "3-TROC1-A-2026-09-30T20:11+02:00[Europe/Paris]"
+        "RecordedAtTime": "2026-09-30T20:15:22.001886526+02:00",
+        "ItemIdentifier": "3-TROC1-A-2026-09-30T20:43+02:00[Europe/Paris]"
       }
     ]
   }
