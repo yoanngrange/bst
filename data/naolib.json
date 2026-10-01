@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-01T22:05:27.355Z",
+  "fetchedAt": "2026-10-01T22:10:36.745Z",
   "stops": {
     "MGIN1": [
       {
@@ -164,6 +164,7 @@
           "FirstOrLastJourney": "unspecified",
           "Monitored": true,
           "MonitoredCall": {
+            "VehicleAtStop": true,
             "DestinationDisplay": [
               {
                 "value": "Pirmil",
@@ -171,17 +172,20 @@
               }
             ],
             "AimedArrivalTime": "2026-10-02T00:08:00+02:00",
-            "ExpectedArrivalTime": "2026-10-02T00:12:35+02:00",
+            "ExpectedArrivalTime": "2026-10-02T00:11:09+02:00",
             "ArrivalStatus": "delayed",
+            "ArrivalProximityText": {
+              "value": "Départ proche"
+            },
             "AimedDepartureTime": "2026-10-02T00:08:00+02:00",
-            "ExpectedDepartureTime": "2026-10-02T00:12:35+02:00",
+            "ExpectedDepartureTime": "2026-10-02T00:11:09+02:00",
             "StopPointRef": {
               "value": "MGIN2"
             },
             "Order": 22
           }
         },
-        "RecordedAtTime": "2026-10-02T00:04:47.876707979+02:00",
+        "RecordedAtTime": "2026-10-02T00:10:17.907245626+02:00",
         "ItemIdentifier": "3-MGIN2-R-2026-10-02T00:08+02:00[Europe/Paris]"
       },
       {
@@ -230,20 +234,20 @@
               }
             ],
             "AimedArrivalTime": "2026-10-02T00:38:00+02:00",
-            "ExpectedArrivalTime": "2026-10-02T00:38:00+02:00",
-            "ArrivalStatus": "onTime",
+            "ExpectedArrivalTime": "2026-10-02T00:38:19+02:00",
+            "ArrivalStatus": "delayed",
             "ArrivalProximityText": {
               "value": "Dernier départ"
             },
             "AimedDepartureTime": "2026-10-02T00:38:00+02:00",
-            "ExpectedDepartureTime": "2026-10-02T00:38:00+02:00",
+            "ExpectedDepartureTime": "2026-10-02T00:38:19+02:00",
             "StopPointRef": {
               "value": "MGIN2"
             },
             "Order": 22
           }
         },
-        "RecordedAtTime": "2026-10-02T00:00:07.850268831+02:00",
+        "RecordedAtTime": "2026-10-02T00:10:27.908210598+02:00",
         "ItemIdentifier": "3-MGIN2-R-2026-10-02T00:38+02:00[Europe/Paris]"
       },
       {
@@ -305,7 +309,7 @@
             "Order": 23
           }
         },
-        "RecordedAtTime": "2026-10-02T00:00:04.898734397+02:00",
+        "RecordedAtTime": "2026-10-02T00:09:14.954512376+02:00",
         "ItemIdentifier": "2-MGIN2-R-2026-10-02T01:05+02:00[Europe/Paris]"
       }
     ],
@@ -356,20 +360,20 @@
               }
             ],
             "AimedArrivalTime": "2026-10-02T00:19:00+02:00",
-            "ExpectedArrivalTime": "2026-10-02T00:19:07+02:00",
+            "ExpectedArrivalTime": "2026-10-02T00:19:32+02:00",
             "ArrivalStatus": "delayed",
             "ArrivalProximityText": {
               "value": "Dernier départ"
             },
             "AimedDepartureTime": "2026-10-02T00:19:00+02:00",
-            "ExpectedDepartureTime": "2026-10-02T00:19:07+02:00",
+            "ExpectedDepartureTime": "2026-10-02T00:19:32+02:00",
             "StopPointRef": {
               "value": "IDNA1"
             },
             "Order": 11
           }
         },
-        "RecordedAtTime": "2026-10-02T00:05:18.142703796+02:00",
+        "RecordedAtTime": "2026-10-02T00:09:48.1645163+02:00",
         "ItemIdentifier": "4-IDNA1-A-2026-10-02T00:19+02:00[Europe/Paris]"
       },
       {
@@ -605,83 +609,24 @@
               }
             ],
             "AimedArrivalTime": "2026-10-02T00:18:00+02:00",
-            "ExpectedArrivalTime": "2026-10-02T00:18:08+02:00",
+            "ExpectedArrivalTime": "2026-10-02T00:18:33+02:00",
             "ArrivalStatus": "delayed",
             "ArrivalProximityText": {
               "value": "Dernier départ"
             },
             "AimedDepartureTime": "2026-10-02T00:18:00+02:00",
-            "ExpectedDepartureTime": "2026-10-02T00:18:08+02:00",
+            "ExpectedDepartureTime": "2026-10-02T00:18:33+02:00",
             "StopPointRef": {
               "value": "BENA1"
             },
             "Order": 10
           }
         },
-        "RecordedAtTime": "2026-10-02T00:05:18.153039116+02:00",
+        "RecordedAtTime": "2026-10-02T00:09:48.168453643+02:00",
         "ItemIdentifier": "4-BENA1-A-2026-10-02T00:18+02:00[Europe/Paris]"
       }
     ],
     "RPBL4": [
-      {
-        "MonitoringRef": {
-          "value": "RPBL4"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "5"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "49763840-CR_26_27-CT27BE11-Lu-Ma-Je-02-1101000"
-          },
-          "VehicleMode": [
-            "bus"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Hangar à Bananes - Gare Sud"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "R"
-            }
-          ],
-          "DestinationRef": {
-            "value": "GSSU4"
-          },
-          "DestinationName": [
-            {
-              "value": "Gare Sud",
-              "lang": "FR"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Gare Sud",
-                "lang": "FR"
-              }
-            ],
-            "AimedArrivalTime": "2026-10-02T00:09:00+02:00",
-            "ExpectedArrivalTime": "2026-10-02T00:09:01+02:00",
-            "ArrivalStatus": "delayed",
-            "AimedDepartureTime": "2026-10-02T00:09:00+02:00",
-            "ExpectedDepartureTime": "2026-10-02T00:09:01+02:00",
-            "StopPointRef": {
-              "value": "RPBL4"
-            },
-            "Order": 5
-          }
-        },
-        "RecordedAtTime": "2026-10-01T22:27:16.58363771+02:00",
-        "ItemIdentifier": "5-RPBL4-R-2026-10-02T00:09+02:00[Europe/Paris]"
-      },
       {
         "MonitoringRef": {
           "value": "RPBL4"
