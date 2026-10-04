@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-04T11:55:28.088Z",
+  "fetchedAt": "2026-10-04T12:01:03.747Z",
   "stops": {
     "MGIN1": [
       {
@@ -218,6 +218,7 @@
           "FirstOrLastJourney": "unspecified",
           "Monitored": true,
           "MonitoredCall": {
+            "VehicleAtStop": true,
             "DestinationDisplay": [
               {
                 "value": "Marcel Paul",
@@ -225,17 +226,20 @@
               }
             ],
             "AimedArrivalTime": "2026-10-04T13:59:00+02:00",
-            "ExpectedArrivalTime": "2026-10-04T14:00:02+02:00",
+            "ExpectedArrivalTime": "2026-10-04T14:01:20+02:00",
             "ArrivalStatus": "delayed",
+            "ArrivalProximityText": {
+              "value": "Départ proche"
+            },
             "AimedDepartureTime": "2026-10-04T13:59:00+02:00",
-            "ExpectedDepartureTime": "2026-10-04T14:00:02+02:00",
+            "ExpectedDepartureTime": "2026-10-04T14:01:20+02:00",
             "StopPointRef": {
               "value": "MGIN1"
             },
             "Order": 13
           }
         },
-        "RecordedAtTime": "2026-10-04T13:47:19.34211645+02:00",
+        "RecordedAtTime": "2026-10-04T14:01:00.431530859+02:00",
         "ItemIdentifier": "3-MGIN1-A-2026-10-04T13:59+02:00[Europe/Paris]"
       },
       {
@@ -817,17 +821,17 @@
               }
             ],
             "AimedArrivalTime": "2026-10-04T14:16:00+02:00",
-            "ExpectedArrivalTime": "2026-10-04T14:18:19+02:00",
+            "ExpectedArrivalTime": "2026-10-04T14:19:33+02:00",
             "ArrivalStatus": "delayed",
             "AimedDepartureTime": "2026-10-04T14:16:00+02:00",
-            "ExpectedDepartureTime": "2026-10-04T14:18:19+02:00",
+            "ExpectedDepartureTime": "2026-10-04T14:19:33+02:00",
             "StopPointRef": {
               "value": "MGIN2"
             },
             "Order": 22
           }
         },
-        "RecordedAtTime": "2026-10-04T13:53:30.38108036+02:00",
+        "RecordedAtTime": "2026-10-04T13:58:40.417877131+02:00",
         "ItemIdentifier": "3-MGIN2-R-2026-10-04T14:16+02:00[Europe/Paris]"
       },
       {
@@ -1192,6 +1196,65 @@
         },
         "MonitoredVehicleJourney": {
           "LineRef": {
+            "value": "4"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
+            "DatedVehicleJourneyRef": "52560351-CR_26_27-BT27BA17-Dimanche-03"
+          },
+          "VehicleMode": [
+            "bus"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Foch - Cathédrale - Porte de Vertou"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "A"
+            }
+          ],
+          "DestinationRef": {
+            "value": "DCA73"
+          },
+          "DestinationName": [
+            {
+              "value": "Duchesse Anne-Chateau",
+              "lang": "FR"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": true,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "Duchesse Anne-Chateau",
+                "lang": "FR"
+              }
+            ],
+            "AimedArrivalTime": "2026-10-04T14:46:00+02:00",
+            "ExpectedArrivalTime": "2026-10-04T14:46:00+02:00",
+            "ArrivalStatus": "onTime",
+            "AimedDepartureTime": "2026-10-04T14:46:00+02:00",
+            "ExpectedDepartureTime": "2026-10-04T14:46:00+02:00",
+            "StopPointRef": {
+              "value": "IDNA1"
+            },
+            "Order": 11
+          }
+        },
+        "RecordedAtTime": "2026-10-04T13:59:16.110004101+02:00",
+        "ItemIdentifier": "4-IDNA1-A-2026-10-04T14:46+02:00[Europe/Paris]"
+      },
+      {
+        "MonitoringRef": {
+          "value": "IDNA1"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
             "value": "26"
           },
           "FramedVehicleJourneyRef": {
@@ -1480,65 +1543,6 @@
         },
         "RecordedAtTime": "2026-10-04T12:10:14.447871083+02:00",
         "ItemIdentifier": "4-IDNA1-A-2026-10-04T14:10+02:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "IDNA1"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "4"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "52560355-CR_26_27-BT27BA17-Dimanche-03"
-          },
-          "VehicleMode": [
-            "bus"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Foch - Cathédrale - Porte de Vertou"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "A"
-            }
-          ],
-          "DestinationRef": {
-            "value": "DCA73"
-          },
-          "DestinationName": [
-            {
-              "value": "Duchesse Anne-Chateau",
-              "lang": "FR"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Duchesse Anne-Chateau",
-                "lang": "FR"
-              }
-            ],
-            "AimedArrivalTime": "2026-10-04T13:58:00+02:00",
-            "ExpectedArrivalTime": "2026-10-04T13:59:09+02:00",
-            "ArrivalStatus": "delayed",
-            "AimedDepartureTime": "2026-10-04T13:58:00+02:00",
-            "ExpectedDepartureTime": "2026-10-04T13:59:09+02:00",
-            "StopPointRef": {
-              "value": "IDNA1"
-            },
-            "Order": 11
-          }
-        },
-        "RecordedAtTime": "2026-10-04T13:46:16.031293892+02:00",
-        "ItemIdentifier": "4-IDNA1-A-2026-10-04T13:58+02:00[Europe/Paris]"
       },
       {
         "MonitoringRef": {
@@ -1969,6 +1973,65 @@
             "DataFrameRef": {
               "value": "any"
             },
+            "DatedVehicleJourneyRef": "52560351-CR_26_27-BT27BA17-Dimanche-03"
+          },
+          "VehicleMode": [
+            "bus"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Foch - Cathédrale - Porte de Vertou"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "A"
+            }
+          ],
+          "DestinationRef": {
+            "value": "DCA73"
+          },
+          "DestinationName": [
+            {
+              "value": "Duchesse Anne-Chateau",
+              "lang": "FR"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": true,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "Duchesse Anne-Chateau",
+                "lang": "FR"
+              }
+            ],
+            "AimedArrivalTime": "2026-10-04T14:45:00+02:00",
+            "ExpectedArrivalTime": "2026-10-04T14:45:00+02:00",
+            "ArrivalStatus": "onTime",
+            "AimedDepartureTime": "2026-10-04T14:45:00+02:00",
+            "ExpectedDepartureTime": "2026-10-04T14:45:00+02:00",
+            "StopPointRef": {
+              "value": "BENA1"
+            },
+            "Order": 10
+          }
+        },
+        "RecordedAtTime": "2026-10-04T13:58:16.673355393+02:00",
+        "ItemIdentifier": "4-BENA1-A-2026-10-04T14:45+02:00[Europe/Paris]"
+      },
+      {
+        "MonitoringRef": {
+          "value": "BENA1"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
+            "value": "4"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
             "DatedVehicleJourneyRef": "52560358-CR_26_27-BT27BA17-Dimanche-03"
           },
           "VehicleMode": [
@@ -2074,65 +2137,6 @@
         },
         "RecordedAtTime": "2026-10-04T12:21:14.533024465+02:00",
         "ItemIdentifier": "4-BENA1-A-2026-10-04T14:21+02:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "BENA1"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "4"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "52560355-CR_26_27-BT27BA17-Dimanche-03"
-          },
-          "VehicleMode": [
-            "bus"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Foch - Cathédrale - Porte de Vertou"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "A"
-            }
-          ],
-          "DestinationRef": {
-            "value": "DCA73"
-          },
-          "DestinationName": [
-            {
-              "value": "Duchesse Anne-Chateau",
-              "lang": "FR"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Duchesse Anne-Chateau",
-                "lang": "FR"
-              }
-            ],
-            "AimedArrivalTime": "2026-10-04T13:57:00+02:00",
-            "ExpectedArrivalTime": "2026-10-04T13:58:09+02:00",
-            "ArrivalStatus": "delayed",
-            "AimedDepartureTime": "2026-10-04T13:57:00+02:00",
-            "ExpectedDepartureTime": "2026-10-04T13:58:09+02:00",
-            "StopPointRef": {
-              "value": "BENA1"
-            },
-            "Order": 10
-          }
-        },
-        "RecordedAtTime": "2026-10-04T13:46:16.036932196+02:00",
-        "ItemIdentifier": "4-BENA1-A-2026-10-04T13:57+02:00[Europe/Paris]"
       }
     ],
     "RPBL4": [
@@ -2538,17 +2542,17 @@
               }
             ],
             "AimedArrivalTime": "2026-10-04T14:19:00+02:00",
-            "ExpectedArrivalTime": "2026-10-04T14:17:03+02:00",
+            "ExpectedArrivalTime": "2026-10-04T14:16:04+02:00",
             "ArrivalStatus": "early",
             "AimedDepartureTime": "2026-10-04T14:19:00+02:00",
-            "ExpectedDepartureTime": "2026-10-04T14:17:03+02:00",
+            "ExpectedDepartureTime": "2026-10-04T14:16:04+02:00",
             "StopPointRef": {
               "value": "RPBL1"
             },
             "Order": 28
           }
         },
-        "RecordedAtTime": "2026-10-04T13:54:46.084942537+02:00",
+        "RecordedAtTime": "2026-10-04T13:57:16.103794401+02:00",
         "ItemIdentifier": "26-RPBL1-R-2026-10-04T14:19+02:00[Europe/Paris]"
       }
     ],
@@ -2982,7 +2986,7 @@
             "DataFrameRef": {
               "value": "any"
             },
-            "DatedVehicleJourneyRef": "49677138-CR_26_27-BT27BA17-Dimanche-03"
+            "DatedVehicleJourneyRef": "49677140-CR_26_27-BT27BA17-Dimanche-03"
           },
           "VehicleMode": [
             "bus"
@@ -3015,19 +3019,19 @@
                 "lang": "FR"
               }
             ],
-            "AimedArrivalTime": "2026-10-04T13:56:00+02:00",
-            "ExpectedArrivalTime": "2026-10-04T13:57:18+02:00",
-            "ArrivalStatus": "delayed",
-            "AimedDepartureTime": "2026-10-04T13:56:00+02:00",
-            "ExpectedDepartureTime": "2026-10-04T13:57:18+02:00",
+            "AimedArrivalTime": "2026-10-04T15:57:00+02:00",
+            "ExpectedArrivalTime": "2026-10-04T15:56:39+02:00",
+            "ArrivalStatus": "early",
+            "AimedDepartureTime": "2026-10-04T15:57:00+02:00",
+            "ExpectedDepartureTime": "2026-10-04T15:56:39+02:00",
             "StopPointRef": {
               "value": "LHOU1"
             },
             "Order": 25
           }
         },
-        "RecordedAtTime": "2026-10-04T13:47:16.048347416+02:00",
-        "ItemIdentifier": "30-LHOU1-R-2026-10-04T13:56+02:00[Europe/Paris]"
+        "RecordedAtTime": "2026-10-04T13:56:46.103347962+02:00",
+        "ItemIdentifier": "30-LHOU1-R-2026-10-04T15:57+02:00[Europe/Paris]"
       }
     ],
     "DIDE5": [
