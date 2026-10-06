@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-06T21:45:43.458Z",
+  "fetchedAt": "2026-10-06T21:50:43.996Z",
   "stops": {
     "MGIN1": [
       {
@@ -133,10 +133,10 @@
               }
             ],
             "AimedArrivalTime": "2026-10-06T23:52:00+02:00",
-            "ExpectedArrivalTime": "2026-10-06T23:52:00+02:00",
-            "ArrivalStatus": "onTime",
+            "ExpectedArrivalTime": "2026-10-06T23:53:06+02:00",
+            "ArrivalStatus": "delayed",
             "AimedDepartureTime": "2026-10-06T23:52:00+02:00",
-            "ExpectedDepartureTime": "2026-10-06T23:52:00+02:00",
+            "ExpectedDepartureTime": "2026-10-06T23:53:06+02:00",
             "StopPointRef": {
               "value": "MGIN1"
             },
@@ -149,7 +149,7 @@
             ]
           }
         },
-        "RecordedAtTime": "2026-10-06T22:39:07.363978246+02:00",
+        "RecordedAtTime": "2026-10-06T23:49:09.855829929+02:00",
         "ItemIdentifier": "2-MGIN1-A-2026-10-06T23:52+02:00[Europe/Paris]"
       }
     ],
@@ -203,6 +203,7 @@
           "FirstOrLastJourney": "unspecified",
           "Monitored": true,
           "MonitoredCall": {
+            "VehicleAtStop": true,
             "DestinationDisplay": [
               {
                 "value": "Espace Diderot",
@@ -210,10 +211,13 @@
               }
             ],
             "AimedArrivalTime": "2026-10-06T23:48:00+02:00",
-            "ExpectedArrivalTime": "2026-10-06T23:50:12+02:00",
+            "ExpectedArrivalTime": "2026-10-06T23:50:29+02:00",
             "ArrivalStatus": "delayed",
+            "ArrivalProximityText": {
+              "value": "Départ proche"
+            },
             "AimedDepartureTime": "2026-10-06T23:48:00+02:00",
-            "ExpectedDepartureTime": "2026-10-06T23:50:12+02:00",
+            "ExpectedDepartureTime": "2026-10-06T23:50:29+02:00",
             "StopPointRef": {
               "value": "MGIN2"
             },
@@ -226,86 +230,11 @@
             ]
           }
         },
-        "RecordedAtTime": "2026-10-06T23:41:19.799660578+02:00",
+        "RecordedAtTime": "2026-10-06T23:50:19.862849444+02:00",
         "ItemIdentifier": "2-MGIN2-R-2026-10-06T23:48+02:00[Europe/Paris]"
       }
     ],
     "IDNA1": [
-      {
-        "MonitoringRef": {
-          "value": "IDNA1"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "4"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "00002480220049762568"
-          },
-          "VehicleMode": [
-            "bus"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Foch - Cathédrale - Porte de Vertou"
-            },
-            {
-              "value": "Foch - Cathédrale - Porte de Vertou",
-              "lang": "fr"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "A"
-            }
-          ],
-          "DestinationRef": {
-            "value": "FOCH1"
-          },
-          "DestinationName": [
-            {
-              "value": "Foch - Cathédrale",
-              "lang": "fr"
-            }
-          ],
-          "VehicleJourneyName": [
-            {
-              "value": "Foch - Cathédrale",
-              "lang": "fr"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Foch - Cathédrale",
-                "lang": "fr"
-              }
-            ],
-            "AimedArrivalTime": "2026-10-06T23:49:00+02:00",
-            "ExpectedArrivalTime": "2026-10-06T23:49:04+02:00",
-            "ArrivalStatus": "delayed",
-            "AimedDepartureTime": "2026-10-06T23:49:00+02:00",
-            "ExpectedDepartureTime": "2026-10-06T23:49:04+02:00",
-            "StopPointRef": {
-              "value": "IDNA1"
-            },
-            "Order": 11,
-            "StopPointName": [
-              {
-                "value": "Île de Nantes",
-                "lang": "fr"
-              }
-            ]
-          }
-        },
-        "RecordedAtTime": "2026-10-06T23:43:58.590674789+02:00",
-        "ItemIdentifier": "4-IDNA1-A-2026-10-06T23:49+02:00[Europe/Paris]"
-      },
       {
         "MonitoringRef": {
           "value": "IDNA1"
@@ -461,81 +390,6 @@
         },
         "RecordedAtTime": "2026-10-06T22:40:57.159012827+02:00",
         "ItemIdentifier": "4-IDNA1-A-2026-10-07T00:19+02:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "IDNA1"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "5"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "00002480220049763837"
-          },
-          "VehicleMode": [
-            "bus"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Hangar à Bananes - Gare Sud"
-            },
-            {
-              "value": "Hangar à Bananes - Gare Sud",
-              "lang": "fr"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "A"
-            }
-          ],
-          "DestinationRef": {
-            "value": "HBAN1"
-          },
-          "DestinationName": [
-            {
-              "value": "Hangar à Bananes",
-              "lang": "fr"
-            }
-          ],
-          "VehicleJourneyName": [
-            {
-              "value": "Hangar à Bananes",
-              "lang": "fr"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Hangar à Bananes",
-                "lang": "fr"
-              }
-            ],
-            "AimedArrivalTime": "2026-10-06T23:50:00+02:00",
-            "ExpectedArrivalTime": "2026-10-06T23:50:19+02:00",
-            "ArrivalStatus": "delayed",
-            "AimedDepartureTime": "2026-10-06T23:50:00+02:00",
-            "ExpectedDepartureTime": "2026-10-06T23:50:19+02:00",
-            "StopPointRef": {
-              "value": "IDNA1"
-            },
-            "Order": 7,
-            "StopPointName": [
-              {
-                "value": "Île de Nantes",
-                "lang": "fr"
-              }
-            ]
-          }
-        },
-        "RecordedAtTime": "2026-10-06T21:51:27.776382729+02:00",
-        "ItemIdentifier": "5-IDNA1-A-2026-10-06T23:50+02:00[Europe/Paris]"
       }
     ],
     "GNRA4": [
@@ -771,81 +625,6 @@
         },
         "RecordedAtTime": "2026-10-06T22:39:57.154700405+02:00",
         "ItemIdentifier": "4-BENA1-A-2026-10-07T00:18+02:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "BENA1"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "4"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "00002480220049762568"
-          },
-          "VehicleMode": [
-            "bus"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Foch - Cathédrale - Porte de Vertou"
-            },
-            {
-              "value": "Foch - Cathédrale - Porte de Vertou",
-              "lang": "fr"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "A"
-            }
-          ],
-          "DestinationRef": {
-            "value": "FOCH1"
-          },
-          "DestinationName": [
-            {
-              "value": "Foch - Cathédrale",
-              "lang": "fr"
-            }
-          ],
-          "VehicleJourneyName": [
-            {
-              "value": "Foch - Cathédrale",
-              "lang": "fr"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Foch - Cathédrale",
-                "lang": "fr"
-              }
-            ],
-            "AimedArrivalTime": "2026-10-06T23:48:00+02:00",
-            "ExpectedArrivalTime": "2026-10-06T23:48:04+02:00",
-            "ArrivalStatus": "delayed",
-            "AimedDepartureTime": "2026-10-06T23:48:00+02:00",
-            "ExpectedDepartureTime": "2026-10-06T23:48:04+02:00",
-            "StopPointRef": {
-              "value": "BENA1"
-            },
-            "Order": 10,
-            "StopPointName": [
-              {
-                "value": "Beaulieu",
-                "lang": "fr"
-              }
-            ]
-          }
-        },
-        "RecordedAtTime": "2026-10-06T23:43:58.596471237+02:00",
-        "ItemIdentifier": "4-BENA1-A-2026-10-06T23:48+02:00[Europe/Paris]"
       }
     ],
     "RPBL4": [
