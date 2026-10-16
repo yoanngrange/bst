@@ -5,9 +5,11 @@
 
 import { writeFile, mkdir } from "node:fs/promises";
 
-// ---- CONFIG: adjust these once you've confirmed the real API details ----
-const API_BASE_URL = "https://api.staging.okina.fr/gateway/sem/realtime/siri/2.0/stop-monitoring.json";
-// ---------------------------------------------------------------------
+// ---- CONFIG ----
+// Prod API (confirmed working 2026-10-16) — was api.staging.okina.fr during
+// dev while waiting for prod access.
+const API_BASE_URL = "https://api.okina.fr/gateway/sem/realtime/siri/2.0/stop-monitoring.json";
+// ----------------
 
 const MONITORING_REFS = [
   "MGIN1", "MGIN2", "IDNA1", "GNRA4", "BENA1",
