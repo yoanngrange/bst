@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-18T00:10:38.186Z",
+  "fetchedAt": "2026-10-18T00:15:37.740Z",
   "stops": {
     "MGIN1": [
       {
@@ -14,7 +14,7 @@
             "DataFrameRef": {
               "value": "any"
             },
-            "DatedVehicleJourneyRef": "53488642-CR_26_27-MW27VL16-Samedi-00"
+            "DatedVehicleJourneyRef": "53488849-CR_26_27-MW27VL16-Samedi-00"
           },
           "VehicleMode": [
             "tram"
@@ -30,7 +30,7 @@
             }
           ],
           "DestinationRef": {
-            "value": "MPAU2"
+            "value": "MPAU1"
           },
           "DestinationName": [
             {
@@ -47,19 +47,81 @@
                 "lang": "FR"
               }
             ],
-            "AimedArrivalTime": "2026-10-18T01:22:00+02:00",
-            "ExpectedArrivalTime": "2026-10-18T02:19:26+02:00",
-            "ArrivalStatus": "delayed",
-            "AimedDepartureTime": "2026-10-18T01:22:00+02:00",
-            "ExpectedDepartureTime": "2026-10-18T02:19:26+02:00",
+            "AimedArrivalTime": "2026-10-18T02:52:00+02:00",
+            "ExpectedArrivalTime": "2026-10-18T02:52:00+02:00",
+            "ArrivalStatus": "onTime",
+            "ArrivalProximityText": {
+              "value": "Dernier départ"
+            },
+            "AimedDepartureTime": "2026-10-18T02:52:00+02:00",
+            "ExpectedDepartureTime": "2026-10-18T02:52:00+02:00",
             "StopPointRef": {
               "value": "MGIN1"
             },
             "Order": 13
           }
         },
-        "RecordedAtTime": "2026-10-18T02:09:46.060759264+02:00",
-        "ItemIdentifier": "3-MGIN1-A-2026-10-18T01:22+02:00[Europe/Paris]"
+        "RecordedAtTime": "2026-10-18T02:15:36.141420537+02:00",
+        "ItemIdentifier": "3-MGIN1-A-2026-10-18T02:52+02:00[Europe/Paris]"
+      },
+      {
+        "MonitoringRef": {
+          "value": "MGIN1"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
+            "value": "3"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
+            "DatedVehicleJourneyRef": "53488875-CR_26_27-MW27VL16-Samedi-00"
+          },
+          "VehicleMode": [
+            "tram"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Marcel Paul - Neustrie"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "A"
+            }
+          ],
+          "DestinationRef": {
+            "value": "MPAU1"
+          },
+          "DestinationName": [
+            {
+              "value": "Marcel Paul",
+              "lang": "FR"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": true,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "Marcel Paul",
+                "lang": "FR"
+              }
+            ],
+            "AimedArrivalTime": "2026-10-18T00:37:00+02:00",
+            "ExpectedArrivalTime": "2026-10-18T02:59:02+02:00",
+            "ArrivalStatus": "delayed",
+            "AimedDepartureTime": "2026-10-18T00:37:00+02:00",
+            "ExpectedDepartureTime": "2026-10-18T02:59:02+02:00",
+            "StopPointRef": {
+              "value": "MGIN1"
+            },
+            "Order": 13
+          }
+        },
+        "RecordedAtTime": "2026-10-18T02:15:36.14141165+02:00",
+        "ItemIdentifier": "3-MGIN1-A-2026-10-18T00:37+02:00[Europe/Paris]"
       }
     ],
     "MGIN2": [
@@ -313,6 +375,65 @@
         },
         "MonitoredVehicleJourney": {
           "LineRef": {
+            "value": "NS"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
+            "DatedVehicleJourneyRef": "49915035-CR_26_27-MT27VL16-Samedi-02"
+          },
+          "VehicleMode": [
+            "bus"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Bourdonnières - Hangar à Bananes"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "A"
+            }
+          ],
+          "DestinationRef": {
+            "value": "BODO4"
+          },
+          "DestinationName": [
+            {
+              "value": "Bourdonnières",
+              "lang": "FR"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": false,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "Bourdonnières",
+                "lang": "FR"
+              }
+            ],
+            "AimedArrivalTime": "2026-10-18T03:48:00+02:00",
+            "ExpectedArrivalTime": "2026-10-18T03:48:25+02:00",
+            "ArrivalStatus": "delayed",
+            "AimedDepartureTime": "2026-10-18T03:48:00+02:00",
+            "ExpectedDepartureTime": "2026-10-18T03:48:25+02:00",
+            "StopPointRef": {
+              "value": "RPBL4"
+            },
+            "Order": 5
+          }
+        },
+        "RecordedAtTime": "2026-10-18T01:48:42.382751048+02:00",
+        "ItemIdentifier": "NS-RPBL4-A-2026-10-18T03:48+02:00[Europe/Paris]"
+      },
+      {
+        "MonitoringRef": {
+          "value": "RPBL4"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
             "value": "NN"
           },
           "FramedVehicleJourneyRef": {
@@ -365,6 +486,65 @@
         },
         "RecordedAtTime": "2026-10-18T01:48:42.382666149+02:00",
         "ItemIdentifier": "NN-RPBL4-A-2026-10-18T03:48+02:00[Europe/Paris]"
+      },
+      {
+        "MonitoringRef": {
+          "value": "RPBL4"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
+            "value": "NO"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
+            "DatedVehicleJourneyRef": "50576601-CR_26_27-MS27VL16-Samedi-02"
+          },
+          "VehicleMode": [
+            "bus"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Beauséjour - Hangar à Bananes"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "A"
+            }
+          ],
+          "DestinationRef": {
+            "value": "BSE11"
+          },
+          "DestinationName": [
+            {
+              "value": "Beauséjour",
+              "lang": "FR"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": false,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "Beauséjour",
+                "lang": "FR"
+              }
+            ],
+            "AimedArrivalTime": "2026-10-18T02:48:00+02:00",
+            "ExpectedArrivalTime": "2026-10-18T02:48:01+02:00",
+            "ArrivalStatus": "delayed",
+            "AimedDepartureTime": "2026-10-18T02:48:00+02:00",
+            "ExpectedDepartureTime": "2026-10-18T02:48:01+02:00",
+            "StopPointRef": {
+              "value": "RPBL4"
+            },
+            "Order": 5
+          }
+        },
+        "RecordedAtTime": "2026-10-18T00:48:10.991054234+02:00",
+        "ItemIdentifier": "NO-RPBL4-A-2026-10-18T02:48+02:00[Europe/Paris]"
       },
       {
         "MonitoringRef": {
@@ -437,124 +617,6 @@
             "DataFrameRef": {
               "value": "any"
             },
-            "DatedVehicleJourneyRef": "49915035-CR_26_27-MT27VL16-Samedi-02"
-          },
-          "VehicleMode": [
-            "bus"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Bourdonnières - Hangar à Bananes"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "A"
-            }
-          ],
-          "DestinationRef": {
-            "value": "BODO4"
-          },
-          "DestinationName": [
-            {
-              "value": "Bourdonnières",
-              "lang": "FR"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": false,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Bourdonnières",
-                "lang": "FR"
-              }
-            ],
-            "AimedArrivalTime": "2026-10-18T03:48:00+02:00",
-            "ExpectedArrivalTime": "2026-10-18T03:48:25+02:00",
-            "ArrivalStatus": "delayed",
-            "AimedDepartureTime": "2026-10-18T03:48:00+02:00",
-            "ExpectedDepartureTime": "2026-10-18T03:48:25+02:00",
-            "StopPointRef": {
-              "value": "RPBL4"
-            },
-            "Order": 5
-          }
-        },
-        "RecordedAtTime": "2026-10-18T01:48:42.382751048+02:00",
-        "ItemIdentifier": "NS-RPBL4-A-2026-10-18T03:48+02:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "RPBL4"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "NO"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "50576601-CR_26_27-MS27VL16-Samedi-02"
-          },
-          "VehicleMode": [
-            "bus"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Beauséjour - Hangar à Bananes"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "A"
-            }
-          ],
-          "DestinationRef": {
-            "value": "BSE11"
-          },
-          "DestinationName": [
-            {
-              "value": "Beauséjour",
-              "lang": "FR"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": false,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Beauséjour",
-                "lang": "FR"
-              }
-            ],
-            "AimedArrivalTime": "2026-10-18T02:48:00+02:00",
-            "ExpectedArrivalTime": "2026-10-18T02:48:01+02:00",
-            "ArrivalStatus": "delayed",
-            "AimedDepartureTime": "2026-10-18T02:48:00+02:00",
-            "ExpectedDepartureTime": "2026-10-18T02:48:01+02:00",
-            "StopPointRef": {
-              "value": "RPBL4"
-            },
-            "Order": 5
-          }
-        },
-        "RecordedAtTime": "2026-10-18T00:48:10.991054234+02:00",
-        "ItemIdentifier": "NO-RPBL4-A-2026-10-18T02:48+02:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "RPBL4"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "NS"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
             "DatedVehicleJourneyRef": "49915033-CR_26_27-MT27VL16-Samedi-02"
           },
           "VehicleMode": [
@@ -601,127 +663,9 @@
         },
         "RecordedAtTime": "2026-10-18T00:48:40.994278865+02:00",
         "ItemIdentifier": "NS-RPBL4-A-2026-10-18T02:48+02:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "RPBL4"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "NN"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "49958772-CR_26_27-MD27VLA6-Samedi-22"
-          },
-          "VehicleMode": [
-            "bus"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Porte de la Chapelle - Hangar à Bananes"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "A"
-            }
-          ],
-          "DestinationRef": {
-            "value": "PCPE3"
-          },
-          "DestinationName": [
-            {
-              "value": "Porte de La Chapelle",
-              "lang": "FR"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": false,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Porte de La Chapelle",
-                "lang": "FR"
-              }
-            ],
-            "AimedArrivalTime": "2026-10-18T02:48:00+02:00",
-            "ExpectedArrivalTime": "2026-10-18T02:48:26+02:00",
-            "ArrivalStatus": "delayed",
-            "AimedDepartureTime": "2026-10-18T02:48:00+02:00",
-            "ExpectedDepartureTime": "2026-10-18T02:48:26+02:00",
-            "StopPointRef": {
-              "value": "RPBL4"
-            },
-            "Order": 5
-          }
-        },
-        "RecordedAtTime": "2026-10-18T00:48:40.994251037+02:00",
-        "ItemIdentifier": "NN-RPBL4-A-2026-10-18T02:48+02:00[Europe/Paris]"
       }
     ],
     "RPBL1": [
-      {
-        "MonitoringRef": {
-          "value": "RPBL1"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "NN"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "49958769-CR_26_27-MD27VLA6-Samedi-22"
-          },
-          "VehicleMode": [
-            "bus"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Porte de la Chapelle - Hangar à Bananes"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "R"
-            }
-          ],
-          "DestinationRef": {
-            "value": "HBAN1"
-          },
-          "DestinationName": [
-            {
-              "value": "Hangar à Bananes",
-              "lang": "FR"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": false,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Hangar à Bananes",
-                "lang": "FR"
-              }
-            ],
-            "AimedArrivalTime": "2026-10-18T03:28:00+02:00",
-            "ExpectedArrivalTime": "2026-10-18T03:27:52+02:00",
-            "ArrivalStatus": "early",
-            "AimedDepartureTime": "2026-10-18T03:28:00+02:00",
-            "ExpectedDepartureTime": "2026-10-18T03:27:52+02:00",
-            "StopPointRef": {
-              "value": "RPBL1"
-            },
-            "Order": 22
-          }
-        },
-        "RecordedAtTime": "2026-10-18T01:28:12.251457458+02:00",
-        "ItemIdentifier": "NN-RPBL1-R-2026-10-18T03:28+02:00[Europe/Paris]"
-      },
       {
         "MonitoringRef": {
           "value": "RPBL1"
@@ -840,7 +784,7 @@
             "Order": 7
           }
         },
-        "RecordedAtTime": "2026-10-18T02:10:36.066086029+02:00",
+        "RecordedAtTime": "2026-10-18T02:15:36.140777076+02:00",
         "ItemIdentifier": "3-DIDE1-A-2026-10-18T00:58+02:00[Europe/Paris]"
       },
       {
@@ -902,7 +846,7 @@
             "Order": 7
           }
         },
-        "RecordedAtTime": "2026-10-18T02:09:26.059043673+02:00",
+        "RecordedAtTime": "2026-10-18T02:15:36.140791308+02:00",
         "ItemIdentifier": "3-DIDE1-A-2026-10-18T02:43+02:00[Europe/Paris]"
       },
       {
@@ -961,7 +905,7 @@
             "Order": 7
           }
         },
-        "RecordedAtTime": "2026-10-18T02:09:26.059032682+02:00",
+        "RecordedAtTime": "2026-10-18T02:15:36.140761965+02:00",
         "ItemIdentifier": "3-DIDE1-A-2026-10-18T00:28+02:00[Europe/Paris]"
       }
     ],
@@ -1024,6 +968,65 @@
         },
         "RecordedAtTime": "2026-10-18T01:14:42.16168444+02:00",
         "ItemIdentifier": "NS-LHOU1-R-2026-10-18T03:14+02:00[Europe/Paris]"
+      },
+      {
+        "MonitoringRef": {
+          "value": "LHOU1"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
+            "value": "NS"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
+            "DatedVehicleJourneyRef": "49915034-CR_26_27-MT27VL16-Samedi-02"
+          },
+          "VehicleMode": [
+            "bus"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Bourdonnières - Hangar à Bananes"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "R"
+            }
+          ],
+          "DestinationRef": {
+            "value": "HBA99"
+          },
+          "DestinationName": [
+            {
+              "value": "Hangar à Bananes",
+              "lang": "FR"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": false,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "Hangar à Bananes",
+                "lang": "FR"
+              }
+            ],
+            "AimedArrivalTime": "2026-10-18T04:14:00+02:00",
+            "ExpectedArrivalTime": "2026-10-18T04:14:12+02:00",
+            "ArrivalStatus": "delayed",
+            "AimedDepartureTime": "2026-10-18T04:14:00+02:00",
+            "ExpectedDepartureTime": "2026-10-18T04:14:12+02:00",
+            "StopPointRef": {
+              "value": "LHOU1"
+            },
+            "Order": 9
+          }
+        },
+        "RecordedAtTime": "2026-10-18T02:14:41.549917153+02:00",
+        "ItemIdentifier": "NS-LHOU1-R-2026-10-18T04:14+02:00[Europe/Paris]"
       }
     ],
     "DIDE5": [],
@@ -1087,7 +1090,7 @@
             "Order": 6
           }
         },
-        "RecordedAtTime": "2026-10-18T02:10:06.063720463+02:00",
+        "RecordedAtTime": "2026-10-18T02:15:36.142138684+02:00",
         "ItemIdentifier": "3-TROC1-A-2026-10-18T02:41+02:00[Europe/Paris]"
       },
       {
@@ -1146,7 +1149,7 @@
             "Order": 6
           }
         },
-        "RecordedAtTime": "2026-10-18T02:10:06.063701412+02:00",
+        "RecordedAtTime": "2026-10-18T02:15:36.142114286+02:00",
         "ItemIdentifier": "3-TROC1-A-2026-10-18T00:26+02:00[Europe/Paris]"
       },
       {
@@ -1205,7 +1208,7 @@
             "Order": 6
           }
         },
-        "RecordedAtTime": "2026-10-18T02:10:06.063712665+02:00",
+        "RecordedAtTime": "2026-10-18T02:15:36.142127772+02:00",
         "ItemIdentifier": "3-TROC1-A-2026-10-18T00:56+02:00[Europe/Paris]"
       }
     ]
