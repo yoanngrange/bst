@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-19T02:25:29.220Z",
+  "fetchedAt": "2026-10-19T02:30:56.875Z",
   "stops": {
     "MGIN1": [],
     "MGIN2": [],
@@ -364,6 +364,65 @@
         },
         "MonitoredVehicleJourney": {
           "LineRef": {
+            "value": "26"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
+            "DatedVehicleJourneyRef": "49639379-CR_26_27-AT27VE11-L-Ma-Me-J-02"
+          },
+          "VehicleMode": [
+            "bus"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Jonelière - Hôtel de Région"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "A"
+            }
+          ],
+          "DestinationRef": {
+            "value": "JNLI2"
+          },
+          "DestinationName": [
+            {
+              "value": "Jonelière",
+              "lang": "FR"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": false,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "Jonelière",
+                "lang": "FR"
+              }
+            ],
+            "AimedArrivalTime": "2026-10-19T06:29:00+02:00",
+            "ExpectedArrivalTime": "2026-10-19T06:28:50+02:00",
+            "ArrivalStatus": "early",
+            "AimedDepartureTime": "2026-10-19T06:29:00+02:00",
+            "ExpectedDepartureTime": "2026-10-19T06:28:50+02:00",
+            "StopPointRef": {
+              "value": "IDNA1"
+            },
+            "Order": 5
+          }
+        },
+        "RecordedAtTime": "2026-10-19T04:29:08.699137683+02:00",
+        "ItemIdentifier": "26-IDNA1-A-2026-10-19T06:29+02:00[Europe/Paris]"
+      },
+      {
+        "MonitoringRef": {
+          "value": "IDNA1"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
             "value": "4"
           },
           "FramedVehicleJourneyRef": {
@@ -595,6 +654,65 @@
         },
         "RecordedAtTime": "2026-10-19T04:09:08.562731618+02:00",
         "ItemIdentifier": "38-GNRA4-R-2026-10-19T06:09+02:00[Europe/Paris]"
+      },
+      {
+        "MonitoringRef": {
+          "value": "GNRA4"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
+            "value": "36"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
+            "DatedVehicleJourneyRef": "53341906-CR_26_27-AT27VE11-L-Ma-Me-J-02"
+          },
+          "VehicleMode": [
+            "bus"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Greneraie - Croix Jeannette"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "R"
+            }
+          ],
+          "DestinationRef": {
+            "value": "XJAN1"
+          },
+          "DestinationName": [
+            {
+              "value": "Croix Jeannette",
+              "lang": "FR"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": false,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "Croix Jeannette",
+                "lang": "FR"
+              }
+            ],
+            "AimedArrivalTime": "2026-10-19T06:30:00+02:00",
+            "ExpectedArrivalTime": "2026-10-19T06:30:00+02:00",
+            "ArrivalStatus": "onTime",
+            "AimedDepartureTime": "2026-10-19T06:30:00+02:00",
+            "ExpectedDepartureTime": "2026-10-19T06:30:00+02:00",
+            "StopPointRef": {
+              "value": "GNRA4"
+            },
+            "Order": 1
+          }
+        },
+        "RecordedAtTime": "2026-10-19T04:30:15.705224143+02:00",
+        "ItemIdentifier": "36-GNRA4-R-2026-10-19T06:30+02:00[Europe/Paris]"
       },
       {
         "MonitoringRef": {
@@ -1359,17 +1477,17 @@
               }
             ],
             "AimedArrivalTime": "2026-10-19T04:32:00+02:00",
-            "ExpectedArrivalTime": "2026-10-19T04:32:00+02:00",
-            "ArrivalStatus": "onTime",
+            "ExpectedArrivalTime": "2026-10-19T04:33:03+02:00",
+            "ArrivalStatus": "delayed",
             "AimedDepartureTime": "2026-10-19T04:32:00+02:00",
-            "ExpectedDepartureTime": "2026-10-19T04:32:00+02:00",
+            "ExpectedDepartureTime": "2026-10-19T04:33:03+02:00",
             "StopPointRef": {
               "value": "DIDE1"
             },
             "Order": 7
           }
         },
-        "RecordedAtTime": "2026-10-19T03:44:48.699040647+02:00",
+        "RecordedAtTime": "2026-10-19T04:28:09.251054775+02:00",
         "ItemIdentifier": "3-DIDE1-A-2026-10-19T04:32+02:00[Europe/Paris]"
       },
       {
@@ -1948,6 +2066,7 @@
           "FirstOrLastJourney": "unspecified",
           "Monitored": true,
           "MonitoredCall": {
+            "VehicleAtStop": true,
             "DestinationDisplay": [
               {
                 "value": "8 Mai",
@@ -1955,17 +2074,20 @@
               }
             ],
             "AimedArrivalTime": "2026-10-19T04:30:00+02:00",
-            "ExpectedArrivalTime": "2026-10-19T04:30:00+02:00",
-            "ArrivalStatus": "onTime",
+            "ExpectedArrivalTime": "2026-10-19T04:31:24+02:00",
+            "ArrivalStatus": "delayed",
+            "ArrivalProximityText": {
+              "value": "Départ proche"
+            },
             "AimedDepartureTime": "2026-10-19T04:30:00+02:00",
-            "ExpectedDepartureTime": "2026-10-19T04:30:00+02:00",
+            "ExpectedDepartureTime": "2026-10-19T04:31:24+02:00",
             "StopPointRef": {
               "value": "TROC1"
             },
             "Order": 6
           }
         },
-        "RecordedAtTime": "2026-10-19T03:44:48.698965385+02:00",
+        "RecordedAtTime": "2026-10-19T04:30:49.266745784+02:00",
         "ItemIdentifier": "3-TROC1-A-2026-10-19T04:30+02:00[Europe/Paris]"
       }
     ]
