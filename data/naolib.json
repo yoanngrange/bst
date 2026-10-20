@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-20T17:05:30.530Z",
+  "fetchedAt": "2026-10-20T17:10:38.229Z",
   "stops": {
     "MGIN1": [],
     "MGIN2": [],
@@ -459,6 +459,7 @@
           "FirstOrLastJourney": "unspecified",
           "Monitored": true,
           "MonitoredCall": {
+            "VehicleAtStop": true,
             "DestinationDisplay": [
               {
                 "value": "Jonelière",
@@ -466,17 +467,20 @@
               }
             ],
             "AimedArrivalTime": "2026-10-20T19:10:00+02:00",
-            "ExpectedArrivalTime": "2026-10-20T19:09:50+02:00",
-            "ArrivalStatus": "early",
+            "ExpectedArrivalTime": "2026-10-20T19:10:36+02:00",
+            "ArrivalStatus": "delayed",
+            "ArrivalProximityText": {
+              "value": "Départ proche"
+            },
             "AimedDepartureTime": "2026-10-20T19:10:00+02:00",
-            "ExpectedDepartureTime": "2026-10-20T19:09:50+02:00",
+            "ExpectedDepartureTime": "2026-10-20T19:10:36+02:00",
             "StopPointRef": {
               "value": "IDNA1"
             },
             "Order": 5
           }
         },
-        "RecordedAtTime": "2026-10-20T17:49:37.587850138+02:00",
+        "RecordedAtTime": "2026-10-20T19:10:09.171233593+02:00",
         "ItemIdentifier": "26-IDNA1-A-2026-10-20T19:10+02:00[Europe/Paris]"
       },
       {
@@ -550,6 +554,65 @@
             "DataFrameRef": {
               "value": "any"
             },
+            "DatedVehicleJourneyRef": "49753709-CR_26_27-AT27VE11-L-Ma-Me-J-21"
+          },
+          "VehicleMode": [
+            "bus"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Foch - Cathédrale - Porte de Vertou"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "A"
+            }
+          ],
+          "DestinationRef": {
+            "value": "FOCH1"
+          },
+          "DestinationName": [
+            {
+              "value": "Foch - Cathédrale",
+              "lang": "FR"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": true,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "Foch - Cathédrale",
+                "lang": "FR"
+              }
+            ],
+            "AimedArrivalTime": "2026-10-20T19:34:00+02:00",
+            "ExpectedArrivalTime": "2026-10-20T19:34:00+02:00",
+            "ArrivalStatus": "onTime",
+            "AimedDepartureTime": "2026-10-20T19:34:00+02:00",
+            "ExpectedDepartureTime": "2026-10-20T19:34:00+02:00",
+            "StopPointRef": {
+              "value": "IDNA1"
+            },
+            "Order": 11
+          }
+        },
+        "RecordedAtTime": "2026-10-20T19:09:39.166016273+02:00",
+        "ItemIdentifier": "4-IDNA1-A-2026-10-20T19:34+02:00[Europe/Paris]"
+      },
+      {
+        "MonitoringRef": {
+          "value": "IDNA1"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
+            "value": "4"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
             "DatedVehicleJourneyRef": "49753860-CR_26_27-AT27VE11-L-Ma-Me-J-21"
           },
           "VehicleMode": [
@@ -596,65 +659,6 @@
         },
         "RecordedAtTime": "2026-10-20T19:04:09.119132987+02:00",
         "ItemIdentifier": "4-IDNA1-A-2026-10-20T19:27+02:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "IDNA1"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "4"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "49753714-CR_26_27-AT27VE11-L-Ma-Me-J-21"
-          },
-          "VehicleMode": [
-            "bus"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Foch - Cathédrale - Porte de Vertou"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "A"
-            }
-          ],
-          "DestinationRef": {
-            "value": "FOCH1"
-          },
-          "DestinationName": [
-            {
-              "value": "Foch - Cathédrale",
-              "lang": "FR"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Foch - Cathédrale",
-                "lang": "FR"
-              }
-            ],
-            "AimedArrivalTime": "2026-10-20T19:08:00+02:00",
-            "ExpectedArrivalTime": "2026-10-20T19:09:18+02:00",
-            "ArrivalStatus": "delayed",
-            "AimedDepartureTime": "2026-10-20T19:08:00+02:00",
-            "ExpectedDepartureTime": "2026-10-20T19:09:18+02:00",
-            "StopPointRef": {
-              "value": "IDNA1"
-            },
-            "Order": 11
-          }
-        },
-        "RecordedAtTime": "2026-10-20T18:56:39.048282071+02:00",
-        "ItemIdentifier": "4-IDNA1-A-2026-10-20T19:08+02:00[Europe/Paris]"
       }
     ],
     "GNRA4": [
@@ -697,6 +701,7 @@
           "FirstOrLastJourney": "unspecified",
           "Monitored": true,
           "MonitoredCall": {
+            "VehicleAtStop": true,
             "DestinationDisplay": [
               {
                 "value": "Aéroport",
@@ -704,17 +709,20 @@
               }
             ],
             "AimedArrivalTime": "2026-10-20T19:10:00+02:00",
-            "ExpectedArrivalTime": "2026-10-20T19:10:00+02:00",
-            "ArrivalStatus": "onTime",
+            "ExpectedArrivalTime": "2026-10-20T19:10:07+02:00",
+            "ArrivalStatus": "delayed",
+            "ArrivalProximityText": {
+              "value": "Départ proche"
+            },
             "AimedDepartureTime": "2026-10-20T19:10:00+02:00",
-            "ExpectedDepartureTime": "2026-10-20T19:10:00+02:00",
+            "ExpectedDepartureTime": "2026-10-20T19:10:07+02:00",
             "StopPointRef": {
               "value": "GNRA4"
             },
             "Order": 1
           }
         },
-        "RecordedAtTime": "2026-10-20T17:52:37.602163102+02:00",
+        "RecordedAtTime": "2026-10-20T19:10:09.183367006+02:00",
         "ItemIdentifier": "38-GNRA4-R-2026-10-20T19:10+02:00[Europe/Paris]"
       },
       {
@@ -815,6 +823,7 @@
           "FirstOrLastJourney": "unspecified",
           "Monitored": true,
           "MonitoredCall": {
+            "VehicleAtStop": true,
             "DestinationDisplay": [
               {
                 "value": "Croix Jeannette",
@@ -822,17 +831,20 @@
               }
             ],
             "AimedArrivalTime": "2026-10-20T19:10:00+02:00",
-            "ExpectedArrivalTime": "2026-10-20T19:10:00+02:00",
-            "ArrivalStatus": "onTime",
+            "ExpectedArrivalTime": "2026-10-20T19:10:07+02:00",
+            "ArrivalStatus": "delayed",
+            "ArrivalProximityText": {
+              "value": "Départ proche"
+            },
             "AimedDepartureTime": "2026-10-20T19:10:00+02:00",
-            "ExpectedDepartureTime": "2026-10-20T19:10:00+02:00",
+            "ExpectedDepartureTime": "2026-10-20T19:10:07+02:00",
             "StopPointRef": {
               "value": "GNRA4"
             },
             "Order": 1
           }
         },
-        "RecordedAtTime": "2026-10-20T18:01:07.69069907+02:00",
+        "RecordedAtTime": "2026-10-20T19:10:09.183325688+02:00",
         "ItemIdentifier": "36-GNRA4-R-2026-10-20T19:10+02:00[Europe/Paris]"
       },
       {
@@ -1018,131 +1030,6 @@
         },
         "MonitoredVehicleJourney": {
           "LineRef": {
-            "value": "E8"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "50287817-CR_26_27-BA27VE21-Lu-Ma-Je-03"
-          },
-          "VehicleMode": [
-            "bus"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "La Cochère - Greneraie"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "A"
-            }
-          ],
-          "DestinationRef": {
-            "value": "CHER3"
-          },
-          "DestinationName": [
-            {
-              "value": "La Cochère",
-              "lang": "FR"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "VehicleAtStop": true,
-            "DestinationDisplay": [
-              {
-                "value": "La Cochère",
-                "lang": "FR"
-              }
-            ],
-            "AimedArrivalTime": "2026-10-20T19:03:00+02:00",
-            "ExpectedArrivalTime": "2026-10-20T19:05:23+02:00",
-            "ArrivalStatus": "delayed",
-            "ArrivalProximityText": {
-              "value": "Départ proche"
-            },
-            "AimedDepartureTime": "2026-10-20T19:03:00+02:00",
-            "ExpectedDepartureTime": "2026-10-20T19:05:23+02:00",
-            "StopPointRef": {
-              "value": "GNRA4"
-            },
-            "Order": 1
-          }
-        },
-        "RecordedAtTime": "2026-10-20T19:05:10.117884882+02:00",
-        "ItemIdentifier": "E8-GNRA4-A-2026-10-20T19:03+02:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "GNRA4"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "E8"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "50287818-CR_26_27-BA27VE21-Lu-Ma-Je-03"
-          },
-          "VehicleMode": [
-            "bus"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "La Cochère - Greneraie"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "A"
-            }
-          ],
-          "DestinationRef": {
-            "value": "CHER3"
-          },
-          "DestinationName": [
-            {
-              "value": "La Cochère",
-              "lang": "FR"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "La Cochère",
-                "lang": "FR"
-              }
-            ],
-            "AimedArrivalTime": "2026-10-20T19:15:00+02:00",
-            "ExpectedArrivalTime": "2026-10-20T19:15:00+02:00",
-            "ArrivalStatus": "onTime",
-            "ArrivalProximityText": {
-              "value": "Dernier départ"
-            },
-            "AimedDepartureTime": "2026-10-20T19:15:00+02:00",
-            "ExpectedDepartureTime": "2026-10-20T19:15:00+02:00",
-            "StopPointRef": {
-              "value": "GNRA4"
-            },
-            "Order": 1
-          }
-        },
-        "RecordedAtTime": "2026-10-20T18:27:37.887379937+02:00",
-        "ItemIdentifier": "E8-GNRA4-A-2026-10-20T19:15+02:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "GNRA4"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
             "value": "36"
           },
           "FramedVehicleJourneyRef": {
@@ -1269,7 +1156,7 @@
             "DataFrameRef": {
               "value": "any"
             },
-            "DatedVehicleJourneyRef": "49753714-CR_26_27-AT27VE11-L-Ma-Me-J-21"
+            "DatedVehicleJourneyRef": "49753709-CR_26_27-AT27VE11-L-Ma-Me-J-21"
           },
           "VehicleMode": [
             "bus"
@@ -1302,19 +1189,19 @@
                 "lang": "FR"
               }
             ],
-            "AimedArrivalTime": "2026-10-20T19:07:00+02:00",
-            "ExpectedArrivalTime": "2026-10-20T19:08:18+02:00",
-            "ArrivalStatus": "delayed",
-            "AimedDepartureTime": "2026-10-20T19:07:00+02:00",
-            "ExpectedDepartureTime": "2026-10-20T19:08:18+02:00",
+            "AimedArrivalTime": "2026-10-20T19:33:00+02:00",
+            "ExpectedArrivalTime": "2026-10-20T19:33:00+02:00",
+            "ArrivalStatus": "onTime",
+            "AimedDepartureTime": "2026-10-20T19:33:00+02:00",
+            "ExpectedDepartureTime": "2026-10-20T19:33:00+02:00",
             "StopPointRef": {
               "value": "BENA1"
             },
             "Order": 10
           }
         },
-        "RecordedAtTime": "2026-10-20T18:56:39.059331862+02:00",
-        "ItemIdentifier": "4-BENA1-A-2026-10-20T19:07+02:00[Europe/Paris]"
+        "RecordedAtTime": "2026-10-20T19:08:09.175935772+02:00",
+        "ItemIdentifier": "4-BENA1-A-2026-10-20T19:33+02:00[Europe/Paris]"
       },
       {
         "MonitoringRef": {
@@ -1625,7 +1512,7 @@
             "DataFrameRef": {
               "value": "any"
             },
-            "DatedVehicleJourneyRef": "49430263-CR_26_27-AT27VE11-L-Ma-Me-J-21-1111000"
+            "DatedVehicleJourneyRef": "49430246-CR_26_27-AT27VE11-L-Ma-Me-J-21-1111000"
           },
           "VehicleMode": [
             "bus"
@@ -1658,19 +1545,19 @@
                 "lang": "FR"
               }
             ],
-            "AimedArrivalTime": "2026-10-20T19:07:00+02:00",
-            "ExpectedArrivalTime": "2026-10-20T19:08:04+02:00",
-            "ArrivalStatus": "delayed",
-            "AimedDepartureTime": "2026-10-20T19:07:00+02:00",
-            "ExpectedDepartureTime": "2026-10-20T19:08:04+02:00",
+            "AimedArrivalTime": "2026-10-20T19:46:00+02:00",
+            "ExpectedArrivalTime": "2026-10-20T19:46:00+02:00",
+            "ArrivalStatus": "onTime",
+            "AimedDepartureTime": "2026-10-20T19:46:00+02:00",
+            "ExpectedDepartureTime": "2026-10-20T19:46:00+02:00",
             "StopPointRef": {
               "value": "RPBL4"
             },
             "Order": 5
           }
         },
-        "RecordedAtTime": "2026-10-20T19:04:09.144604788+02:00",
-        "ItemIdentifier": "5-RPBL4-R-2026-10-20T19:07+02:00[Europe/Paris]"
+        "RecordedAtTime": "2026-10-20T19:10:09.193589692+02:00",
+        "ItemIdentifier": "5-RPBL4-R-2026-10-20T19:46+02:00[Europe/Paris]"
       }
     ],
     "RPBL1": [
@@ -1779,17 +1666,17 @@
               }
             ],
             "AimedArrivalTime": "2026-10-20T19:39:00+02:00",
-            "ExpectedArrivalTime": "2026-10-20T19:39:00+02:00",
-            "ArrivalStatus": "onTime",
+            "ExpectedArrivalTime": "2026-10-20T19:40:25+02:00",
+            "ArrivalStatus": "delayed",
             "AimedDepartureTime": "2026-10-20T19:39:00+02:00",
-            "ExpectedDepartureTime": "2026-10-20T19:39:00+02:00",
+            "ExpectedDepartureTime": "2026-10-20T19:40:25+02:00",
             "StopPointRef": {
               "value": "RPBL1"
             },
             "Order": 28
           }
         },
-        "RecordedAtTime": "2026-10-20T18:20:37.789171597+02:00",
+        "RecordedAtTime": "2026-10-20T19:07:39.15171166+02:00",
         "ItemIdentifier": "26-RPBL1-R-2026-10-20T19:39+02:00[Europe/Paris]"
       },
       {
@@ -2196,17 +2083,17 @@
               }
             ],
             "AimedArrivalTime": "2026-10-20T19:12:00+02:00",
-            "ExpectedArrivalTime": "2026-10-20T19:12:00+02:00",
-            "ArrivalStatus": "onTime",
+            "ExpectedArrivalTime": "2026-10-20T19:14:13+02:00",
+            "ArrivalStatus": "delayed",
             "AimedDepartureTime": "2026-10-20T19:12:00+02:00",
-            "ExpectedDepartureTime": "2026-10-20T19:12:00+02:00",
+            "ExpectedDepartureTime": "2026-10-20T19:14:13+02:00",
             "StopPointRef": {
               "value": "DIDE1"
             },
             "Order": 5
           }
         },
-        "RecordedAtTime": "2026-10-20T18:51:30.160901676+02:00",
+        "RecordedAtTime": "2026-10-20T19:09:31.296122975+02:00",
         "ItemIdentifier": "3-DIDE1-A-2026-10-20T19:12+02:00[Europe/Paris]"
       },
       {
@@ -2326,65 +2213,6 @@
         },
         "RecordedAtTime": "2026-10-20T18:54:31.180704683+02:00",
         "ItemIdentifier": "3-DIDE1-A-2026-10-20T19:18+02:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "DIDE1"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "3"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "52360031-CR_26_27-AW27VE11-L-Ma-Me-J-01-1111000"
-          },
-          "VehicleMode": [
-            "tram"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Marcel Paul - Neustrie"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "A"
-            }
-          ],
-          "DestinationRef": {
-            "value": "MAI81"
-          },
-          "DestinationName": [
-            {
-              "value": "8 Mai",
-              "lang": "FR"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "8 Mai",
-                "lang": "FR"
-              }
-            ],
-            "AimedArrivalTime": "2026-10-20T19:06:00+02:00",
-            "ExpectedArrivalTime": "2026-10-20T19:07:10+02:00",
-            "ArrivalStatus": "delayed",
-            "AimedDepartureTime": "2026-10-20T19:06:00+02:00",
-            "ExpectedDepartureTime": "2026-10-20T19:07:10+02:00",
-            "StopPointRef": {
-              "value": "DIDE1"
-            },
-            "Order": 5
-          }
-        },
-        "RecordedAtTime": "2026-10-20T19:03:21.244338656+02:00",
-        "ItemIdentifier": "3-DIDE1-A-2026-10-20T19:06+02:00[Europe/Paris]"
       }
     ],
     "LHOU1": [
@@ -2493,17 +2321,17 @@
               }
             ],
             "AimedArrivalTime": "2026-10-20T19:17:00+02:00",
-            "ExpectedArrivalTime": "2026-10-20T19:17:13+02:00",
+            "ExpectedArrivalTime": "2026-10-20T19:18:22+02:00",
             "ArrivalStatus": "delayed",
             "AimedDepartureTime": "2026-10-20T19:17:00+02:00",
-            "ExpectedDepartureTime": "2026-10-20T19:17:13+02:00",
+            "ExpectedDepartureTime": "2026-10-20T19:18:22+02:00",
             "StopPointRef": {
               "value": "LHOU1"
             },
             "Order": 25
           }
         },
-        "RecordedAtTime": "2026-10-20T18:19:07.782641612+02:00",
+        "RecordedAtTime": "2026-10-20T19:09:09.171192634+02:00",
         "ItemIdentifier": "30-LHOU1-R-2026-10-20T19:17+02:00[Europe/Paris]"
       },
       {
@@ -2793,17 +2621,17 @@
               }
             ],
             "AimedArrivalTime": "2026-10-20T19:19:00+02:00",
-            "ExpectedArrivalTime": "2026-10-20T19:21:00+02:00",
+            "ExpectedArrivalTime": "2026-10-20T19:22:34+02:00",
             "ArrivalStatus": "delayed",
             "AimedDepartureTime": "2026-10-20T19:19:00+02:00",
-            "ExpectedDepartureTime": "2026-10-20T19:21:00+02:00",
+            "ExpectedDepartureTime": "2026-10-20T19:22:34+02:00",
             "StopPointRef": {
               "value": "DIDE5"
             },
             "Order": 10
           }
         },
-        "RecordedAtTime": "2026-10-20T18:09:37.723754023+02:00",
+        "RecordedAtTime": "2026-10-20T19:08:40.167682791+02:00",
         "ItemIdentifier": "30-DIDE5-A-2026-10-20T19:19+02:00[Europe/Paris]"
       },
       {
@@ -2913,17 +2741,17 @@
               }
             ],
             "AimedArrivalTime": "2026-10-20T19:10:00+02:00",
-            "ExpectedArrivalTime": "2026-10-20T19:10:00+02:00",
-            "ArrivalStatus": "onTime",
+            "ExpectedArrivalTime": "2026-10-20T19:12:13+02:00",
+            "ArrivalStatus": "delayed",
             "AimedDepartureTime": "2026-10-20T19:10:00+02:00",
-            "ExpectedDepartureTime": "2026-10-20T19:10:00+02:00",
+            "ExpectedDepartureTime": "2026-10-20T19:12:13+02:00",
             "StopPointRef": {
               "value": "TROC1"
             },
             "Order": 4
           }
         },
-        "RecordedAtTime": "2026-10-20T18:49:40.147806003+02:00",
+        "RecordedAtTime": "2026-10-20T19:09:31.296067757+02:00",
         "ItemIdentifier": "3-TROC1-A-2026-10-20T19:10+02:00[Europe/Paris]"
       },
       {
