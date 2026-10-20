@@ -1,9 +1,68 @@
 {
-  "fetchedAt": "2026-10-20T20:20:43.032Z",
+  "fetchedAt": "2026-10-20T20:25:31.344Z",
   "stops": {
     "MGIN1": [],
     "MGIN2": [],
     "IDNA1": [
+      {
+        "MonitoringRef": {
+          "value": "IDNA1"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
+            "value": "5"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
+            "DatedVehicleJourneyRef": "49430494-CR_26_27-AT27VE11-L-Ma-Me-J-21-1111000"
+          },
+          "VehicleMode": [
+            "bus"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Hangar à Bananes - Gare Sud"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "A"
+            }
+          ],
+          "DestinationRef": {
+            "value": "HBAN1"
+          },
+          "DestinationName": [
+            {
+              "value": "Hangar à Bananes",
+              "lang": "FR"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": true,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "Hangar à Bananes",
+                "lang": "FR"
+              }
+            ],
+            "AimedArrivalTime": "2026-10-21T00:22:00+02:00",
+            "ExpectedArrivalTime": "2026-10-21T00:21:51+02:00",
+            "ArrivalStatus": "early",
+            "AimedDepartureTime": "2026-10-21T00:22:00+02:00",
+            "ExpectedDepartureTime": "2026-10-21T00:21:51+02:00",
+            "StopPointRef": {
+              "value": "IDNA1"
+            },
+            "Order": 7
+          }
+        },
+        "RecordedAtTime": "2026-10-20T22:23:43.596349731+02:00",
+        "ItemIdentifier": "5-IDNA1-A-2026-10-21T00:22+02:00[Europe/Paris]"
+      },
       {
         "MonitoringRef": {
           "value": "IDNA1"
@@ -121,65 +180,6 @@
         },
         "RecordedAtTime": "2026-10-20T21:52:13.364878227+02:00",
         "ItemIdentifier": "5-IDNA1-A-2026-10-20T23:22+02:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "IDNA1"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "5"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "49430476-CR_26_27-AT27VE11-L-Ma-Me-J-21-1111000"
-          },
-          "VehicleMode": [
-            "bus"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Hangar à Bananes - Gare Sud"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "A"
-            }
-          ],
-          "DestinationRef": {
-            "value": "HBAN1"
-          },
-          "DestinationName": [
-            {
-              "value": "Hangar à Bananes",
-              "lang": "FR"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Hangar à Bananes",
-                "lang": "FR"
-              }
-            ],
-            "AimedArrivalTime": "2026-10-20T22:22:00+02:00",
-            "ExpectedArrivalTime": "2026-10-20T22:22:58+02:00",
-            "ArrivalStatus": "delayed",
-            "AimedDepartureTime": "2026-10-20T22:22:00+02:00",
-            "ExpectedDepartureTime": "2026-10-20T22:22:58+02:00",
-            "StopPointRef": {
-              "value": "IDNA1"
-            },
-            "Order": 7
-          }
-        },
-        "RecordedAtTime": "2026-10-20T22:19:43.568857283+02:00",
-        "ItemIdentifier": "5-IDNA1-A-2026-10-20T22:22+02:00[Europe/Paris]"
       },
       {
         "MonitoringRef": {
@@ -1114,6 +1114,7 @@
           "FirstOrLastJourney": "unspecified",
           "Monitored": true,
           "MonitoredCall": {
+            "VehicleAtStop": true,
             "DestinationDisplay": [
               {
                 "value": "Gare Sud",
@@ -1121,17 +1122,20 @@
               }
             ],
             "AimedArrivalTime": "2026-10-20T22:25:00+02:00",
-            "ExpectedArrivalTime": "2026-10-20T22:25:00+02:00",
-            "ArrivalStatus": "onTime",
+            "ExpectedArrivalTime": "2026-10-20T22:25:43+02:00",
+            "ArrivalStatus": "delayed",
+            "ArrivalProximityText": {
+              "value": "Départ proche"
+            },
             "AimedDepartureTime": "2026-10-20T22:25:00+02:00",
-            "ExpectedDepartureTime": "2026-10-20T22:25:00+02:00",
+            "ExpectedDepartureTime": "2026-10-20T22:25:43+02:00",
             "StopPointRef": {
               "value": "RPBL4"
             },
             "Order": 5
           }
         },
-        "RecordedAtTime": "2026-10-20T21:26:12.191129768+02:00",
+        "RecordedAtTime": "2026-10-20T22:25:13.620177911+02:00",
         "ItemIdentifier": "5-RPBL4-R-2026-10-20T22:25+02:00[Europe/Paris]"
       }
     ],
