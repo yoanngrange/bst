@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-22T02:10:39.959Z",
+  "fetchedAt": "2026-10-22T02:15:37.903Z",
   "stops": {
     "MGIN1": [],
     "MGIN2": [],
@@ -1233,6 +1233,7 @@
           "FirstOrLastJourney": "unspecified",
           "Monitored": true,
           "MonitoredCall": {
+            "VehicleAtStop": true,
             "DestinationDisplay": [
               {
                 "value": "8 Mai",
@@ -1240,17 +1241,20 @@
               }
             ],
             "AimedArrivalTime": "2026-10-22T04:14:00+02:00",
-            "ExpectedArrivalTime": "2026-10-22T04:15:18+02:00",
+            "ExpectedArrivalTime": "2026-10-22T04:15:31+02:00",
             "ArrivalStatus": "delayed",
+            "ArrivalProximityText": {
+              "value": "Départ proche"
+            },
             "AimedDepartureTime": "2026-10-22T04:14:00+02:00",
-            "ExpectedDepartureTime": "2026-10-22T04:15:18+02:00",
+            "ExpectedDepartureTime": "2026-10-22T04:15:31+02:00",
             "StopPointRef": {
               "value": "DIDE1"
             },
             "Order": 5
           }
         },
-        "RecordedAtTime": "2026-10-22T04:09:27.422660899+02:00",
+        "RecordedAtTime": "2026-10-22T04:15:17.467040134+02:00",
         "ItemIdentifier": "3-DIDE1-A-2026-10-22T04:14+02:00[Europe/Paris]"
       },
       {
@@ -1490,6 +1494,65 @@
         },
         "RecordedAtTime": "2026-10-22T03:51:16.279789819+02:00",
         "ItemIdentifier": "30-LHOU1-R-2026-10-22T05:51+02:00[Europe/Paris]"
+      },
+      {
+        "MonitoringRef": {
+          "value": "LHOU1"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
+            "value": "30"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
+            "DatedVehicleJourneyRef": "49676560-CR_26_27-AT27VE11-L-Ma-Me-J-21"
+          },
+          "VehicleMode": [
+            "bus"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Joliverie / Iles de Loire - Trentemoult"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "R"
+            }
+          ],
+          "DestinationRef": {
+            "value": "TTMO4"
+          },
+          "DestinationName": [
+            {
+              "value": "Trentemoult",
+              "lang": "FR"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": false,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "Trentemoult",
+                "lang": "FR"
+              }
+            ],
+            "AimedArrivalTime": "2026-10-22T06:11:00+02:00",
+            "ExpectedArrivalTime": "2026-10-22T06:11:12+02:00",
+            "ArrivalStatus": "delayed",
+            "AimedDepartureTime": "2026-10-22T06:11:00+02:00",
+            "ExpectedDepartureTime": "2026-10-22T06:11:12+02:00",
+            "StopPointRef": {
+              "value": "LHOU1"
+            },
+            "Order": 25
+          }
+        },
+        "RecordedAtTime": "2026-10-22T04:11:16.450949535+02:00",
+        "ItemIdentifier": "30-LHOU1-R-2026-10-22T06:11+02:00[Europe/Paris]"
       }
     ],
     "DIDE5": [
@@ -1554,65 +1617,6 @@
       }
     ],
     "TROC1": [
-      {
-        "MonitoringRef": {
-          "value": "TROC1"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "3"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "52340245-CR_26_27-AW27VE11-L-Ma-Me-J-01-1111000"
-          },
-          "VehicleMode": [
-            "tram"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Marcel Paul - Neustrie"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "A"
-            }
-          ],
-          "DestinationRef": {
-            "value": "MAI81"
-          },
-          "DestinationName": [
-            {
-              "value": "8 Mai",
-              "lang": "FR"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "8 Mai",
-                "lang": "FR"
-              }
-            ],
-            "AimedArrivalTime": "2026-10-22T04:12:00+02:00",
-            "ExpectedArrivalTime": "2026-10-22T04:13:18+02:00",
-            "ArrivalStatus": "delayed",
-            "AimedDepartureTime": "2026-10-22T04:12:00+02:00",
-            "ExpectedDepartureTime": "2026-10-22T04:13:18+02:00",
-            "StopPointRef": {
-              "value": "TROC1"
-            },
-            "Order": 4
-          }
-        },
-        "RecordedAtTime": "2026-10-22T04:09:27.422609255+02:00",
-        "ItemIdentifier": "3-TROC1-A-2026-10-22T04:12+02:00[Europe/Paris]"
-      },
       {
         "MonitoringRef": {
           "value": "TROC1"
@@ -1730,6 +1734,65 @@
         },
         "RecordedAtTime": "2026-10-22T03:38:06.175331586+02:00",
         "ItemIdentifier": "3-TROC1-A-2026-10-22T05:10+02:00[Europe/Paris]"
+      },
+      {
+        "MonitoringRef": {
+          "value": "TROC1"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
+            "value": "3"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
+            "DatedVehicleJourneyRef": "52129127-CR_26_27-AW27VE11-L-Ma-Me-J-01-1111000"
+          },
+          "VehicleMode": [
+            "tram"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Marcel Paul - Neustrie"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "A"
+            }
+          ],
+          "DestinationRef": {
+            "value": "MAI81"
+          },
+          "DestinationName": [
+            {
+              "value": "8 Mai",
+              "lang": "FR"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": true,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "8 Mai",
+                "lang": "FR"
+              }
+            ],
+            "AimedArrivalTime": "2026-10-22T05:30:00+02:00",
+            "ExpectedArrivalTime": "2026-10-22T05:30:00+02:00",
+            "ArrivalStatus": "onTime",
+            "AimedDepartureTime": "2026-10-22T05:30:00+02:00",
+            "ExpectedDepartureTime": "2026-10-22T05:30:00+02:00",
+            "StopPointRef": {
+              "value": "TROC1"
+            },
+            "Order": 4
+          }
+        },
+        "RecordedAtTime": "2026-10-22T04:14:17.458626742+02:00",
+        "ItemIdentifier": "3-TROC1-A-2026-10-22T05:30+02:00[Europe/Paris]"
       },
       {
         "MonitoringRef": {
