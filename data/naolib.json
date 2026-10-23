@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-23T18:45:42.378Z",
+  "fetchedAt": "2026-10-23T18:50:39.764Z",
   "stops": {
     "MGIN1": [],
     "MGIN2": [],
@@ -397,6 +397,7 @@
           "FirstOrLastJourney": "unspecified",
           "Monitored": true,
           "MonitoredCall": {
+            "VehicleAtStop": true,
             "DestinationDisplay": [
               {
                 "value": "Foch - Cathédrale",
@@ -404,17 +405,20 @@
               }
             ],
             "AimedArrivalTime": "2026-10-23T20:49:00+02:00",
-            "ExpectedArrivalTime": "2026-10-23T20:51:22+02:00",
+            "ExpectedArrivalTime": "2026-10-23T20:51:23+02:00",
             "ArrivalStatus": "delayed",
+            "ArrivalProximityText": {
+              "value": "Départ proche"
+            },
             "AimedDepartureTime": "2026-10-23T20:49:00+02:00",
-            "ExpectedDepartureTime": "2026-10-23T20:51:22+02:00",
+            "ExpectedDepartureTime": "2026-10-23T20:51:23+02:00",
             "StopPointRef": {
               "value": "IDNA1"
             },
             "Order": 11
           }
         },
-        "RecordedAtTime": "2026-10-23T20:38:29.901134687+02:00",
+        "RecordedAtTime": "2026-10-23T20:50:30.018353452+02:00",
         "ItemIdentifier": "4-IDNA1-A-2026-10-23T20:49+02:00[Europe/Paris]"
       },
       {
@@ -908,6 +912,65 @@
             "DataFrameRef": {
               "value": "any"
             },
+            "DatedVehicleJourneyRef": "49753729-CR_26_27-AT27VE15-Vendredi-21"
+          },
+          "VehicleMode": [
+            "bus"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Foch - Cathédrale - Porte de Vertou"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "A"
+            }
+          ],
+          "DestinationRef": {
+            "value": "FOCH1"
+          },
+          "DestinationName": [
+            {
+              "value": "Foch - Cathédrale",
+              "lang": "FR"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": true,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "Foch - Cathédrale",
+                "lang": "FR"
+              }
+            ],
+            "AimedArrivalTime": "2026-10-23T21:29:00+02:00",
+            "ExpectedArrivalTime": "2026-10-23T21:29:00+02:00",
+            "ArrivalStatus": "onTime",
+            "AimedDepartureTime": "2026-10-23T21:29:00+02:00",
+            "ExpectedDepartureTime": "2026-10-23T21:29:00+02:00",
+            "StopPointRef": {
+              "value": "BENA1"
+            },
+            "Order": 10
+          }
+        },
+        "RecordedAtTime": "2026-10-23T20:50:00.042726015+02:00",
+        "ItemIdentifier": "4-BENA1-A-2026-10-23T21:29+02:00[Europe/Paris]"
+      },
+      {
+        "MonitoringRef": {
+          "value": "BENA1"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
+            "value": "4"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
             "DatedVehicleJourneyRef": "49749825-CR_26_27-AT27VE15-Vendredi-21"
           },
           "VehicleMode": [
@@ -954,65 +1017,6 @@
         },
         "RecordedAtTime": "2026-10-23T20:29:59.855387014+02:00",
         "ItemIdentifier": "4-BENA1-A-2026-10-23T21:09+02:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "BENA1"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "4"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "49753733-CR_26_27-AT27VE15-Vendredi-21"
-          },
-          "VehicleMode": [
-            "bus"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Foch - Cathédrale - Porte de Vertou"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "A"
-            }
-          ],
-          "DestinationRef": {
-            "value": "FOCH1"
-          },
-          "DestinationName": [
-            {
-              "value": "Foch - Cathédrale",
-              "lang": "FR"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Foch - Cathédrale",
-                "lang": "FR"
-              }
-            ],
-            "AimedArrivalTime": "2026-10-23T20:48:00+02:00",
-            "ExpectedArrivalTime": "2026-10-23T20:50:22+02:00",
-            "ArrivalStatus": "delayed",
-            "AimedDepartureTime": "2026-10-23T20:48:00+02:00",
-            "ExpectedDepartureTime": "2026-10-23T20:50:22+02:00",
-            "StopPointRef": {
-              "value": "BENA1"
-            },
-            "Order": 10
-          }
-        },
-        "RecordedAtTime": "2026-10-23T20:38:29.916084431+02:00",
-        "ItemIdentifier": "4-BENA1-A-2026-10-23T20:48+02:00[Europe/Paris]"
       },
       {
         "MonitoringRef": {
@@ -1087,6 +1091,65 @@
             "DataFrameRef": {
               "value": "any"
             },
+            "DatedVehicleJourneyRef": "49958718-CR_26_27-AT27VE15-Vendredi-21-0000100"
+          },
+          "VehicleMode": [
+            "bus"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Hangar à Bananes - Gare Sud"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "R"
+            }
+          ],
+          "DestinationRef": {
+            "value": "GSSU4"
+          },
+          "DestinationName": [
+            {
+              "value": "Gare Sud",
+              "lang": "FR"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": true,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "Gare Sud",
+                "lang": "FR"
+              }
+            ],
+            "AimedArrivalTime": "2026-10-23T21:39:00+02:00",
+            "ExpectedArrivalTime": "2026-10-23T21:39:00+02:00",
+            "ArrivalStatus": "onTime",
+            "AimedDepartureTime": "2026-10-23T21:39:00+02:00",
+            "ExpectedDepartureTime": "2026-10-23T21:39:00+02:00",
+            "StopPointRef": {
+              "value": "RPBL4"
+            },
+            "Order": 5
+          }
+        },
+        "RecordedAtTime": "2026-10-23T20:47:00.017485804+02:00",
+        "ItemIdentifier": "5-RPBL4-R-2026-10-23T21:39+02:00[Europe/Paris]"
+      },
+      {
+        "MonitoringRef": {
+          "value": "RPBL4"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
+            "value": "5"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
             "DatedVehicleJourneyRef": "49958717-CR_26_27-AT27VE15-Vendredi-21-0000100"
           },
           "VehicleMode": [
@@ -1133,65 +1196,6 @@
         },
         "RecordedAtTime": "2026-10-23T20:36:29.913184083+02:00",
         "ItemIdentifier": "5-RPBL4-R-2026-10-23T21:24+02:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "RPBL4"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "5"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "49959029-CR_26_27-AT27VE15-Vendredi-21-0000100"
-          },
-          "VehicleMode": [
-            "bus"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Hangar à Bananes - Gare Sud"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "R"
-            }
-          ],
-          "DestinationRef": {
-            "value": "GSSU4"
-          },
-          "DestinationName": [
-            {
-              "value": "Gare Sud",
-              "lang": "FR"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Gare Sud",
-                "lang": "FR"
-              }
-            ],
-            "AimedArrivalTime": "2026-10-23T20:46:00+02:00",
-            "ExpectedArrivalTime": "2026-10-23T20:46:00+02:00",
-            "ArrivalStatus": "onTime",
-            "AimedDepartureTime": "2026-10-23T20:46:00+02:00",
-            "ExpectedDepartureTime": "2026-10-23T20:46:00+02:00",
-            "StopPointRef": {
-              "value": "RPBL4"
-            },
-            "Order": 5
-          }
-        },
-        "RecordedAtTime": "2026-10-23T20:06:29.679701569+02:00",
-        "ItemIdentifier": "5-RPBL4-R-2026-10-23T20:46+02:00[Europe/Paris]"
       },
       {
         "MonitoringRef": {
@@ -1300,24 +1304,83 @@
               }
             ],
             "AimedArrivalTime": "2026-10-23T20:48:00+02:00",
-            "ExpectedArrivalTime": "2026-10-23T20:54:36+02:00",
+            "ExpectedArrivalTime": "2026-10-23T20:53:47+02:00",
             "ArrivalStatus": "delayed",
             "ArrivalProximityText": {
               "value": "Dernier départ"
             },
             "AimedDepartureTime": "2026-10-23T20:48:00+02:00",
-            "ExpectedDepartureTime": "2026-10-23T20:54:36+02:00",
+            "ExpectedDepartureTime": "2026-10-23T20:53:47+02:00",
             "StopPointRef": {
               "value": "RPBL1"
             },
             "Order": 28
           }
         },
-        "RecordedAtTime": "2026-10-23T20:45:29.972615934+02:00",
+        "RecordedAtTime": "2026-10-23T20:50:30.020876785+02:00",
         "ItemIdentifier": "26-RPBL1-R-2026-10-23T20:48+02:00[Europe/Paris]"
       }
     ],
     "GALH2": [
+      {
+        "MonitoringRef": {
+          "value": "GALH2"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
+            "value": "38"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
+            "DatedVehicleJourneyRef": "49835971-CR_26_27-AT27VE15-Vendredi-21"
+          },
+          "VehicleMode": [
+            "bus"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Greneraie - Aéroport"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "A"
+            }
+          ],
+          "DestinationRef": {
+            "value": "GNRA7"
+          },
+          "DestinationName": [
+            {
+              "value": "Greneraie",
+              "lang": "FR"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": true,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "Greneraie",
+                "lang": "FR"
+              }
+            ],
+            "AimedArrivalTime": "2026-10-23T22:48:00+02:00",
+            "ExpectedArrivalTime": "2026-10-23T22:47:46+02:00",
+            "ArrivalStatus": "early",
+            "AimedDepartureTime": "2026-10-23T22:48:00+02:00",
+            "ExpectedDepartureTime": "2026-10-23T22:47:46+02:00",
+            "StopPointRef": {
+              "value": "GALH2"
+            },
+            "Order": 10
+          }
+        },
+        "RecordedAtTime": "2026-10-23T20:48:31.024659583+02:00",
+        "ItemIdentifier": "38-GALH2-A-2026-10-23T22:48+02:00[Europe/Paris]"
+      },
       {
         "MonitoringRef": {
           "value": "GALH2"
@@ -1435,65 +1498,6 @@
         },
         "RecordedAtTime": "2026-10-23T20:18:59.745938377+02:00",
         "ItemIdentifier": "38-GALH2-A-2026-10-23T22:18+02:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "GALH2"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "38"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "49835956-CR_26_27-AT27VE15-Vendredi-21"
-          },
-          "VehicleMode": [
-            "bus"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Greneraie - Aéroport"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "A"
-            }
-          ],
-          "DestinationRef": {
-            "value": "GNRA7"
-          },
-          "DestinationName": [
-            {
-              "value": "Greneraie",
-              "lang": "FR"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Greneraie",
-                "lang": "FR"
-              }
-            ],
-            "AimedArrivalTime": "2026-10-23T20:48:00+02:00",
-            "ExpectedArrivalTime": "2026-10-23T20:47:46+02:00",
-            "ArrivalStatus": "early",
-            "AimedDepartureTime": "2026-10-23T20:48:00+02:00",
-            "ExpectedDepartureTime": "2026-10-23T20:47:46+02:00",
-            "StopPointRef": {
-              "value": "GALH2"
-            },
-            "Order": 10
-          }
-        },
-        "RecordedAtTime": "2026-10-23T18:58:58.146175025+02:00",
-        "ItemIdentifier": "38-GALH2-A-2026-10-23T20:48+02:00[Europe/Paris]"
       },
       {
         "MonitoringRef": {
@@ -1722,20 +1726,20 @@
               }
             ],
             "AimedArrivalTime": "2026-10-23T20:58:00+02:00",
-            "ExpectedArrivalTime": "2026-10-23T20:58:13+02:00",
+            "ExpectedArrivalTime": "2026-10-23T21:00:15+02:00",
             "ArrivalStatus": "delayed",
             "ArrivalProximityText": {
               "value": "Dernier départ"
             },
             "AimedDepartureTime": "2026-10-23T20:58:00+02:00",
-            "ExpectedDepartureTime": "2026-10-23T20:58:13+02:00",
+            "ExpectedDepartureTime": "2026-10-23T21:00:15+02:00",
             "StopPointRef": {
               "value": "LHOU1"
             },
             "Order": 25
           }
         },
-        "RecordedAtTime": "2026-10-23T19:46:29.521764946+02:00",
+        "RecordedAtTime": "2026-10-23T20:50:30.026284882+02:00",
         "ItemIdentifier": "30-LHOU1-R-2026-10-23T20:58+02:00[Europe/Paris]"
       }
     ],
