@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-24T20:25:29.783Z",
+  "fetchedAt": "2026-10-24T20:30:54.598Z",
   "stops": {
     "MGIN1": [],
     "MGIN2": [],
@@ -168,17 +168,17 @@
               }
             ],
             "AimedArrivalTime": "2026-10-24T22:36:00+02:00",
-            "ExpectedArrivalTime": "2026-10-24T22:36:19+02:00",
+            "ExpectedArrivalTime": "2026-10-24T22:37:25+02:00",
             "ArrivalStatus": "delayed",
             "AimedDepartureTime": "2026-10-24T22:36:00+02:00",
-            "ExpectedDepartureTime": "2026-10-24T22:36:19+02:00",
+            "ExpectedDepartureTime": "2026-10-24T22:37:25+02:00",
             "StopPointRef": {
               "value": "IDNA1"
             },
             "Order": 7
           }
         },
-        "RecordedAtTime": "2026-10-24T22:00:10.773116961+02:00",
+        "RecordedAtTime": "2026-10-24T22:29:09.997020227+02:00",
         "ItemIdentifier": "5-IDNA1-A-2026-10-24T22:36+02:00[Europe/Paris]"
       },
       {
@@ -456,6 +456,7 @@
           "FirstOrLastJourney": "unspecified",
           "Monitored": true,
           "MonitoredCall": {
+            "VehicleAtStop": true,
             "DestinationDisplay": [
               {
                 "value": "Cité des Congrès",
@@ -463,17 +464,20 @@
               }
             ],
             "AimedArrivalTime": "2026-10-24T22:31:00+02:00",
-            "ExpectedArrivalTime": "2026-10-24T22:32:11+02:00",
+            "ExpectedArrivalTime": "2026-10-24T22:31:30+02:00",
             "ArrivalStatus": "delayed",
+            "ArrivalProximityText": {
+              "value": "Départ proche"
+            },
             "AimedDepartureTime": "2026-10-24T22:31:00+02:00",
-            "ExpectedDepartureTime": "2026-10-24T22:32:11+02:00",
+            "ExpectedDepartureTime": "2026-10-24T22:31:30+02:00",
             "StopPointRef": {
               "value": "IDNA1"
             },
             "Order": 11
           }
         },
-        "RecordedAtTime": "2026-10-24T22:23:39.954236656+02:00",
+        "RecordedAtTime": "2026-10-24T22:30:39.01160918+02:00",
         "ItemIdentifier": "4-IDNA1-A-2026-10-24T22:31+02:00[Europe/Paris]"
       }
     ],
@@ -790,65 +794,6 @@
             "DataFrameRef": {
               "value": "any"
             },
-            "DatedVehicleJourneyRef": "53586166-CR_26_27-MT27VL16-Samedi-21"
-          },
-          "VehicleMode": [
-            "bus"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Foch - Cathédrale - Porte de Vertou"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "A"
-            }
-          ],
-          "DestinationRef": {
-            "value": "JEMP1"
-          },
-          "DestinationName": [
-            {
-              "value": "Cité des Congrès",
-              "lang": "FR"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Cité des Congrès",
-                "lang": "FR"
-              }
-            ],
-            "AimedArrivalTime": "2026-10-24T22:30:00+02:00",
-            "ExpectedArrivalTime": "2026-10-24T22:31:11+02:00",
-            "ArrivalStatus": "delayed",
-            "AimedDepartureTime": "2026-10-24T22:30:00+02:00",
-            "ExpectedDepartureTime": "2026-10-24T22:31:11+02:00",
-            "StopPointRef": {
-              "value": "BENA1"
-            },
-            "Order": 10
-          }
-        },
-        "RecordedAtTime": "2026-10-24T22:23:39.963720444+02:00",
-        "ItemIdentifier": "4-BENA1-A-2026-10-24T22:30+02:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "BENA1"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "4"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
             "DatedVehicleJourneyRef": "53588491-CR_26_27-MT27VL16-Samedi-21"
           },
           "VehicleMode": [
@@ -895,6 +840,65 @@
         },
         "RecordedAtTime": "2026-10-24T22:17:09.912261462+02:00",
         "ItemIdentifier": "4-BENA1-A-2026-10-24T22:38+02:00[Europe/Paris]"
+      },
+      {
+        "MonitoringRef": {
+          "value": "BENA1"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
+            "value": "4"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
+            "DatedVehicleJourneyRef": "53588565-CR_26_27-MT27VL16-Samedi-21"
+          },
+          "VehicleMode": [
+            "bus"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Foch - Cathédrale - Porte de Vertou"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "A"
+            }
+          ],
+          "DestinationRef": {
+            "value": "JEMP1"
+          },
+          "DestinationName": [
+            {
+              "value": "Cité des Congrès",
+              "lang": "FR"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": true,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "Cité des Congrès",
+                "lang": "FR"
+              }
+            ],
+            "AimedArrivalTime": "2026-10-24T23:17:00+02:00",
+            "ExpectedArrivalTime": "2026-10-24T23:17:00+02:00",
+            "ArrivalStatus": "onTime",
+            "AimedDepartureTime": "2026-10-24T23:17:00+02:00",
+            "ExpectedDepartureTime": "2026-10-24T23:17:00+02:00",
+            "StopPointRef": {
+              "value": "BENA1"
+            },
+            "Order": 10
+          }
+        },
+        "RecordedAtTime": "2026-10-24T22:30:39.022092482+02:00",
+        "ItemIdentifier": "4-BENA1-A-2026-10-24T23:17+02:00[Europe/Paris]"
       }
     ],
     "RPBL4": [
@@ -969,7 +973,7 @@
             "DataFrameRef": {
               "value": "any"
             },
-            "DatedVehicleJourneyRef": "49432588-CR_26_27-MT27VL16-Samedi-21"
+            "DatedVehicleJourneyRef": "49432597-CR_26_27-MT27VL16-Samedi-21"
           },
           "VehicleMode": [
             "bus"
@@ -1002,19 +1006,19 @@
                 "lang": "FR"
               }
             ],
-            "AimedArrivalTime": "2026-10-24T22:25:00+02:00",
-            "ExpectedArrivalTime": "2026-10-24T22:28:02+02:00",
-            "ArrivalStatus": "delayed",
-            "AimedDepartureTime": "2026-10-24T22:25:00+02:00",
-            "ExpectedDepartureTime": "2026-10-24T22:28:02+02:00",
+            "AimedArrivalTime": "2026-10-24T23:25:00+02:00",
+            "ExpectedArrivalTime": "2026-10-24T23:25:00+02:00",
+            "ArrivalStatus": "onTime",
+            "AimedDepartureTime": "2026-10-24T23:25:00+02:00",
+            "ExpectedDepartureTime": "2026-10-24T23:25:00+02:00",
             "StopPointRef": {
               "value": "RPBL4"
             },
             "Order": 5
           }
         },
-        "RecordedAtTime": "2026-10-24T22:24:09.97145093+02:00",
-        "ItemIdentifier": "5-RPBL4-R-2026-10-24T22:25+02:00[Europe/Paris]"
+        "RecordedAtTime": "2026-10-24T22:28:10.986498963+02:00",
+        "ItemIdentifier": "5-RPBL4-R-2026-10-24T23:25+02:00[Europe/Paris]"
       },
       {
         "MonitoringRef": {
@@ -1365,17 +1369,17 @@
               }
             ],
             "AimedArrivalTime": "2026-10-24T22:32:00+02:00",
-            "ExpectedArrivalTime": "2026-10-24T22:32:00+02:00",
-            "ArrivalStatus": "onTime",
+            "ExpectedArrivalTime": "2026-10-24T22:33:01+02:00",
+            "ArrivalStatus": "delayed",
             "AimedDepartureTime": "2026-10-24T22:32:00+02:00",
-            "ExpectedDepartureTime": "2026-10-24T22:32:00+02:00",
+            "ExpectedDepartureTime": "2026-10-24T22:33:01+02:00",
             "StopPointRef": {
               "value": "DIDE1"
             },
             "Order": 6
           }
         },
-        "RecordedAtTime": "2026-10-24T21:52:59.770239163+02:00",
+        "RecordedAtTime": "2026-10-24T22:28:30.070648924+02:00",
         "ItemIdentifier": "3-DIDE1-A-2026-10-24T22:32+02:00[Europe/Paris]"
       },
       {
@@ -1598,6 +1602,7 @@
           "FirstOrLastJourney": "unspecified",
           "Monitored": true,
           "MonitoredCall": {
+            "VehicleAtStop": true,
             "DestinationDisplay": [
               {
                 "value": "8 Mai",
@@ -1605,17 +1610,20 @@
               }
             ],
             "AimedArrivalTime": "2026-10-24T22:30:00+02:00",
-            "ExpectedArrivalTime": "2026-10-24T22:30:00+02:00",
-            "ArrivalStatus": "onTime",
+            "ExpectedArrivalTime": "2026-10-24T22:30:46+02:00",
+            "ArrivalStatus": "delayed",
+            "ArrivalProximityText": {
+              "value": "Départ proche"
+            },
             "AimedDepartureTime": "2026-10-24T22:30:00+02:00",
-            "ExpectedDepartureTime": "2026-10-24T22:30:00+02:00",
+            "ExpectedDepartureTime": "2026-10-24T22:30:46+02:00",
             "StopPointRef": {
               "value": "TROC1"
             },
             "Order": 5
           }
         },
-        "RecordedAtTime": "2026-10-24T21:51:19.757789884+02:00",
+        "RecordedAtTime": "2026-10-24T22:30:50.087449306+02:00",
         "ItemIdentifier": "3-TROC1-A-2026-10-24T22:30+02:00[Europe/Paris]"
       },
       {
