@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-25T18:15:40.959Z",
+  "fetchedAt": "2026-10-25T18:20:41.255Z",
   "stops": {
     "MGIN1": [],
     "MGIN2": [],
@@ -697,6 +697,7 @@
           "FirstOrLastJourney": "unspecified",
           "Monitored": true,
           "MonitoredCall": {
+            "VehicleAtStop": true,
             "DestinationDisplay": [
               {
                 "value": "Croix Jeannette",
@@ -704,17 +705,20 @@
               }
             ],
             "AimedArrivalTime": "2026-10-25T19:20:00+01:00",
-            "ExpectedArrivalTime": "2026-10-25T19:20:00+01:00",
-            "ArrivalStatus": "onTime",
+            "ExpectedArrivalTime": "2026-10-25T19:20:16+01:00",
+            "ArrivalStatus": "delayed",
+            "ArrivalProximityText": {
+              "value": "Départ proche"
+            },
             "AimedDepartureTime": "2026-10-25T19:20:00+01:00",
-            "ExpectedDepartureTime": "2026-10-25T19:20:00+01:00",
+            "ExpectedDepartureTime": "2026-10-25T19:20:16+01:00",
             "StopPointRef": {
               "value": "GNRA4"
             },
             "Order": 1
           }
         },
-        "RecordedAtTime": "2026-10-25T17:20:17.969695224+01:00",
+        "RecordedAtTime": "2026-10-25T19:20:18.917544733+01:00",
         "ItemIdentifier": "36-GNRA4-R-2026-10-25T19:20+01:00[Europe/Paris]"
       },
       {
@@ -1850,6 +1854,65 @@
         },
         "RecordedAtTime": "2026-10-25T18:34:50.692566059+01:00",
         "ItemIdentifier": "3-DIDE1-A-2026-10-25T20:02+01:00[Europe/Paris]"
+      },
+      {
+        "MonitoringRef": {
+          "value": "DIDE1"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
+            "value": "3"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
+            "DatedVehicleJourneyRef": "52436733-CR_26_27-AW27BA17-Dimanche-01"
+          },
+          "VehicleMode": [
+            "tram"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Marcel Paul - Neustrie"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "A"
+            }
+          ],
+          "DestinationRef": {
+            "value": "MAI81"
+          },
+          "DestinationName": [
+            {
+              "value": "8 Mai",
+              "lang": "FR"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": true,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "8 Mai",
+                "lang": "FR"
+              }
+            ],
+            "AimedArrivalTime": "2026-10-25T20:17:00+01:00",
+            "ExpectedArrivalTime": "2026-10-25T19:24:33+01:00",
+            "ArrivalStatus": "early",
+            "AimedDepartureTime": "2026-10-25T20:17:00+01:00",
+            "ExpectedDepartureTime": "2026-10-25T19:24:33+01:00",
+            "StopPointRef": {
+              "value": "DIDE1"
+            },
+            "Order": 6
+          }
+        },
+        "RecordedAtTime": "2026-10-25T19:18:42.024051387+01:00",
+        "ItemIdentifier": "3-DIDE1-A-2026-10-25T20:17+01:00[Europe/Paris]"
       }
     ],
     "LHOU1": [
@@ -2022,20 +2085,20 @@
               }
             ],
             "AimedArrivalTime": "2026-10-25T20:26:00+01:00",
-            "ExpectedArrivalTime": "2026-10-25T20:26:00+01:00",
-            "ArrivalStatus": "onTime",
+            "ExpectedArrivalTime": "2026-10-25T20:28:00+01:00",
+            "ArrivalStatus": "delayed",
             "ArrivalProximityText": {
               "value": "Dernier départ"
             },
             "AimedDepartureTime": "2026-10-25T20:26:00+01:00",
-            "ExpectedDepartureTime": "2026-10-25T20:26:00+01:00",
+            "ExpectedDepartureTime": "2026-10-25T20:28:00+01:00",
             "StopPointRef": {
               "value": "DIDE5"
             },
             "Order": 10
           }
         },
-        "RecordedAtTime": "2026-10-25T18:26:18.452998824+01:00",
+        "RecordedAtTime": "2026-10-25T19:16:18.871874346+01:00",
         "ItemIdentifier": "30-DIDE5-A-2026-10-25T20:26+01:00[Europe/Paris]"
       },
       {
@@ -2275,6 +2338,65 @@
         },
         "RecordedAtTime": "2026-10-25T18:33:00.67858014+01:00",
         "ItemIdentifier": "3-TROC1-A-2026-10-25T20:00+01:00[Europe/Paris]"
+      },
+      {
+        "MonitoringRef": {
+          "value": "TROC1"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
+            "value": "3"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
+            "DatedVehicleJourneyRef": "52436733-CR_26_27-AW27BA17-Dimanche-01"
+          },
+          "VehicleMode": [
+            "tram"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Marcel Paul - Neustrie"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "A"
+            }
+          ],
+          "DestinationRef": {
+            "value": "MAI81"
+          },
+          "DestinationName": [
+            {
+              "value": "8 Mai",
+              "lang": "FR"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": true,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "8 Mai",
+                "lang": "FR"
+              }
+            ],
+            "AimedArrivalTime": "2026-10-25T20:15:00+01:00",
+            "ExpectedArrivalTime": "2026-10-25T19:22:33+01:00",
+            "ArrivalStatus": "early",
+            "AimedDepartureTime": "2026-10-25T20:15:00+01:00",
+            "ExpectedDepartureTime": "2026-10-25T19:22:33+01:00",
+            "StopPointRef": {
+              "value": "TROC1"
+            },
+            "Order": 5
+          }
+        },
+        "RecordedAtTime": "2026-10-25T19:18:42.023839392+01:00",
+        "ItemIdentifier": "3-TROC1-A-2026-10-25T20:15+01:00[Europe/Paris]"
       }
     ]
   }
