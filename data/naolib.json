@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-25T01:10:40.841Z",
+  "fetchedAt": "2026-10-25T01:15:37.972Z",
   "stops": {
     "MGIN1": [],
     "MGIN2": [],
@@ -232,17 +232,17 @@
               }
             ],
             "AimedArrivalTime": "2026-10-25T03:28:00+01:00",
-            "ExpectedArrivalTime": "2026-10-25T03:32:09+01:00",
-            "ArrivalStatus": "delayed",
+            "ExpectedArrivalTime": "2026-10-25T03:27:53+01:00",
+            "ArrivalStatus": "early",
             "AimedDepartureTime": "2026-10-25T03:28:00+01:00",
-            "ExpectedDepartureTime": "2026-10-25T03:32:09+01:00",
+            "ExpectedDepartureTime": "2026-10-25T03:27:53+01:00",
             "StopPointRef": {
               "value": "RPBL1"
             },
             "Order": 18
           }
         },
-        "RecordedAtTime": "2026-10-25T02:55:42.050099522+02:00",
+        "RecordedAtTime": "2026-10-25T02:15:12.188474196+02:00",
         "ItemIdentifier": "NO-RPBL1-R-2026-10-25T03:28+01:00[Europe/Paris]"
       },
       {
@@ -347,6 +347,7 @@
           "FirstOrLastJourney": "unspecified",
           "Monitored": true,
           "MonitoredCall": {
+            "VehicleAtStop": true,
             "DestinationDisplay": [
               {
                 "value": "Hangar à Bananes",
@@ -354,18 +355,80 @@
               }
             ],
             "AimedArrivalTime": "2026-10-25T03:14:00+01:00",
-            "ExpectedArrivalTime": "2026-10-25T02:15:22+02:00",
+            "ExpectedArrivalTime": "2026-10-25T02:15:50+02:00",
             "ArrivalStatus": "early",
+            "ArrivalProximityText": {
+              "value": "Départ proche"
+            },
             "AimedDepartureTime": "2026-10-25T03:14:00+01:00",
-            "ExpectedDepartureTime": "2026-10-25T02:15:22+02:00",
+            "ExpectedDepartureTime": "2026-10-25T02:15:50+02:00",
             "StopPointRef": {
               "value": "LHOU1"
             },
             "Order": 9
           }
         },
-        "RecordedAtTime": "2026-10-25T02:08:42.142782258+02:00",
+        "RecordedAtTime": "2026-10-25T02:15:12.189252664+02:00",
         "ItemIdentifier": "NS-LHOU1-R-2026-10-25T03:14+01:00[Europe/Paris]"
+      },
+      {
+        "MonitoringRef": {
+          "value": "LHOU1"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
+            "value": "NS"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
+            "DatedVehicleJourneyRef": "49915034-CR_26_27-MT27VL16-Samedi-21"
+          },
+          "VehicleMode": [
+            "bus"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Bourdonnières - Hangar à Bananes"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "R"
+            }
+          ],
+          "DestinationRef": {
+            "value": "HBA99"
+          },
+          "DestinationName": [
+            {
+              "value": "Hangar à Bananes",
+              "lang": "FR"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": true,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "Hangar à Bananes",
+                "lang": "FR"
+              }
+            ],
+            "AimedArrivalTime": "2026-10-25T04:14:00+01:00",
+            "ExpectedArrivalTime": "2026-10-25T04:14:12+01:00",
+            "ArrivalStatus": "delayed",
+            "AimedDepartureTime": "2026-10-25T04:14:00+01:00",
+            "ExpectedDepartureTime": "2026-10-25T04:14:12+01:00",
+            "StopPointRef": {
+              "value": "LHOU1"
+            },
+            "Order": 9
+          }
+        },
+        "RecordedAtTime": "2026-10-25T02:14:42.185825752+02:00",
+        "ItemIdentifier": "NS-LHOU1-R-2026-10-25T04:14+01:00[Europe/Paris]"
       }
     ],
     "DIDE5": [],
