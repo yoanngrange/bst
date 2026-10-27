@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-27T21:20:41.264Z",
+  "fetchedAt": "2026-10-27T21:25:30.070Z",
   "stops": {
     "MGIN1": [],
     "MGIN2": [],
@@ -391,6 +391,81 @@
             "DataFrameRef": {
               "value": "any"
             },
+            "DatedVehicleJourneyRef": "49430494-CR_26_27-AT27VE11-L-Ma-Me-J-21-1111000"
+          },
+          "VehicleMode": [
+            "bus"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Hangar à Bananes - Gare Sud"
+            },
+            {
+              "value": "Hangar à Bananes - Gare Sud",
+              "lang": "fr"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "A"
+            }
+          ],
+          "DestinationRef": {
+            "value": "HBAN1"
+          },
+          "DestinationName": [
+            {
+              "value": "Hangar à Bananes",
+              "lang": "fr"
+            }
+          ],
+          "VehicleJourneyName": [
+            {
+              "value": "Hangar à Bananes",
+              "lang": "fr"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": true,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "Hangar à Bananes",
+                "lang": "fr"
+              }
+            ],
+            "AimedArrivalTime": "2026-10-28T00:22:00+01:00",
+            "ExpectedArrivalTime": "2026-10-28T00:21:51+01:00",
+            "ArrivalStatus": "early",
+            "AimedDepartureTime": "2026-10-28T00:22:00+01:00",
+            "ExpectedDepartureTime": "2026-10-28T00:21:51+01:00",
+            "StopPointRef": {
+              "value": "IDNA1"
+            },
+            "Order": 7,
+            "StopPointName": [
+              {
+                "value": "Île de Nantes",
+                "lang": "fr"
+              }
+            ]
+          }
+        },
+        "RecordedAtTime": "2026-10-27T22:23:05.90117216+01:00",
+        "ItemIdentifier": "5-IDNA1-A-2026-10-28T00:22+01:00[Europe/Paris]"
+      },
+      {
+        "MonitoringRef": {
+          "value": "IDNA1"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
+            "value": "5"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
             "DatedVehicleJourneyRef": "49430488-CR_26_27-AT27VE11-L-Ma-Me-J-21-1111000"
           },
           "VehicleMode": [
@@ -528,81 +603,6 @@
         },
         "RecordedAtTime": "2026-10-27T21:50:35.620475839+01:00",
         "ItemIdentifier": "5-IDNA1-A-2026-10-27T23:22+01:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "IDNA1"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "5"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "49430476-CR_26_27-AT27VE11-L-Ma-Me-J-21-1111000"
-          },
-          "VehicleMode": [
-            "bus"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Hangar à Bananes - Gare Sud"
-            },
-            {
-              "value": "Hangar à Bananes - Gare Sud",
-              "lang": "fr"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "A"
-            }
-          ],
-          "DestinationRef": {
-            "value": "HBAN1"
-          },
-          "DestinationName": [
-            {
-              "value": "Hangar à Bananes",
-              "lang": "fr"
-            }
-          ],
-          "VehicleJourneyName": [
-            {
-              "value": "Hangar à Bananes",
-              "lang": "fr"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Hangar à Bananes",
-                "lang": "fr"
-              }
-            ],
-            "AimedArrivalTime": "2026-10-27T22:22:00+01:00",
-            "ExpectedArrivalTime": "2026-10-27T22:22:12+01:00",
-            "ArrivalStatus": "delayed",
-            "AimedDepartureTime": "2026-10-27T22:22:00+01:00",
-            "ExpectedDepartureTime": "2026-10-27T22:22:12+01:00",
-            "StopPointRef": {
-              "value": "IDNA1"
-            },
-            "Order": 7,
-            "StopPointName": [
-              {
-                "value": "Île de Nantes",
-                "lang": "fr"
-              }
-            ]
-          }
-        },
-        "RecordedAtTime": "2026-10-27T22:19:05.874031881+01:00",
-        "ItemIdentifier": "5-IDNA1-A-2026-10-27T22:22+01:00[Europe/Paris]"
       }
     ],
     "GNRA4": [
@@ -1337,6 +1337,7 @@
           "FirstOrLastJourney": "unspecified",
           "Monitored": true,
           "MonitoredCall": {
+            "VehicleAtStop": true,
             "DestinationDisplay": [
               {
                 "value": "Gare Sud",
@@ -1344,10 +1345,13 @@
               }
             ],
             "AimedArrivalTime": "2026-10-27T22:25:00+01:00",
-            "ExpectedArrivalTime": "2026-10-27T22:25:00+01:00",
-            "ArrivalStatus": "onTime",
+            "ExpectedArrivalTime": "2026-10-27T22:25:28+01:00",
+            "ArrivalStatus": "delayed",
+            "ArrivalProximityText": {
+              "value": "Départ proche"
+            },
             "AimedDepartureTime": "2026-10-27T22:25:00+01:00",
-            "ExpectedDepartureTime": "2026-10-27T22:25:00+01:00",
+            "ExpectedDepartureTime": "2026-10-27T22:25:28+01:00",
             "StopPointRef": {
               "value": "RPBL4"
             },
@@ -1360,7 +1364,7 @@
             ]
           }
         },
-        "RecordedAtTime": "2026-10-27T21:24:34.440593993+01:00",
+        "RecordedAtTime": "2026-10-27T22:25:05.910056994+01:00",
         "ItemIdentifier": "5-RPBL4-R-2026-10-27T22:25+01:00[Europe/Paris]"
       },
       {
@@ -1727,10 +1731,10 @@
               }
             ],
             "AimedArrivalTime": "2026-10-27T22:32:00+01:00",
-            "ExpectedArrivalTime": "2026-10-27T22:32:00+01:00",
-            "ArrivalStatus": "onTime",
+            "ExpectedArrivalTime": "2026-10-27T22:30:54+01:00",
+            "ArrivalStatus": "early",
             "AimedDepartureTime": "2026-10-27T22:32:00+01:00",
-            "ExpectedDepartureTime": "2026-10-27T22:32:00+01:00",
+            "ExpectedDepartureTime": "2026-10-27T22:30:54+01:00",
             "StopPointRef": {
               "value": "DIDE1"
             },
@@ -1743,7 +1747,7 @@
             ]
           }
         },
-        "RecordedAtTime": "2026-10-27T21:32:43.420563722+01:00",
+        "RecordedAtTime": "2026-10-27T22:25:04.815256127+01:00",
         "ItemIdentifier": "3-DIDE1-A-2026-10-27T22:32+01:00[Europe/Paris]"
       }
     ],
@@ -1806,10 +1810,10 @@
               }
             ],
             "AimedArrivalTime": "2026-10-27T22:30:00+01:00",
-            "ExpectedArrivalTime": "2026-10-27T22:30:00+01:00",
-            "ArrivalStatus": "onTime",
+            "ExpectedArrivalTime": "2026-10-27T22:28:54+01:00",
+            "ArrivalStatus": "early",
             "AimedDepartureTime": "2026-10-27T22:30:00+01:00",
-            "ExpectedDepartureTime": "2026-10-27T22:30:00+01:00",
+            "ExpectedDepartureTime": "2026-10-27T22:28:54+01:00",
             "StopPointRef": {
               "value": "TROC1"
             },
@@ -1822,7 +1826,7 @@
             ]
           }
         },
-        "RecordedAtTime": "2026-10-27T21:30:53.408870923+01:00",
+        "RecordedAtTime": "2026-10-27T22:25:04.815185936+01:00",
         "ItemIdentifier": "3-TROC1-A-2026-10-27T22:30+01:00[Europe/Paris]"
       },
       {
