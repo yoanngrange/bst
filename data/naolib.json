@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-31T07:20:46.748Z",
+  "fetchedAt": "2026-10-31T07:25:28.969Z",
   "stops": {
     "MGIN1": [],
     "MGIN2": [],
@@ -691,6 +691,81 @@
             "DataFrameRef": {
               "value": "any"
             },
+            "DatedVehicleJourneyRef": "53678127-CR_26_27-MT27VL16-Samedi-22"
+          },
+          "VehicleMode": [
+            "bus"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Jonelière - Hôtel de Région"
+            },
+            {
+              "value": "Jonelière - Hôtel de Région",
+              "lang": "fr"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "A"
+            }
+          ],
+          "DestinationRef": {
+            "value": "JNLI2"
+          },
+          "DestinationName": [
+            {
+              "value": "Jonelière",
+              "lang": "fr"
+            }
+          ],
+          "VehicleJourneyName": [
+            {
+              "value": "Jonelière",
+              "lang": "fr"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": true,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "Jonelière",
+                "lang": "fr"
+              }
+            ],
+            "AimedArrivalTime": "2026-10-31T10:07:00+01:00",
+            "ExpectedArrivalTime": "2026-10-31T10:07:18+01:00",
+            "ArrivalStatus": "delayed",
+            "AimedDepartureTime": "2026-10-31T10:07:00+01:00",
+            "ExpectedDepartureTime": "2026-10-31T10:07:18+01:00",
+            "StopPointRef": {
+              "value": "IDNA1"
+            },
+            "Order": 5,
+            "StopPointName": [
+              {
+                "value": "Île de Nantes",
+                "lang": "fr"
+              }
+            ]
+          }
+        },
+        "RecordedAtTime": "2026-10-31T08:21:54.351023778+01:00",
+        "ItemIdentifier": "26-IDNA1-A-2026-10-31T10:07+01:00[Europe/Paris]"
+      },
+      {
+        "MonitoringRef": {
+          "value": "IDNA1"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
+            "value": "26"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
             "DatedVehicleJourneyRef": "53678120-CR_26_27-MT27VL16-Samedi-22"
           },
           "VehicleMode": [
@@ -828,81 +903,6 @@
         },
         "RecordedAtTime": "2026-10-31T07:59:54.191175133+01:00",
         "ItemIdentifier": "4-IDNA1-A-2026-10-31T08:27+01:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "IDNA1"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "26"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "53678139-CR_26_27-MT27VL16-Samedi-22"
-          },
-          "VehicleMode": [
-            "bus"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Jonelière - Hôtel de Région"
-            },
-            {
-              "value": "Jonelière - Hôtel de Région",
-              "lang": "fr"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "A"
-            }
-          ],
-          "DestinationRef": {
-            "value": "JNLI2"
-          },
-          "DestinationName": [
-            {
-              "value": "Jonelière",
-              "lang": "fr"
-            }
-          ],
-          "VehicleJourneyName": [
-            {
-              "value": "Jonelière",
-              "lang": "fr"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Jonelière",
-                "lang": "fr"
-              }
-            ],
-            "AimedArrivalTime": "2026-10-31T08:24:00+01:00",
-            "ExpectedArrivalTime": "2026-10-31T08:22:11+01:00",
-            "ArrivalStatus": "early",
-            "AimedDepartureTime": "2026-10-31T08:24:00+01:00",
-            "ExpectedDepartureTime": "2026-10-31T08:22:11+01:00",
-            "StopPointRef": {
-              "value": "IDNA1"
-            },
-            "Order": 5,
-            "StopPointName": [
-              {
-                "value": "Île de Nantes",
-                "lang": "fr"
-              }
-            ]
-          }
-        },
-        "RecordedAtTime": "2026-10-31T08:20:25.337674175+01:00",
-        "ItemIdentifier": "26-IDNA1-A-2026-10-31T08:24+01:00[Europe/Paris]"
       }
     ],
     "GNRA4": [
@@ -1782,6 +1782,7 @@
           "FirstOrLastJourney": "unspecified",
           "Monitored": true,
           "MonitoredCall": {
+            "VehicleAtStop": true,
             "DestinationDisplay": [
               {
                 "value": "Foch - Cathédrale",
@@ -1789,10 +1790,13 @@
               }
             ],
             "AimedArrivalTime": "2026-10-31T08:26:00+01:00",
-            "ExpectedArrivalTime": "2026-10-31T08:26:00+01:00",
-            "ArrivalStatus": "onTime",
+            "ExpectedArrivalTime": "2026-10-31T08:26:02+01:00",
+            "ArrivalStatus": "delayed",
+            "ArrivalProximityText": {
+              "value": "Départ proche"
+            },
             "AimedDepartureTime": "2026-10-31T08:26:00+01:00",
-            "ExpectedDepartureTime": "2026-10-31T08:26:00+01:00",
+            "ExpectedDepartureTime": "2026-10-31T08:26:02+01:00",
             "StopPointRef": {
               "value": "BENA1"
             },
@@ -1805,7 +1809,7 @@
             ]
           }
         },
-        "RecordedAtTime": "2026-10-31T07:58:53.198577619+01:00",
+        "RecordedAtTime": "2026-10-31T08:25:25.383510778+01:00",
         "ItemIdentifier": "4-BENA1-A-2026-10-31T08:26+01:00[Europe/Paris]"
       }
     ],
@@ -1822,7 +1826,7 @@
             "DataFrameRef": {
               "value": "any"
             },
-            "DatedVehicleJourneyRef": "49432486-CR_26_27-MT27VL16-Samedi-22"
+            "DatedVehicleJourneyRef": "49432493-CR_26_27-MT27VL16-Samedi-22"
           },
           "VehicleMode": [
             "bus"
@@ -1865,11 +1869,11 @@
                 "lang": "fr"
               }
             ],
-            "AimedArrivalTime": "2026-10-31T08:21:00+01:00",
-            "ExpectedArrivalTime": "2026-10-31T08:21:00+01:00",
+            "AimedArrivalTime": "2026-10-31T09:01:00+01:00",
+            "ExpectedArrivalTime": "2026-10-31T09:01:00+01:00",
             "ArrivalStatus": "onTime",
-            "AimedDepartureTime": "2026-10-31T08:21:00+01:00",
-            "ExpectedDepartureTime": "2026-10-31T08:21:00+01:00",
+            "AimedDepartureTime": "2026-10-31T09:01:00+01:00",
+            "ExpectedDepartureTime": "2026-10-31T09:01:00+01:00",
             "StopPointRef": {
               "value": "RPBL4"
             },
@@ -1882,8 +1886,8 @@
             ]
           }
         },
-        "RecordedAtTime": "2026-10-31T07:43:23.087693853+01:00",
-        "ItemIdentifier": "5-RPBL4-R-2026-10-31T08:21+01:00[Europe/Paris]"
+        "RecordedAtTime": "2026-10-31T08:21:54.36217435+01:00",
+        "ItemIdentifier": "5-RPBL4-R-2026-10-31T09:01+01:00[Europe/Paris]"
       },
       {
         "MonitoringRef": {
@@ -2199,6 +2203,81 @@
             "DataFrameRef": {
               "value": "any"
             },
+            "DatedVehicleJourneyRef": "53678122-CR_26_27-MT27VL16-Samedi-22"
+          },
+          "VehicleMode": [
+            "bus"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Jonelière - Hôtel de Région"
+            },
+            {
+              "value": "Jonelière - Hôtel de Région",
+              "lang": "fr"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "R"
+            }
+          ],
+          "DestinationRef": {
+            "value": "HREG2"
+          },
+          "DestinationName": [
+            {
+              "value": "Hôtel de Région",
+              "lang": "fr"
+            }
+          ],
+          "VehicleJourneyName": [
+            {
+              "value": "Hôtel de Région",
+              "lang": "fr"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": true,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "Hôtel de Région",
+                "lang": "fr"
+              }
+            ],
+            "AimedArrivalTime": "2026-10-31T10:06:00+01:00",
+            "ExpectedArrivalTime": "2026-10-31T10:06:00+01:00",
+            "ArrivalStatus": "onTime",
+            "AimedDepartureTime": "2026-10-31T10:06:00+01:00",
+            "ExpectedDepartureTime": "2026-10-31T10:06:00+01:00",
+            "StopPointRef": {
+              "value": "RPBL1"
+            },
+            "Order": 28,
+            "StopPointName": [
+              {
+                "value": "République",
+                "lang": "fr"
+              }
+            ]
+          }
+        },
+        "RecordedAtTime": "2026-10-31T08:22:25.353289867+01:00",
+        "ItemIdentifier": "26-RPBL1-R-2026-10-31T10:06+01:00[Europe/Paris]"
+      },
+      {
+        "MonitoringRef": {
+          "value": "RPBL1"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
+            "value": "26"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
             "DatedVehicleJourneyRef": "53678137-CR_26_27-MT27VL16-Samedi-22"
           },
           "VehicleMode": [
@@ -2336,81 +2415,6 @@
         },
         "RecordedAtTime": "2026-10-31T07:04:21.789820311+01:00",
         "ItemIdentifier": "26-RPBL1-R-2026-10-31T08:48+01:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "RPBL1"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "26"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "53678124-CR_26_27-MT27VL16-Samedi-22"
-          },
-          "VehicleMode": [
-            "bus"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Jonelière - Hôtel de Région"
-            },
-            {
-              "value": "Jonelière - Hôtel de Région",
-              "lang": "fr"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "R"
-            }
-          ],
-          "DestinationRef": {
-            "value": "HREG2"
-          },
-          "DestinationName": [
-            {
-              "value": "Hôtel de Région",
-              "lang": "fr"
-            }
-          ],
-          "VehicleJourneyName": [
-            {
-              "value": "Hôtel de Région",
-              "lang": "fr"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Hôtel de Région",
-                "lang": "fr"
-              }
-            ],
-            "AimedArrivalTime": "2026-10-31T08:22:00+01:00",
-            "ExpectedArrivalTime": "2026-10-31T08:23:17+01:00",
-            "ArrivalStatus": "delayed",
-            "AimedDepartureTime": "2026-10-31T08:22:00+01:00",
-            "ExpectedDepartureTime": "2026-10-31T08:23:17+01:00",
-            "StopPointRef": {
-              "value": "RPBL1"
-            },
-            "Order": 28,
-            "StopPointName": [
-              {
-                "value": "République",
-                "lang": "fr"
-              }
-            ]
-          }
-        },
-        "RecordedAtTime": "2026-10-31T08:10:54.272049146+01:00",
-        "ItemIdentifier": "26-RPBL1-R-2026-10-31T08:22+01:00[Europe/Paris]"
       }
     ],
     "GALH2": [
@@ -2878,6 +2882,81 @@
             "DataFrameRef": {
               "value": "any"
             },
+            "DatedVehicleJourneyRef": "53678300-CR_26_27-MW27VL16-Samedi-22"
+          },
+          "VehicleMode": [
+            "tram"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Marcel Paul - Neustrie"
+            },
+            {
+              "value": "Marcel Paul - Neustrie",
+              "lang": "fr"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "A"
+            }
+          ],
+          "DestinationRef": {
+            "value": "MAI81"
+          },
+          "DestinationName": [
+            {
+              "value": "8 Mai",
+              "lang": "fr"
+            }
+          ],
+          "VehicleJourneyName": [
+            {
+              "value": "Marcel Paul",
+              "lang": "fr"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": true,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "8 Mai",
+                "lang": "fr"
+              }
+            ],
+            "AimedArrivalTime": "2026-10-31T08:55:00+01:00",
+            "ExpectedArrivalTime": "2026-10-31T08:55:00+01:00",
+            "ArrivalStatus": "onTime",
+            "AimedDepartureTime": "2026-10-31T08:55:00+01:00",
+            "ExpectedDepartureTime": "2026-10-31T08:55:00+01:00",
+            "StopPointRef": {
+              "value": "DIDE1"
+            },
+            "Order": 6,
+            "StopPointName": [
+              {
+                "value": "Espace Diderot",
+                "lang": "fr"
+              }
+            ]
+          }
+        },
+        "RecordedAtTime": "2026-10-31T08:23:16.795734316+01:00",
+        "ItemIdentifier": "3-DIDE1-A-2026-10-31T08:55+01:00[Europe/Paris]"
+      },
+      {
+        "MonitoringRef": {
+          "value": "DIDE1"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
+            "value": "3"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
             "DatedVehicleJourneyRef": "53678306-CR_26_27-MW27VL16-Samedi-22"
           },
           "VehicleMode": [
@@ -2940,81 +3019,6 @@
         },
         "RecordedAtTime": "2026-10-31T08:08:56.6911306+01:00",
         "ItemIdentifier": "3-DIDE1-A-2026-10-31T08:39+01:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "DIDE1"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "3"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "53678352-CR_26_27-MW27VL16-Samedi-22"
-          },
-          "VehicleMode": [
-            "tram"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Marcel Paul - Neustrie"
-            },
-            {
-              "value": "Marcel Paul - Neustrie",
-              "lang": "fr"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "A"
-            }
-          ],
-          "DestinationRef": {
-            "value": "MAI81"
-          },
-          "DestinationName": [
-            {
-              "value": "8 Mai",
-              "lang": "fr"
-            }
-          ],
-          "VehicleJourneyName": [
-            {
-              "value": "Marcel Paul",
-              "lang": "fr"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "8 Mai",
-                "lang": "fr"
-              }
-            ],
-            "AimedArrivalTime": "2026-10-31T08:23:00+01:00",
-            "ExpectedArrivalTime": "2026-10-31T08:23:00+01:00",
-            "ArrivalStatus": "onTime",
-            "AimedDepartureTime": "2026-10-31T08:23:00+01:00",
-            "ExpectedDepartureTime": "2026-10-31T08:23:00+01:00",
-            "StopPointRef": {
-              "value": "DIDE1"
-            },
-            "Order": 6,
-            "StopPointName": [
-              {
-                "value": "Espace Diderot",
-                "lang": "fr"
-              }
-            ]
-          }
-        },
-        "RecordedAtTime": "2026-10-31T07:50:55.554907704+01:00",
-        "ItemIdentifier": "3-DIDE1-A-2026-10-31T08:23+01:00[Europe/Paris]"
       }
     ],
     "LHOU1": [
@@ -3376,10 +3380,10 @@
               }
             ],
             "AimedArrivalTime": "2026-10-31T08:25:00+01:00",
-            "ExpectedArrivalTime": "2026-10-31T08:27:00+01:00",
+            "ExpectedArrivalTime": "2026-10-31T08:26:50+01:00",
             "ArrivalStatus": "delayed",
             "AimedDepartureTime": "2026-10-31T08:25:00+01:00",
-            "ExpectedDepartureTime": "2026-10-31T08:27:00+01:00",
+            "ExpectedDepartureTime": "2026-10-31T08:26:50+01:00",
             "StopPointRef": {
               "value": "DIDE5"
             },
@@ -3392,7 +3396,7 @@
             ]
           }
         },
-        "RecordedAtTime": "2026-10-31T07:15:22.878128526+01:00",
+        "RecordedAtTime": "2026-10-31T08:25:25.377791799+01:00",
         "ItemIdentifier": "30-DIDE5-A-2026-10-31T08:25+01:00[Europe/Paris]"
       },
       {
@@ -3634,7 +3638,7 @@
             "DataFrameRef": {
               "value": "any"
             },
-            "DatedVehicleJourneyRef": "53678352-CR_26_27-MW27VL16-Samedi-22"
+            "DatedVehicleJourneyRef": "53678300-CR_26_27-MW27VL16-Samedi-22"
           },
           "VehicleMode": [
             "tram"
@@ -3671,21 +3675,17 @@
           "FirstOrLastJourney": "unspecified",
           "Monitored": true,
           "MonitoredCall": {
-            "VehicleAtStop": true,
             "DestinationDisplay": [
               {
                 "value": "8 Mai",
                 "lang": "fr"
               }
             ],
-            "AimedArrivalTime": "2026-10-31T08:21:00+01:00",
-            "ExpectedArrivalTime": "2026-10-31T08:21:14+01:00",
-            "ArrivalStatus": "delayed",
-            "ArrivalProximityText": {
-              "value": "Départ proche"
-            },
-            "AimedDepartureTime": "2026-10-31T08:21:00+01:00",
-            "ExpectedDepartureTime": "2026-10-31T08:21:14+01:00",
+            "AimedArrivalTime": "2026-10-31T08:53:00+01:00",
+            "ExpectedArrivalTime": "2026-10-31T08:53:00+01:00",
+            "ArrivalStatus": "onTime",
+            "AimedDepartureTime": "2026-10-31T08:53:00+01:00",
+            "ExpectedDepartureTime": "2026-10-31T08:53:00+01:00",
             "StopPointRef": {
               "value": "TROC1"
             },
@@ -3698,8 +3698,8 @@
             ]
           }
         },
-        "RecordedAtTime": "2026-10-31T08:20:36.776615652+01:00",
-        "ItemIdentifier": "3-TROC1-A-2026-10-31T08:21+01:00[Europe/Paris]"
+        "RecordedAtTime": "2026-10-31T08:21:36.784073542+01:00",
+        "ItemIdentifier": "3-TROC1-A-2026-10-31T08:53+01:00[Europe/Paris]"
       },
       {
         "MonitoringRef": {
