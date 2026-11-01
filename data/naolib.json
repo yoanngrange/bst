@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-01T08:35:27.168Z",
+  "fetchedAt": "2026-11-01T08:40:39.788Z",
   "stops": {
     "MGIN1": [],
     "MGIN2": [],
@@ -805,6 +805,7 @@
           "FirstOrLastJourney": "unspecified",
           "Monitored": true,
           "MonitoredCall": {
+            "VehicleAtStop": true,
             "DestinationDisplay": [
               {
                 "value": "Aéroport",
@@ -812,10 +813,13 @@
               }
             ],
             "AimedArrivalTime": "2026-11-01T09:40:00+01:00",
-            "ExpectedArrivalTime": "2026-11-01T09:40:00+01:00",
-            "ArrivalStatus": "onTime",
+            "ExpectedArrivalTime": "2026-11-01T09:40:18+01:00",
+            "ArrivalStatus": "delayed",
+            "ArrivalProximityText": {
+              "value": "Départ proche"
+            },
             "AimedDepartureTime": "2026-11-01T09:40:00+01:00",
-            "ExpectedDepartureTime": "2026-11-01T09:40:00+01:00",
+            "ExpectedDepartureTime": "2026-11-01T09:40:18+01:00",
             "StopPointRef": {
               "value": "GNRA4"
             },
@@ -828,7 +832,7 @@
             ]
           }
         },
-        "RecordedAtTime": "2026-11-01T07:40:18.648232449+01:00",
+        "RecordedAtTime": "2026-11-01T09:40:20.597754918+01:00",
         "ItemIdentifier": "38-GNRA4-R-2026-11-01T09:40+01:00[Europe/Paris]"
       },
       {
@@ -912,23 +916,23 @@
         },
         "MonitoredVehicleJourney": {
           "LineRef": {
-            "value": "36"
+            "value": "38"
           },
           "FramedVehicleJourneyRef": {
             "DataFrameRef": {
               "value": "any"
             },
-            "DatedVehicleJourneyRef": "53341739-CR_26_27-AT27BA17-Dimanche-01"
+            "DatedVehicleJourneyRef": "49836205-CR_26_27-AT27BA17-Dimanche-01"
           },
           "VehicleMode": [
             "bus"
           ],
           "PublishedLineName": [
             {
-              "value": "Greneraie - Croix Jeannette"
+              "value": "Greneraie - Aéroport"
             },
             {
-              "value": "Greneraie - Croix Jeannette",
+              "value": "Greneraie - Aéroport",
               "lang": "fr"
             }
           ],
@@ -938,38 +942,34 @@
             }
           ],
           "DestinationRef": {
-            "value": "XJAN1"
+            "value": "NATL2"
           },
           "DestinationName": [
             {
-              "value": "Croix Jeannette",
+              "value": "Aéroport",
               "lang": "fr"
             }
           ],
           "VehicleJourneyName": [
             {
-              "value": "Croix Jeannette",
+              "value": "Aéroport",
               "lang": "fr"
             }
           ],
           "FirstOrLastJourney": "unspecified",
           "Monitored": true,
           "MonitoredCall": {
-            "VehicleAtStop": true,
             "DestinationDisplay": [
               {
-                "value": "Croix Jeannette",
+                "value": "Aéroport",
                 "lang": "fr"
               }
             ],
-            "AimedArrivalTime": "2026-11-01T09:36:00+01:00",
-            "ExpectedArrivalTime": "2026-11-01T09:36:00+01:00",
+            "AimedArrivalTime": "2026-11-01T11:40:00+01:00",
+            "ExpectedArrivalTime": "2026-11-01T11:40:00+01:00",
             "ArrivalStatus": "onTime",
-            "ArrivalProximityText": {
-              "value": "Départ proche"
-            },
-            "AimedDepartureTime": "2026-11-01T09:36:00+01:00",
-            "ExpectedDepartureTime": "2026-11-01T09:36:00+01:00",
+            "AimedDepartureTime": "2026-11-01T11:40:00+01:00",
+            "ExpectedDepartureTime": "2026-11-01T11:40:00+01:00",
             "StopPointRef": {
               "value": "GNRA4"
             },
@@ -982,8 +982,8 @@
             ]
           }
         },
-        "RecordedAtTime": "2026-11-01T09:35:20.558094753+01:00",
-        "ItemIdentifier": "36-GNRA4-R-2026-11-01T09:36+01:00[Europe/Paris]"
+        "RecordedAtTime": "2026-11-01T09:40:20.597762103+01:00",
+        "ItemIdentifier": "38-GNRA4-R-2026-11-01T11:40+01:00[Europe/Paris]"
       },
       {
         "MonitoringRef": {
@@ -1890,81 +1890,6 @@
         },
         "RecordedAtTime": "2026-11-01T09:24:20.460542168+01:00",
         "ItemIdentifier": "26-RPBL1-R-2026-11-01T11:24+01:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "RPBL1"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "26"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "49639756-CR_26_27-AT27BA17-Dimanche-01"
-          },
-          "VehicleMode": [
-            "bus"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Jonelière - Hôtel de Région"
-            },
-            {
-              "value": "Jonelière - Hôtel de Région",
-              "lang": "fr"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "R"
-            }
-          ],
-          "DestinationRef": {
-            "value": "HREG2"
-          },
-          "DestinationName": [
-            {
-              "value": "Hôtel de Région",
-              "lang": "fr"
-            }
-          ],
-          "VehicleJourneyName": [
-            {
-              "value": "Hôtel de Région",
-              "lang": "fr"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Hôtel de Région",
-                "lang": "fr"
-              }
-            ],
-            "AimedArrivalTime": "2026-11-01T09:38:00+01:00",
-            "ExpectedArrivalTime": "2026-11-01T09:37:57+01:00",
-            "ArrivalStatus": "early",
-            "AimedDepartureTime": "2026-11-01T09:38:00+01:00",
-            "ExpectedDepartureTime": "2026-11-01T09:37:57+01:00",
-            "StopPointRef": {
-              "value": "RPBL1"
-            },
-            "Order": 28,
-            "StopPointName": [
-              {
-                "value": "République",
-                "lang": "fr"
-              }
-            ]
-          }
-        },
-        "RecordedAtTime": "2026-11-01T09:31:20.534367961+01:00",
-        "ItemIdentifier": "26-RPBL1-R-2026-11-01T09:38+01:00[Europe/Paris]"
       }
     ],
     "GALH2": [
