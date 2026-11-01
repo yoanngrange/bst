@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-01T06:15:38.936Z",
+  "fetchedAt": "2026-11-01T06:20:37.697Z",
   "stops": {
     "MGIN1": [],
     "MGIN2": [],
@@ -278,6 +278,7 @@
           "FirstOrLastJourney": "unspecified",
           "Monitored": true,
           "MonitoredCall": {
+            "VehicleAtStop": true,
             "DestinationDisplay": [
               {
                 "value": "Foch - Cathédrale",
@@ -285,10 +286,13 @@
               }
             ],
             "AimedArrivalTime": "2026-11-01T07:20:00+01:00",
-            "ExpectedArrivalTime": "2026-11-01T07:20:00+01:00",
-            "ArrivalStatus": "onTime",
+            "ExpectedArrivalTime": "2026-11-01T07:21:06+01:00",
+            "ArrivalStatus": "delayed",
+            "ArrivalProximityText": {
+              "value": "Départ proche"
+            },
             "AimedDepartureTime": "2026-11-01T07:20:00+01:00",
-            "ExpectedDepartureTime": "2026-11-01T07:20:00+01:00",
+            "ExpectedDepartureTime": "2026-11-01T07:21:06+01:00",
             "StopPointRef": {
               "value": "IDNA1"
             },
@@ -301,7 +305,7 @@
             ]
           }
         },
-        "RecordedAtTime": "2026-11-01T05:37:45.715018146+01:00",
+        "RecordedAtTime": "2026-11-01T07:20:17.503089885+01:00",
         "ItemIdentifier": "4-IDNA1-A-2026-11-01T07:20+01:00[Europe/Paris]"
       },
       {
@@ -1070,7 +1074,7 @@
             "DataFrameRef": {
               "value": "any"
             },
-            "DatedVehicleJourneyRef": "49666051-CR_26_27-AT27BA17-Dimanche-01"
+            "DatedVehicleJourneyRef": "49666025-CR_26_27-AT27BA17-Dimanche-01"
           },
           "VehicleMode": [
             "bus"
@@ -1113,11 +1117,11 @@
                 "lang": "fr"
               }
             ],
-            "AimedArrivalTime": "2026-11-01T07:19:00+01:00",
-            "ExpectedArrivalTime": "2026-11-01T07:19:00+01:00",
+            "AimedArrivalTime": "2026-11-01T08:43:00+01:00",
+            "ExpectedArrivalTime": "2026-11-01T08:43:00+01:00",
             "ArrivalStatus": "onTime",
-            "AimedDepartureTime": "2026-11-01T07:19:00+01:00",
-            "ExpectedDepartureTime": "2026-11-01T07:19:00+01:00",
+            "AimedDepartureTime": "2026-11-01T08:43:00+01:00",
+            "ExpectedDepartureTime": "2026-11-01T08:43:00+01:00",
             "StopPointRef": {
               "value": "BENA1"
             },
@@ -1130,8 +1134,8 @@
             ]
           }
         },
-        "RecordedAtTime": "2026-11-01T05:36:15.707776499+01:00",
-        "ItemIdentifier": "4-BENA1-A-2026-11-01T07:19+01:00[Europe/Paris]"
+        "RecordedAtTime": "2026-11-01T07:19:47.50859105+01:00",
+        "ItemIdentifier": "4-BENA1-A-2026-11-01T08:43+01:00[Europe/Paris]"
       },
       {
         "MonitoringRef": {
@@ -1588,6 +1592,81 @@
     ],
     "RPBL1": [],
     "GALH2": [
+      {
+        "MonitoringRef": {
+          "value": "GALH2"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
+            "value": "38"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
+            "DatedVehicleJourneyRef": "49836217-CR_26_27-AT27BA17-Dimanche-01"
+          },
+          "VehicleMode": [
+            "bus"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Greneraie - Aéroport"
+            },
+            {
+              "value": "Greneraie - Aéroport",
+              "lang": "fr"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "A"
+            }
+          ],
+          "DestinationRef": {
+            "value": "GNRA7"
+          },
+          "DestinationName": [
+            {
+              "value": "Greneraie",
+              "lang": "fr"
+            }
+          ],
+          "VehicleJourneyName": [
+            {
+              "value": "Greneraie",
+              "lang": "fr"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": true,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "Greneraie",
+                "lang": "fr"
+              }
+            ],
+            "AimedArrivalTime": "2026-11-01T09:19:00+01:00",
+            "ExpectedArrivalTime": "2026-11-01T09:18:46+01:00",
+            "ArrivalStatus": "early",
+            "AimedDepartureTime": "2026-11-01T09:19:00+01:00",
+            "ExpectedDepartureTime": "2026-11-01T09:18:46+01:00",
+            "StopPointRef": {
+              "value": "GALH2"
+            },
+            "Order": 10,
+            "StopPointName": [
+              {
+                "value": "Galheur",
+                "lang": "fr"
+              }
+            ]
+          }
+        },
+        "RecordedAtTime": "2026-11-01T07:19:17.49035918+01:00",
+        "ItemIdentifier": "38-GALH2-A-2026-11-01T09:19+01:00[Europe/Paris]"
+      },
       {
         "MonitoringRef": {
           "value": "GALH2"
