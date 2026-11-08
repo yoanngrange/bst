@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-08T03:25:30.987Z",
+  "fetchedAt": "2026-11-08T03:30:58.404Z",
   "stops": {
     "MGIN1": [],
     "MGIN2": [],
@@ -149,7 +149,80 @@
         "ItemIdentifier": "4-IDNA1-A-2026-11-08T06:08+01:00[Europe/Paris]"
       }
     ],
-    "GNRA4": [],
+    "GNRA4": [
+      {
+        "MonitoringRef": {
+          "value": "GNRA4"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
+            "value": "38"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
+            "DatedVehicleJourneyRef": "49836208-CR_26_27-HT27BA27-Dimanche-02"
+          },
+          "VehicleMode": [
+            "bus"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Greneraie - Aéroport",
+              "lang": "fr"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "R"
+            }
+          ],
+          "DestinationRef": {
+            "value": "NATL2"
+          },
+          "DestinationName": [
+            {
+              "value": "Aéroport",
+              "lang": "fr"
+            }
+          ],
+          "VehicleJourneyName": [
+            {
+              "value": "Aéroport",
+              "lang": "fr"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": false,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "Aéroport",
+                "lang": "fr"
+              }
+            ],
+            "AimedArrivalTime": "2026-11-08T06:30:00+01:00",
+            "ExpectedArrivalTime": "2026-11-08T06:30:00+01:00",
+            "ArrivalStatus": "onTime",
+            "AimedDepartureTime": "2026-11-08T06:30:00+01:00",
+            "ExpectedDepartureTime": "2026-11-08T06:30:00+01:00",
+            "StopPointRef": {
+              "value": "GNRA4"
+            },
+            "Order": 1,
+            "StopPointName": [
+              {
+                "value": "Greneraie",
+                "lang": "fr"
+              }
+            ]
+          }
+        },
+        "RecordedAtTime": "2026-11-08T04:30:15.957821826+01:00",
+        "ItemIdentifier": "38-GNRA4-R-2026-11-08T06:30+01:00[Europe/Paris]"
+      }
+    ],
     "BENA1": [
       {
         "MonitoringRef": {
@@ -443,29 +516,27 @@
         },
         "RecordedAtTime": "2026-11-08T04:01:26.757450473+01:00",
         "ItemIdentifier": "5-RPBL4-R-2026-11-08T06:01+01:00[Europe/Paris]"
-      }
-    ],
-    "RPBL1": [
+      },
       {
         "MonitoringRef": {
-          "value": "RPBL1"
+          "value": "RPBL4"
         },
         "MonitoredVehicleJourney": {
           "LineRef": {
-            "value": "NO"
+            "value": "5"
           },
           "FramedVehicleJourneyRef": {
             "DataFrameRef": {
               "value": "any"
             },
-            "DatedVehicleJourneyRef": "50548028-CR_26_27-MS27OR16-Samedi-01"
+            "DatedVehicleJourneyRef": "49432784-CR_26_27-HT27BA27-Dimanche-02"
           },
           "VehicleMode": [
             "bus"
           ],
           "PublishedLineName": [
             {
-              "value": "Beauséjour - Hangar à Bananes",
+              "value": "Hangar à Bananes - Gare Sud",
               "lang": "fr"
             }
           ],
@@ -475,41 +546,38 @@
             }
           ],
           "DestinationRef": {
-            "value": "HBAN1"
+            "value": "GSSU4"
           },
           "DestinationName": [
             {
-              "value": "Hangar à Bananes",
+              "value": "Gare Sud",
               "lang": "fr"
             }
           ],
           "VehicleJourneyName": [
             {
-              "value": "Hangar à Bananes",
+              "value": "Gare Sud",
               "lang": "fr"
             }
           ],
           "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
+          "Monitored": false,
           "MonitoredCall": {
             "DestinationDisplay": [
               {
-                "value": "Hangar à Bananes",
+                "value": "Gare Sud",
                 "lang": "fr"
               }
             ],
-            "AimedArrivalTime": "2026-11-08T04:28:00+01:00",
-            "ExpectedArrivalTime": "2026-11-08T04:29:21+01:00",
-            "ArrivalStatus": "delayed",
-            "ArrivalProximityText": {
-              "value": "Dernier départ"
-            },
-            "AimedDepartureTime": "2026-11-08T04:28:00+01:00",
-            "ExpectedDepartureTime": "2026-11-08T04:29:21+01:00",
+            "AimedArrivalTime": "2026-11-08T06:30:00+01:00",
+            "ExpectedArrivalTime": "2026-11-08T06:30:00+01:00",
+            "ArrivalStatus": "onTime",
+            "AimedDepartureTime": "2026-11-08T06:30:00+01:00",
+            "ExpectedDepartureTime": "2026-11-08T06:30:00+01:00",
             "StopPointRef": {
-              "value": "RPBL1"
+              "value": "RPBL4"
             },
-            "Order": 18,
+            "Order": 5,
             "StopPointName": [
               {
                 "value": "République",
@@ -518,10 +586,11 @@
             ]
           }
         },
-        "RecordedAtTime": "2026-11-08T04:25:27.923045368+01:00",
-        "ItemIdentifier": "NO-RPBL1-R-2026-11-08T04:28+01:00[Europe/Paris]"
+        "RecordedAtTime": "2026-11-08T04:30:15.958740937+01:00",
+        "ItemIdentifier": "5-RPBL4-R-2026-11-08T06:30+01:00[Europe/Paris]"
       }
     ],
+    "RPBL1": [],
     "GALH2": [],
     "DIDE1": [],
     "LHOU1": [],
