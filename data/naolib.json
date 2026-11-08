@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-08T00:01:10.028Z",
+  "fetchedAt": "2026-11-08T00:05:32.637Z",
   "stops": {
     "MGIN1": [
       {
@@ -417,10 +417,10 @@
               }
             ],
             "AimedArrivalTime": "2026-11-08T01:08:00+01:00",
-            "ExpectedArrivalTime": "2026-11-08T01:08:00+01:00",
-            "ArrivalStatus": "onTime",
+            "ExpectedArrivalTime": "2026-11-08T01:10:12+01:00",
+            "ArrivalStatus": "delayed",
             "AimedDepartureTime": "2026-11-08T01:08:00+01:00",
-            "ExpectedDepartureTime": "2026-11-08T01:08:00+01:00",
+            "ExpectedDepartureTime": "2026-11-08T01:10:12+01:00",
             "StopPointRef": {
               "value": "MGIN2"
             },
@@ -433,7 +433,7 @@
             ]
           }
         },
-        "RecordedAtTime": "2026-11-08T00:08:05.139019823+01:00",
+        "RecordedAtTime": "2026-11-08T01:04:16.573491204+01:00",
         "ItemIdentifier": "3-MGIN2-R-2026-11-08T01:08+01:00[Europe/Paris]"
       },
       {
@@ -628,6 +628,7 @@
           "FirstOrLastJourney": "unspecified",
           "Monitored": true,
           "MonitoredCall": {
+            "VehicleAtStop": true,
             "DestinationDisplay": [
               {
                 "value": "Cité des Congrès",
@@ -635,10 +636,13 @@
               }
             ],
             "AimedArrivalTime": "2026-11-08T01:05:00+01:00",
-            "ExpectedArrivalTime": "2026-11-08T01:06:11+01:00",
+            "ExpectedArrivalTime": "2026-11-08T01:06:05+01:00",
             "ArrivalStatus": "delayed",
+            "ArrivalProximityText": {
+              "value": "Départ proche"
+            },
             "AimedDepartureTime": "2026-11-08T01:05:00+01:00",
-            "ExpectedDepartureTime": "2026-11-08T01:06:11+01:00",
+            "ExpectedDepartureTime": "2026-11-08T01:06:05+01:00",
             "StopPointRef": {
               "value": "IDNA1"
             },
@@ -651,7 +655,7 @@
             ]
           }
         },
-        "RecordedAtTime": "2026-11-08T00:53:16.457394907+01:00",
+        "RecordedAtTime": "2026-11-08T01:05:16.538811091+01:00",
         "ItemIdentifier": "4-IDNA1-A-2026-11-08T01:05+01:00[Europe/Paris]"
       },
       {
@@ -798,7 +802,7 @@
             ]
           }
         },
-        "RecordedAtTime": "2026-11-08T00:54:16.464117322+01:00",
+        "RecordedAtTime": "2026-11-08T01:04:16.528531058+01:00",
         "ItemIdentifier": "5-IDNA1-A-2026-11-08T02:51+01:00[Europe/Paris]"
       },
       {
@@ -945,7 +949,7 @@
             ]
           }
         },
-        "RecordedAtTime": "2026-11-08T00:54:16.464069277+01:00",
+        "RecordedAtTime": "2026-11-08T01:04:16.528505247+01:00",
         "ItemIdentifier": "4-IDNA1-A-2026-11-08T02:35+01:00[Europe/Paris]"
       },
       {
@@ -1238,7 +1242,7 @@
             ]
           }
         },
-        "RecordedAtTime": "2026-11-08T00:52:16.450501171+01:00",
+        "RecordedAtTime": "2026-11-08T01:04:16.530438861+01:00",
         "ItemIdentifier": "36-GNRA4-R-2026-11-08T02:52+01:00[Europe/Paris]"
       },
       {
@@ -1389,78 +1393,6 @@
         },
         "RecordedAtTime": "2026-11-08T00:37:16.354364127+01:00",
         "ItemIdentifier": "4-BENA1-A-2026-11-08T02:34+01:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "BENA1"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "4"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "53826345-CR_26_27-MT27OR26-Samedi-00"
-          },
-          "VehicleMode": [
-            "bus"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Foch - Cathédrale - Porte de Vertou",
-              "lang": "fr"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "A"
-            }
-          ],
-          "DestinationRef": {
-            "value": "JEMP1"
-          },
-          "DestinationName": [
-            {
-              "value": "Cité des Congrès",
-              "lang": "fr"
-            }
-          ],
-          "VehicleJourneyName": [
-            {
-              "value": "Foch - Cathédrale",
-              "lang": "fr"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Cité des Congrès",
-                "lang": "fr"
-              }
-            ],
-            "AimedArrivalTime": "2026-11-08T01:04:00+01:00",
-            "ExpectedArrivalTime": "2026-11-08T01:05:10+01:00",
-            "ArrivalStatus": "delayed",
-            "AimedDepartureTime": "2026-11-08T01:04:00+01:00",
-            "ExpectedDepartureTime": "2026-11-08T01:05:10+01:00",
-            "StopPointRef": {
-              "value": "BENA1"
-            },
-            "Order": 10,
-            "StopPointName": [
-              {
-                "value": "Beaulieu",
-                "lang": "fr"
-              }
-            ]
-          }
-        },
-        "RecordedAtTime": "2026-11-08T00:53:16.464646335+01:00",
-        "ItemIdentifier": "4-BENA1-A-2026-11-08T01:04+01:00[Europe/Paris]"
       },
       {
         "MonitoringRef": {
