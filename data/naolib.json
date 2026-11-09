@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-09T04:10:40.999Z",
+  "fetchedAt": "2026-11-09T04:15:40.504Z",
   "stops": {
     "MGIN1": [
       {
@@ -298,6 +298,78 @@
         },
         "MonitoredVehicleJourney": {
           "LineRef": {
+            "value": "2"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
+            "DatedVehicleJourneyRef": "49949295-CR_26_27-HW27BE11-Lu-Ma-Je-00-1101000"
+          },
+          "VehicleMode": [
+            "tram"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Orvault Grand Val - Gare de Pont Rousseau",
+              "lang": "fr"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "R"
+            }
+          ],
+          "DestinationRef": {
+            "value": "GPRO1"
+          },
+          "DestinationName": [
+            {
+              "value": "Gare de Pont Rousseau",
+              "lang": "fr"
+            }
+          ],
+          "VehicleJourneyName": [
+            {
+              "value": "Gare de Pont Rousseau",
+              "lang": "fr"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": true,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "Gare de Pont Rousseau",
+                "lang": "fr"
+              }
+            ],
+            "AimedArrivalTime": "2026-11-09T06:15:00+01:00",
+            "ExpectedArrivalTime": "2026-11-09T06:15:00+01:00",
+            "ArrivalStatus": "onTime",
+            "AimedDepartureTime": "2026-11-09T06:15:00+01:00",
+            "ExpectedDepartureTime": "2026-11-09T06:15:00+01:00",
+            "StopPointRef": {
+              "value": "MGIN2"
+            },
+            "Order": 23,
+            "StopPointName": [
+              {
+                "value": "Mangin",
+                "lang": "fr"
+              }
+            ]
+          }
+        },
+        "RecordedAtTime": "2026-11-09T05:12:24.389023501+01:00",
+        "ItemIdentifier": "2-MGIN2-R-2026-11-09T06:15+01:00[Europe/Paris]"
+      },
+      {
+        "MonitoringRef": {
+          "value": "MGIN2"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
             "value": "3"
           },
           "FramedVehicleJourneyRef": {
@@ -363,78 +435,6 @@
         },
         "RecordedAtTime": "2026-11-09T05:10:18.443871476+01:00",
         "ItemIdentifier": "3-MGIN2-R-2026-11-09T05:41+01:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "MGIN2"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "2"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "49949110-CR_26_27-HW27BE11-Lu-Ma-Je-00-1101000"
-          },
-          "VehicleMode": [
-            "tram"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Orvault Grand Val - Gare de Pont Rousseau",
-              "lang": "fr"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "R"
-            }
-          ],
-          "DestinationRef": {
-            "value": "GPRO1"
-          },
-          "DestinationName": [
-            {
-              "value": "Gare de Pont Rousseau",
-              "lang": "fr"
-            }
-          ],
-          "VehicleJourneyName": [
-            {
-              "value": "Gare de Pont Rousseau",
-              "lang": "fr"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Gare de Pont Rousseau",
-                "lang": "fr"
-              }
-            ],
-            "AimedArrivalTime": "2026-11-09T05:11:00+01:00",
-            "ExpectedArrivalTime": "2026-11-09T05:11:06+01:00",
-            "ArrivalStatus": "delayed",
-            "AimedDepartureTime": "2026-11-09T05:11:00+01:00",
-            "ExpectedDepartureTime": "2026-11-09T05:11:06+01:00",
-            "StopPointRef": {
-              "value": "MGIN2"
-            },
-            "Order": 23,
-            "StopPointName": [
-              {
-                "value": "Mangin",
-                "lang": "fr"
-              }
-            ]
-          }
-        },
-        "RecordedAtTime": "2026-11-09T05:09:24.367727138+01:00",
-        "ItemIdentifier": "2-MGIN2-R-2026-11-09T05:11+01:00[Europe/Paris]"
       },
       {
         "MonitoringRef": {
@@ -554,6 +554,7 @@
           "FirstOrLastJourney": "unspecified",
           "Monitored": true,
           "MonitoredCall": {
+            "VehicleAtStop": true,
             "DestinationDisplay": [
               {
                 "value": "Neustrie",
@@ -561,10 +562,13 @@
               }
             ],
             "AimedArrivalTime": "2026-11-09T05:13:00+01:00",
-            "ExpectedArrivalTime": "2026-11-09T05:17:28+01:00",
+            "ExpectedArrivalTime": "2026-11-09T05:16:25+01:00",
             "ArrivalStatus": "delayed",
+            "ArrivalProximityText": {
+              "value": "Départ proche"
+            },
             "AimedDepartureTime": "2026-11-09T05:13:00+01:00",
-            "ExpectedDepartureTime": "2026-11-09T05:17:28+01:00",
+            "ExpectedDepartureTime": "2026-11-09T05:16:25+01:00",
             "StopPointRef": {
               "value": "MGIN2"
             },
@@ -577,7 +581,7 @@
             ]
           }
         },
-        "RecordedAtTime": "2026-11-09T05:09:48.440500332+01:00",
+        "RecordedAtTime": "2026-11-09T05:15:38.479773643+01:00",
         "ItemIdentifier": "3-MGIN2-R-2026-11-09T05:13+01:00[Europe/Paris]"
       },
       {
@@ -2657,10 +2661,10 @@
               }
             ],
             "AimedArrivalTime": "2026-11-09T05:18:00+01:00",
-            "ExpectedArrivalTime": "2026-11-09T05:18:00+01:00",
-            "ArrivalStatus": "onTime",
+            "ExpectedArrivalTime": "2026-11-09T05:19:04+01:00",
+            "ArrivalStatus": "delayed",
             "AimedDepartureTime": "2026-11-09T05:18:00+01:00",
-            "ExpectedDepartureTime": "2026-11-09T05:18:00+01:00",
+            "ExpectedDepartureTime": "2026-11-09T05:19:04+01:00",
             "StopPointRef": {
               "value": "RPBL4"
             },
@@ -2673,7 +2677,7 @@
             ]
           }
         },
-        "RecordedAtTime": "2026-11-09T05:04:45.432867093+01:00",
+        "RecordedAtTime": "2026-11-09T05:15:15.504832516+01:00",
         "ItemIdentifier": "5-RPBL4-R-2026-11-09T05:18+01:00[Europe/Paris]"
       },
       {
@@ -2965,6 +2969,78 @@
         },
         "RecordedAtTime": "2026-11-09T04:41:15.26588475+01:00",
         "ItemIdentifier": "26-RPBL1-R-2026-11-09T06:41+01:00[Europe/Paris]"
+      },
+      {
+        "MonitoringRef": {
+          "value": "RPBL1"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
+            "value": "26"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
+            "DatedVehicleJourneyRef": "49446655-CR_26_27-HT27BE21-Lu-Ma-Je-04"
+          },
+          "VehicleMode": [
+            "bus"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Jonelière - Hôtel de Région",
+              "lang": "fr"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "R"
+            }
+          ],
+          "DestinationRef": {
+            "value": "HREG2"
+          },
+          "DestinationName": [
+            {
+              "value": "Hôtel de Région",
+              "lang": "fr"
+            }
+          ],
+          "VehicleJourneyName": [
+            {
+              "value": "Hôtel de Région",
+              "lang": "fr"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": false,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "Hôtel de Région",
+                "lang": "fr"
+              }
+            ],
+            "AimedArrivalTime": "2026-11-09T07:13:00+01:00",
+            "ExpectedArrivalTime": "2026-11-09T07:13:00+01:00",
+            "ArrivalStatus": "onTime",
+            "AimedDepartureTime": "2026-11-09T07:13:00+01:00",
+            "ExpectedDepartureTime": "2026-11-09T07:13:00+01:00",
+            "StopPointRef": {
+              "value": "RPBL1"
+            },
+            "Order": 28,
+            "StopPointName": [
+              {
+                "value": "République",
+                "lang": "fr"
+              }
+            ]
+          }
+        },
+        "RecordedAtTime": "2026-11-09T05:13:15.480710873+01:00",
+        "ItemIdentifier": "26-RPBL1-R-2026-11-09T07:13+01:00[Europe/Paris]"
       },
       {
         "MonitoringRef": {
