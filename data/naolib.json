@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-11T11:20:44.246Z",
+  "fetchedAt": "2026-11-11T11:25:31.825Z",
   "stops": {
     "MGIN1": [
       {
@@ -408,6 +408,7 @@
           "FirstOrLastJourney": "unspecified",
           "Monitored": true,
           "MonitoredCall": {
+            "VehicleAtStop": true,
             "DestinationDisplay": [
               {
                 "value": "Marcel Paul",
@@ -415,10 +416,13 @@
               }
             ],
             "AimedArrivalTime": "2026-11-11T12:23:00+01:00",
-            "ExpectedArrivalTime": "2026-11-11T12:24:04+01:00",
+            "ExpectedArrivalTime": "2026-11-11T12:25:16+01:00",
             "ArrivalStatus": "delayed",
+            "ArrivalProximityText": {
+              "value": "Départ proche"
+            },
             "AimedDepartureTime": "2026-11-11T12:23:00+01:00",
-            "ExpectedDepartureTime": "2026-11-11T12:24:04+01:00",
+            "ExpectedDepartureTime": "2026-11-11T12:25:16+01:00",
             "StopPointRef": {
               "value": "MGIN1"
             },
@@ -431,7 +435,7 @@
             ]
           }
         },
-        "RecordedAtTime": "2026-11-11T12:11:21.946247782+01:00",
+        "RecordedAtTime": "2026-11-11T12:25:12.045454994+01:00",
         "ItemIdentifier": "3-MGIN1-A-2026-11-11T12:23+01:00[Europe/Paris]"
       },
       {
@@ -946,78 +950,6 @@
         },
         "MonitoredVehicleJourney": {
           "LineRef": {
-            "value": "3"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "50601661-CR_26_27-HW27BA17-Dimanche-00"
-          },
-          "VehicleMode": [
-            "tram"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Marcel Paul - Neustrie",
-              "lang": "fr"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "R"
-            }
-          ],
-          "DestinationRef": {
-            "value": "NETR2"
-          },
-          "DestinationName": [
-            {
-              "value": "Neustrie",
-              "lang": "fr"
-            }
-          ],
-          "VehicleJourneyName": [
-            {
-              "value": "Neustrie",
-              "lang": "fr"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Neustrie",
-                "lang": "fr"
-              }
-            ],
-            "AimedArrivalTime": "2026-11-11T12:25:00+01:00",
-            "ExpectedArrivalTime": "2026-11-11T12:25:06+01:00",
-            "ArrivalStatus": "delayed",
-            "AimedDepartureTime": "2026-11-11T12:25:00+01:00",
-            "ExpectedDepartureTime": "2026-11-11T12:25:06+01:00",
-            "StopPointRef": {
-              "value": "MGIN2"
-            },
-            "Order": 22,
-            "StopPointName": [
-              {
-                "value": "Mangin",
-                "lang": "fr"
-              }
-            ]
-          }
-        },
-        "RecordedAtTime": "2026-11-11T12:17:51.997331166+01:00",
-        "ItemIdentifier": "3-MGIN2-R-2026-11-11T12:25+01:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "MGIN2"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
             "value": "2"
           },
           "FramedVehicleJourneyRef": {
@@ -1065,10 +997,10 @@
               }
             ],
             "AimedArrivalTime": "2026-11-11T12:32:00+01:00",
-            "ExpectedArrivalTime": "2026-11-11T12:33:06+01:00",
+            "ExpectedArrivalTime": "2026-11-11T12:34:14+01:00",
             "ArrivalStatus": "delayed",
             "AimedDepartureTime": "2026-11-11T12:32:00+01:00",
-            "ExpectedDepartureTime": "2026-11-11T12:33:06+01:00",
+            "ExpectedDepartureTime": "2026-11-11T12:34:14+01:00",
             "StopPointRef": {
               "value": "MGIN2"
             },
@@ -1081,8 +1013,80 @@
             ]
           }
         },
-        "RecordedAtTime": "2026-11-11T12:06:10.90822711+01:00",
+        "RecordedAtTime": "2026-11-11T12:22:21.024572806+01:00",
         "ItemIdentifier": "2-MGIN2-R-2026-11-11T12:32+01:00[Europe/Paris]"
+      },
+      {
+        "MonitoringRef": {
+          "value": "MGIN2"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
+            "value": "3"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
+            "DatedVehicleJourneyRef": "50601669-CR_26_27-HW27BA17-Dimanche-00"
+          },
+          "VehicleMode": [
+            "tram"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Marcel Paul - Neustrie",
+              "lang": "fr"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "R"
+            }
+          ],
+          "DestinationRef": {
+            "value": "NETR2"
+          },
+          "DestinationName": [
+            {
+              "value": "Neustrie",
+              "lang": "fr"
+            }
+          ],
+          "VehicleJourneyName": [
+            {
+              "value": "Neustrie",
+              "lang": "fr"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": true,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "Neustrie",
+                "lang": "fr"
+              }
+            ],
+            "AimedArrivalTime": "2026-11-11T13:28:00+01:00",
+            "ExpectedArrivalTime": "2026-11-11T13:28:00+01:00",
+            "ArrivalStatus": "onTime",
+            "AimedDepartureTime": "2026-11-11T13:28:00+01:00",
+            "ExpectedDepartureTime": "2026-11-11T13:28:00+01:00",
+            "StopPointRef": {
+              "value": "MGIN2"
+            },
+            "Order": 22,
+            "StopPointName": [
+              {
+                "value": "Mangin",
+                "lang": "fr"
+              }
+            ]
+          }
+        },
+        "RecordedAtTime": "2026-11-11T12:24:42.041211594+01:00",
+        "ItemIdentifier": "3-MGIN2-R-2026-11-11T13:28+01:00[Europe/Paris]"
       },
       {
         "MonitoringRef": {
@@ -1137,10 +1141,10 @@
               }
             ],
             "AimedArrivalTime": "2026-11-11T12:40:00+01:00",
-            "ExpectedArrivalTime": "2026-11-11T12:42:21+01:00",
+            "ExpectedArrivalTime": "2026-11-11T12:43:27+01:00",
             "ArrivalStatus": "delayed",
             "AimedDepartureTime": "2026-11-11T12:40:00+01:00",
-            "ExpectedDepartureTime": "2026-11-11T12:42:21+01:00",
+            "ExpectedDepartureTime": "2026-11-11T12:43:27+01:00",
             "StopPointRef": {
               "value": "MGIN2"
             },
@@ -1153,7 +1157,7 @@
             ]
           }
         },
-        "RecordedAtTime": "2026-11-11T12:17:31.99461118+01:00",
+        "RecordedAtTime": "2026-11-11T12:22:32.026532487+01:00",
         "ItemIdentifier": "3-MGIN2-R-2026-11-11T12:40+01:00[Europe/Paris]"
       }
     ],
@@ -1643,10 +1647,10 @@
               }
             ],
             "AimedArrivalTime": "2026-11-11T12:29:00+01:00",
-            "ExpectedArrivalTime": "2026-11-11T12:30:05+01:00",
+            "ExpectedArrivalTime": "2026-11-11T12:29:01+01:00",
             "ArrivalStatus": "delayed",
             "AimedDepartureTime": "2026-11-11T12:29:00+01:00",
-            "ExpectedDepartureTime": "2026-11-11T12:30:05+01:00",
+            "ExpectedDepartureTime": "2026-11-11T12:29:01+01:00",
             "StopPointRef": {
               "value": "IDNA1"
             },
@@ -1659,7 +1663,7 @@
             ]
           }
         },
-        "RecordedAtTime": "2026-11-11T12:20:15.49524753+01:00",
+        "RecordedAtTime": "2026-11-11T12:22:46.510110701+01:00",
         "ItemIdentifier": "4-IDNA1-A-2026-11-11T12:29+01:00[Europe/Paris]"
       },
       {
@@ -2511,10 +2515,10 @@
               }
             ],
             "AimedArrivalTime": "2026-11-11T12:28:00+01:00",
-            "ExpectedArrivalTime": "2026-11-11T12:29:05+01:00",
+            "ExpectedArrivalTime": "2026-11-11T12:28:01+01:00",
             "ArrivalStatus": "delayed",
             "AimedDepartureTime": "2026-11-11T12:28:00+01:00",
-            "ExpectedDepartureTime": "2026-11-11T12:29:05+01:00",
+            "ExpectedDepartureTime": "2026-11-11T12:28:01+01:00",
             "StopPointRef": {
               "value": "BENA1"
             },
@@ -2527,7 +2531,7 @@
             ]
           }
         },
-        "RecordedAtTime": "2026-11-11T12:20:15.502012846+01:00",
+        "RecordedAtTime": "2026-11-11T12:22:46.515943789+01:00",
         "ItemIdentifier": "4-BENA1-A-2026-11-11T12:28+01:00[Europe/Paris]"
       },
       {
@@ -2688,6 +2692,78 @@
             "DataFrameRef": {
               "value": "any"
             },
+            "DatedVehicleJourneyRef": "49432851-CR_26_27-HT27BA27-Dimanche-02"
+          },
+          "VehicleMode": [
+            "bus"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Hangar à Bananes - Gare Sud",
+              "lang": "fr"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "R"
+            }
+          ],
+          "DestinationRef": {
+            "value": "GSSU4"
+          },
+          "DestinationName": [
+            {
+              "value": "Gare Sud",
+              "lang": "fr"
+            }
+          ],
+          "VehicleJourneyName": [
+            {
+              "value": "Gare Sud",
+              "lang": "fr"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": true,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "Gare Sud",
+                "lang": "fr"
+              }
+            ],
+            "AimedArrivalTime": "2026-11-11T14:05:00+01:00",
+            "ExpectedArrivalTime": "2026-11-11T14:05:00+01:00",
+            "ArrivalStatus": "onTime",
+            "AimedDepartureTime": "2026-11-11T14:05:00+01:00",
+            "ExpectedDepartureTime": "2026-11-11T14:05:00+01:00",
+            "StopPointRef": {
+              "value": "RPBL4"
+            },
+            "Order": 5,
+            "StopPointName": [
+              {
+                "value": "République",
+                "lang": "fr"
+              }
+            ]
+          }
+        },
+        "RecordedAtTime": "2026-11-11T12:25:15.53095585+01:00",
+        "ItemIdentifier": "5-RPBL4-R-2026-11-11T14:05+01:00[Europe/Paris]"
+      },
+      {
+        "MonitoringRef": {
+          "value": "RPBL4"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
+            "value": "5"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
             "DatedVehicleJourneyRef": "49432848-CR_26_27-HT27BA27-Dimanche-02"
           },
           "VehicleMode": [
@@ -2747,78 +2823,6 @@
         },
         "RecordedAtTime": "2026-11-11T11:09:14.999171869+01:00",
         "ItemIdentifier": "5-RPBL4-R-2026-11-11T12:50+01:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "RPBL4"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "5"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "49432847-CR_26_27-HT27BA27-Dimanche-02"
-          },
-          "VehicleMode": [
-            "bus"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Hangar à Bananes - Gare Sud",
-              "lang": "fr"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "R"
-            }
-          ],
-          "DestinationRef": {
-            "value": "GSSU4"
-          },
-          "DestinationName": [
-            {
-              "value": "Gare Sud",
-              "lang": "fr"
-            }
-          ],
-          "VehicleJourneyName": [
-            {
-              "value": "Gare Sud",
-              "lang": "fr"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Gare Sud",
-                "lang": "fr"
-              }
-            ],
-            "AimedArrivalTime": "2026-11-11T12:25:00+01:00",
-            "ExpectedArrivalTime": "2026-11-11T12:25:00+01:00",
-            "ArrivalStatus": "onTime",
-            "AimedDepartureTime": "2026-11-11T12:25:00+01:00",
-            "ExpectedDepartureTime": "2026-11-11T12:25:00+01:00",
-            "StopPointRef": {
-              "value": "RPBL4"
-            },
-            "Order": 5,
-            "StopPointName": [
-              {
-                "value": "République",
-                "lang": "fr"
-              }
-            ]
-          }
-        },
-        "RecordedAtTime": "2026-11-11T10:43:43.815449568+01:00",
-        "ItemIdentifier": "5-RPBL4-R-2026-11-11T12:25+01:00[Europe/Paris]"
       },
       {
         "MonitoringRef": {
@@ -3091,10 +3095,10 @@
               }
             ],
             "AimedArrivalTime": "2026-11-11T12:34:00+01:00",
-            "ExpectedArrivalTime": "2026-11-11T12:36:36+01:00",
+            "ExpectedArrivalTime": "2026-11-11T12:38:05+01:00",
             "ArrivalStatus": "delayed",
             "AimedDepartureTime": "2026-11-11T12:34:00+01:00",
-            "ExpectedDepartureTime": "2026-11-11T12:36:36+01:00",
+            "ExpectedDepartureTime": "2026-11-11T12:38:05+01:00",
             "StopPointRef": {
               "value": "RPBL1"
             },
@@ -3107,7 +3111,7 @@
             ]
           }
         },
-        "RecordedAtTime": "2026-11-11T12:12:46.442298021+01:00",
+        "RecordedAtTime": "2026-11-11T12:23:16.519427424+01:00",
         "ItemIdentifier": "26-RPBL1-R-2026-11-11T12:34+01:00[Europe/Paris]"
       },
       {
@@ -3340,7 +3344,7 @@
             "DataFrameRef": {
               "value": "any"
             },
-            "DatedVehicleJourneyRef": "49836194-CR_26_27-HT27BA27-Dimanche-02"
+            "DatedVehicleJourneyRef": "49836210-CR_26_27-HT27BA27-Dimanche-02"
           },
           "VehicleMode": [
             "bus"
@@ -3374,21 +3378,17 @@
           "FirstOrLastJourney": "unspecified",
           "Monitored": true,
           "MonitoredCall": {
-            "VehicleAtStop": true,
             "DestinationDisplay": [
               {
                 "value": "Greneraie",
                 "lang": "fr"
               }
             ],
-            "AimedArrivalTime": "2026-11-11T12:19:00+01:00",
-            "ExpectedArrivalTime": "2026-11-11T12:20:42+01:00",
-            "ArrivalStatus": "delayed",
-            "ArrivalProximityText": {
-              "value": "Départ proche"
-            },
-            "AimedDepartureTime": "2026-11-11T12:19:00+01:00",
-            "ExpectedDepartureTime": "2026-11-11T12:20:42+01:00",
+            "AimedArrivalTime": "2026-11-11T14:22:00+01:00",
+            "ExpectedArrivalTime": "2026-11-11T14:21:46+01:00",
+            "ArrivalStatus": "early",
+            "AimedDepartureTime": "2026-11-11T14:22:00+01:00",
+            "ExpectedDepartureTime": "2026-11-11T14:21:46+01:00",
             "StopPointRef": {
               "value": "GALH2"
             },
@@ -3401,8 +3401,8 @@
             ]
           }
         },
-        "RecordedAtTime": "2026-11-11T12:20:15.501670368+01:00",
-        "ItemIdentifier": "38-GALH2-A-2026-11-11T12:19+01:00[Europe/Paris]"
+        "RecordedAtTime": "2026-11-11T12:22:16.513776935+01:00",
+        "ItemIdentifier": "38-GALH2-A-2026-11-11T14:22+01:00[Europe/Paris]"
       }
     ],
     "DIDE1": [
@@ -3967,10 +3967,10 @@
               }
             ],
             "AimedArrivalTime": "2026-11-11T12:25:00+01:00",
-            "ExpectedArrivalTime": "2026-11-11T12:28:06+01:00",
+            "ExpectedArrivalTime": "2026-11-11T12:30:32+01:00",
             "ArrivalStatus": "delayed",
             "AimedDepartureTime": "2026-11-11T12:25:00+01:00",
-            "ExpectedDepartureTime": "2026-11-11T12:28:06+01:00",
+            "ExpectedDepartureTime": "2026-11-11T12:30:32+01:00",
             "StopPointRef": {
               "value": "DIDE5"
             },
@@ -3983,8 +3983,80 @@
             ]
           }
         },
-        "RecordedAtTime": "2026-11-11T12:18:16.484885806+01:00",
+        "RecordedAtTime": "2026-11-11T12:24:45.530241044+01:00",
         "ItemIdentifier": "30-DIDE5-A-2026-11-11T12:25+01:00[Europe/Paris]"
+      },
+      {
+        "MonitoringRef": {
+          "value": "DIDE5"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
+            "value": "30"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
+            "DatedVehicleJourneyRef": "49677127-CR_26_27-HT27BA27-Dimanche-02"
+          },
+          "VehicleMode": [
+            "bus"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Joliverie / Iles de Loire - Trentemoult",
+              "lang": "fr"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "A"
+            }
+          ],
+          "DestinationRef": {
+            "value": "JLIE1"
+          },
+          "DestinationName": [
+            {
+              "value": "Joliverie",
+              "lang": "fr"
+            }
+          ],
+          "VehicleJourneyName": [
+            {
+              "value": "Joliverie / Iles de Loire",
+              "lang": "fr"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": true,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "Joliverie",
+                "lang": "fr"
+              }
+            ],
+            "AimedArrivalTime": "2026-11-11T14:25:00+01:00",
+            "ExpectedArrivalTime": "2026-11-11T14:25:00+01:00",
+            "ArrivalStatus": "onTime",
+            "AimedDepartureTime": "2026-11-11T14:25:00+01:00",
+            "ExpectedDepartureTime": "2026-11-11T14:25:00+01:00",
+            "StopPointRef": {
+              "value": "DIDE5"
+            },
+            "Order": 10,
+            "StopPointName": [
+              {
+                "value": "Espace Diderot",
+                "lang": "fr"
+              }
+            ]
+          }
+        },
+        "RecordedAtTime": "2026-11-11T12:25:15.526868413+01:00",
+        "ItemIdentifier": "30-DIDE5-A-2026-11-11T14:25+01:00[Europe/Paris]"
       }
     ],
     "TROC1": [
