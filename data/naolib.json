@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-14T23:01:03.704Z",
+  "fetchedAt": "2026-11-14T23:05:42.584Z",
   "stops": {
     "MGIN1": [
       {
@@ -345,10 +345,10 @@
               }
             ],
             "AimedArrivalTime": "2026-11-15T00:08:00+01:00",
-            "ExpectedArrivalTime": "2026-11-15T00:08:00+01:00",
-            "ArrivalStatus": "onTime",
+            "ExpectedArrivalTime": "2026-11-15T00:06:55+01:00",
+            "ArrivalStatus": "early",
             "AimedDepartureTime": "2026-11-15T00:08:00+01:00",
-            "ExpectedDepartureTime": "2026-11-15T00:08:00+01:00",
+            "ExpectedDepartureTime": "2026-11-15T00:06:55+01:00",
             "StopPointRef": {
               "value": "MGIN2"
             },
@@ -361,7 +361,7 @@
             ]
           }
         },
-        "RecordedAtTime": "2026-11-15T00:00:06.156473457+01:00",
+        "RecordedAtTime": "2026-11-15T00:03:06.174625878+01:00",
         "ItemIdentifier": "3-MGIN2-R-2026-11-15T00:08+01:00[Europe/Paris]"
       },
       {
@@ -700,6 +700,7 @@
           "FirstOrLastJourney": "unspecified",
           "Monitored": true,
           "MonitoredCall": {
+            "VehicleAtStop": true,
             "DestinationDisplay": [
               {
                 "value": "Cité des Congrès",
@@ -707,10 +708,13 @@
               }
             ],
             "AimedArrivalTime": "2026-11-15T00:05:00+01:00",
-            "ExpectedArrivalTime": "2026-11-15T00:06:04+01:00",
+            "ExpectedArrivalTime": "2026-11-15T00:06:05+01:00",
             "ArrivalStatus": "delayed",
+            "ArrivalProximityText": {
+              "value": "Départ proche"
+            },
             "AimedDepartureTime": "2026-11-15T00:05:00+01:00",
-            "ExpectedDepartureTime": "2026-11-15T00:06:04+01:00",
+            "ExpectedDepartureTime": "2026-11-15T00:06:05+01:00",
             "StopPointRef": {
               "value": "IDNA1"
             },
@@ -723,7 +727,7 @@
             ]
           }
         },
-        "RecordedAtTime": "2026-11-14T23:53:12.896592028+01:00",
+        "RecordedAtTime": "2026-11-15T00:05:12.974295936+01:00",
         "ItemIdentifier": "4-IDNA1-A-2026-11-15T00:05+01:00[Europe/Paris]"
       },
       {
@@ -1318,78 +1322,6 @@
             "DataFrameRef": {
               "value": "any"
             },
-            "DatedVehicleJourneyRef": "53826444-CR_26_27-MT27OR26-Samedi-01"
-          },
-          "VehicleMode": [
-            "bus"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Foch - Cathédrale - Porte de Vertou",
-              "lang": "fr"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "A"
-            }
-          ],
-          "DestinationRef": {
-            "value": "JEMP1"
-          },
-          "DestinationName": [
-            {
-              "value": "Cité des Congrès",
-              "lang": "fr"
-            }
-          ],
-          "VehicleJourneyName": [
-            {
-              "value": "Foch - Cathédrale",
-              "lang": "fr"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Cité des Congrès",
-                "lang": "fr"
-              }
-            ],
-            "AimedArrivalTime": "2026-11-15T00:04:00+01:00",
-            "ExpectedArrivalTime": "2026-11-15T00:05:05+01:00",
-            "ArrivalStatus": "delayed",
-            "AimedDepartureTime": "2026-11-15T00:04:00+01:00",
-            "ExpectedDepartureTime": "2026-11-15T00:05:05+01:00",
-            "StopPointRef": {
-              "value": "BENA1"
-            },
-            "Order": 10,
-            "StopPointName": [
-              {
-                "value": "Beaulieu",
-                "lang": "fr"
-              }
-            ]
-          }
-        },
-        "RecordedAtTime": "2026-11-14T23:53:12.902615045+01:00",
-        "ItemIdentifier": "4-BENA1-A-2026-11-15T00:04+01:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "BENA1"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "4"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
             "DatedVehicleJourneyRef": "53826257-CR_26_27-MT27OR26-Samedi-01"
           },
           "VehicleMode": [
@@ -1449,6 +1381,78 @@
         },
         "RecordedAtTime": "2026-11-14T23:20:11.66846195+01:00",
         "ItemIdentifier": "4-BENA1-A-2026-11-15T00:19+01:00[Europe/Paris]"
+      },
+      {
+        "MonitoringRef": {
+          "value": "BENA1"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
+            "value": "4"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
+            "DatedVehicleJourneyRef": "53826341-CR_26_27-MT27OR26-Samedi-01"
+          },
+          "VehicleMode": [
+            "bus"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Foch - Cathédrale - Porte de Vertou",
+              "lang": "fr"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "A"
+            }
+          ],
+          "DestinationRef": {
+            "value": "JEMP1"
+          },
+          "DestinationName": [
+            {
+              "value": "Cité des Congrès",
+              "lang": "fr"
+            }
+          ],
+          "VehicleJourneyName": [
+            {
+              "value": "Foch - Cathédrale",
+              "lang": "fr"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": true,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "Cité des Congrès",
+                "lang": "fr"
+              }
+            ],
+            "AimedArrivalTime": "2026-11-15T01:34:00+01:00",
+            "ExpectedArrivalTime": "2026-11-15T01:34:01+01:00",
+            "ArrivalStatus": "delayed",
+            "AimedDepartureTime": "2026-11-15T01:34:00+01:00",
+            "ExpectedDepartureTime": "2026-11-15T01:34:01+01:00",
+            "StopPointRef": {
+              "value": "BENA1"
+            },
+            "Order": 10,
+            "StopPointName": [
+              {
+                "value": "Beaulieu",
+                "lang": "fr"
+              }
+            ]
+          }
+        },
+        "RecordedAtTime": "2026-11-15T00:05:12.978400649+01:00",
+        "ItemIdentifier": "4-BENA1-A-2026-11-15T01:34+01:00[Europe/Paris]"
       },
       {
         "MonitoringRef": {
