@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-14T21:10:42.363Z",
+  "fetchedAt": "2026-11-14T21:15:39.911Z",
   "stops": {
     "MGIN1": [
       {
@@ -158,6 +158,78 @@
             "DataFrameRef": {
               "value": "any"
             },
+            "DatedVehicleJourneyRef": "53880788-CR_26_27-MW27OR16-Samedi-04"
+          },
+          "VehicleMode": [
+            "tram"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Marcel Paul - Neustrie",
+              "lang": "fr"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "A"
+            }
+          ],
+          "DestinationRef": {
+            "value": "HODI2"
+          },
+          "DestinationName": [
+            {
+              "value": "Hôtel Dieu",
+              "lang": "fr"
+            }
+          ],
+          "VehicleJourneyName": [
+            {
+              "value": "Marcel Paul",
+              "lang": "fr"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": true,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "Hôtel Dieu",
+                "lang": "fr"
+              }
+            ],
+            "AimedArrivalTime": "2026-11-14T22:52:00+01:00",
+            "ExpectedArrivalTime": "2026-11-14T22:52:00+01:00",
+            "ArrivalStatus": "onTime",
+            "AimedDepartureTime": "2026-11-14T22:52:00+01:00",
+            "ExpectedDepartureTime": "2026-11-14T22:52:00+01:00",
+            "StopPointRef": {
+              "value": "MGIN1"
+            },
+            "Order": 12,
+            "StopPointName": [
+              {
+                "value": "Mangin",
+                "lang": "fr"
+              }
+            ]
+          }
+        },
+        "RecordedAtTime": "2026-11-14T22:14:22.419153517+01:00",
+        "ItemIdentifier": "3-MGIN1-A-2026-11-14T22:52+01:00[Europe/Paris]"
+      },
+      {
+        "MonitoringRef": {
+          "value": "MGIN1"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
+            "value": "3"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
             "DatedVehicleJourneyRef": "53880782-CR_26_27-MW27OR16-Samedi-04"
           },
           "VehicleMode": [
@@ -217,78 +289,6 @@
         },
         "RecordedAtTime": "2026-11-14T22:10:02.390641772+01:00",
         "ItemIdentifier": "3-MGIN1-A-2026-11-14T22:22+01:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "MGIN1"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "3"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "53880780-CR_26_27-MW27OR16-Samedi-04"
-          },
-          "VehicleMode": [
-            "tram"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Marcel Paul - Neustrie",
-              "lang": "fr"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "A"
-            }
-          ],
-          "DestinationRef": {
-            "value": "HODI2"
-          },
-          "DestinationName": [
-            {
-              "value": "Hôtel Dieu",
-              "lang": "fr"
-            }
-          ],
-          "VehicleJourneyName": [
-            {
-              "value": "Marcel Paul",
-              "lang": "fr"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Hôtel Dieu",
-                "lang": "fr"
-              }
-            ],
-            "AimedArrivalTime": "2026-11-14T22:12:00+01:00",
-            "ExpectedArrivalTime": "2026-11-14T22:13:06+01:00",
-            "ArrivalStatus": "delayed",
-            "AimedDepartureTime": "2026-11-14T22:12:00+01:00",
-            "ExpectedDepartureTime": "2026-11-14T22:13:06+01:00",
-            "StopPointRef": {
-              "value": "MGIN1"
-            },
-            "Order": 12,
-            "StopPointName": [
-              {
-                "value": "Mangin",
-                "lang": "fr"
-              }
-            ]
-          }
-        },
-        "RecordedAtTime": "2026-11-14T22:00:31.297427557+01:00",
-        "ItemIdentifier": "3-MGIN1-A-2026-11-14T22:12+01:00[Europe/Paris]"
       }
     ],
     "MGIN2": [
@@ -338,6 +338,7 @@
           "FirstOrLastJourney": "unspecified",
           "Monitored": true,
           "MonitoredCall": {
+            "VehicleAtStop": true,
             "DestinationDisplay": [
               {
                 "value": "Neustrie",
@@ -345,10 +346,13 @@
               }
             ],
             "AimedArrivalTime": "2026-11-14T22:17:00+01:00",
-            "ExpectedArrivalTime": "2026-11-14T22:17:00+01:00",
-            "ArrivalStatus": "onTime",
+            "ExpectedArrivalTime": "2026-11-14T22:16:26+01:00",
+            "ArrivalStatus": "early",
+            "ArrivalProximityText": {
+              "value": "Départ proche"
+            },
             "AimedDepartureTime": "2026-11-14T22:17:00+01:00",
-            "ExpectedDepartureTime": "2026-11-14T22:17:00+01:00",
+            "ExpectedDepartureTime": "2026-11-14T22:16:26+01:00",
             "StopPointRef": {
               "value": "MGIN2"
             },
@@ -361,7 +365,7 @@
             ]
           }
         },
-        "RecordedAtTime": "2026-11-14T21:39:11.166710798+01:00",
+        "RecordedAtTime": "2026-11-14T22:15:32.426223521+01:00",
         "ItemIdentifier": "3-MGIN2-R-2026-11-14T22:17+01:00[Europe/Paris]"
       },
       {
@@ -1755,7 +1759,7 @@
             "DataFrameRef": {
               "value": "any"
             },
-            "DatedVehicleJourneyRef": "49431866-CR_26_27-MT27OR26-Samedi-01"
+            "DatedVehicleJourneyRef": "49431859-CR_26_27-MT27OR26-Samedi-01"
           },
           "VehicleMode": [
             "bus"
@@ -1789,21 +1793,17 @@
           "FirstOrLastJourney": "unspecified",
           "Monitored": true,
           "MonitoredCall": {
-            "VehicleAtStop": true,
             "DestinationDisplay": [
               {
                 "value": "Gare Sud",
                 "lang": "fr"
               }
             ],
-            "AimedArrivalTime": "2026-11-14T22:10:00+01:00",
-            "ExpectedArrivalTime": "2026-11-14T22:11:01+01:00",
-            "ArrivalStatus": "delayed",
-            "ArrivalProximityText": {
-              "value": "Départ proche"
-            },
-            "AimedDepartureTime": "2026-11-14T22:10:00+01:00",
-            "ExpectedDepartureTime": "2026-11-14T22:11:01+01:00",
+            "AimedArrivalTime": "2026-11-14T23:10:00+01:00",
+            "ExpectedArrivalTime": "2026-11-14T23:10:00+01:00",
+            "ArrivalStatus": "onTime",
+            "AimedDepartureTime": "2026-11-14T23:10:00+01:00",
+            "ExpectedDepartureTime": "2026-11-14T23:10:00+01:00",
             "StopPointRef": {
               "value": "RPBL4"
             },
@@ -1816,8 +1816,8 @@
             ]
           }
         },
-        "RecordedAtTime": "2026-11-14T22:10:11.127819002+01:00",
-        "ItemIdentifier": "5-RPBL4-R-2026-11-14T22:10+01:00[Europe/Paris]"
+        "RecordedAtTime": "2026-11-14T22:11:10.136782528+01:00",
+        "ItemIdentifier": "5-RPBL4-R-2026-11-14T23:10+01:00[Europe/Paris]"
       },
       {
         "MonitoringRef": {
@@ -2022,10 +2022,10 @@
               }
             ],
             "AimedArrivalTime": "2026-11-14T22:17:00+01:00",
-            "ExpectedArrivalTime": "2026-11-14T22:16:46+01:00",
-            "ArrivalStatus": "early",
+            "ExpectedArrivalTime": "2026-11-14T22:17:49+01:00",
+            "ArrivalStatus": "delayed",
             "AimedDepartureTime": "2026-11-14T22:17:00+01:00",
-            "ExpectedDepartureTime": "2026-11-14T22:16:46+01:00",
+            "ExpectedDepartureTime": "2026-11-14T22:17:49+01:00",
             "StopPointRef": {
               "value": "GALH2"
             },
@@ -2038,7 +2038,7 @@
             ]
           }
         },
-        "RecordedAtTime": "2026-11-14T20:18:08.386673524+01:00",
+        "RecordedAtTime": "2026-11-14T22:11:10.132805341+01:00",
         "ItemIdentifier": "38-GALH2-A-2026-11-14T22:17+01:00[Europe/Paris]"
       },
       {
@@ -2186,78 +2186,6 @@
         },
         "RecordedAtTime": "2026-11-14T21:46:21.20906388+01:00",
         "ItemIdentifier": "3-DIDE1-A-2026-11-14T22:23+01:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "DIDE1"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "3"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "53880782-CR_26_27-MW27OR16-Samedi-04"
-          },
-          "VehicleMode": [
-            "tram"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Marcel Paul - Neustrie",
-              "lang": "fr"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "A"
-            }
-          ],
-          "DestinationRef": {
-            "value": "HODI2"
-          },
-          "DestinationName": [
-            {
-              "value": "Hôtel Dieu",
-              "lang": "fr"
-            }
-          ],
-          "VehicleJourneyName": [
-            {
-              "value": "Marcel Paul",
-              "lang": "fr"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Hôtel Dieu",
-                "lang": "fr"
-              }
-            ],
-            "AimedArrivalTime": "2026-11-14T22:13:00+01:00",
-            "ExpectedArrivalTime": "2026-11-14T22:14:04+01:00",
-            "ArrivalStatus": "delayed",
-            "AimedDepartureTime": "2026-11-14T22:13:00+01:00",
-            "ExpectedDepartureTime": "2026-11-14T22:14:04+01:00",
-            "StopPointRef": {
-              "value": "DIDE1"
-            },
-            "Order": 6,
-            "StopPointName": [
-              {
-                "value": "Espace Diderot",
-                "lang": "fr"
-              }
-            ]
-          }
-        },
-        "RecordedAtTime": "2026-11-14T22:10:02.389663933+01:00",
-        "ItemIdentifier": "3-DIDE1-A-2026-11-14T22:13+01:00[Europe/Paris]"
       },
       {
         "MonitoringRef": {
@@ -2622,78 +2550,6 @@
         },
         "RecordedAtTime": "2026-11-14T21:44:31.196734582+01:00",
         "ItemIdentifier": "3-TROC1-A-2026-11-14T22:22+01:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "TROC1"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "3"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "53880782-CR_26_27-MW27OR16-Samedi-04"
-          },
-          "VehicleMode": [
-            "tram"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Marcel Paul - Neustrie",
-              "lang": "fr"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "A"
-            }
-          ],
-          "DestinationRef": {
-            "value": "HODI2"
-          },
-          "DestinationName": [
-            {
-              "value": "Hôtel Dieu",
-              "lang": "fr"
-            }
-          ],
-          "VehicleJourneyName": [
-            {
-              "value": "Marcel Paul",
-              "lang": "fr"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Hôtel Dieu",
-                "lang": "fr"
-              }
-            ],
-            "AimedArrivalTime": "2026-11-14T22:12:00+01:00",
-            "ExpectedArrivalTime": "2026-11-14T22:13:04+01:00",
-            "ArrivalStatus": "delayed",
-            "AimedDepartureTime": "2026-11-14T22:12:00+01:00",
-            "ExpectedDepartureTime": "2026-11-14T22:13:04+01:00",
-            "StopPointRef": {
-              "value": "TROC1"
-            },
-            "Order": 5,
-            "StopPointName": [
-              {
-                "value": "Trocardière",
-                "lang": "fr"
-              }
-            ]
-          }
-        },
-        "RecordedAtTime": "2026-11-14T22:10:02.388461812+01:00",
-        "ItemIdentifier": "3-TROC1-A-2026-11-14T22:12+01:00[Europe/Paris]"
       }
     ]
   }
