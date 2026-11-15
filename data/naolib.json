@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-15T09:05:31.324Z",
+  "fetchedAt": "2026-11-15T09:10:41.005Z",
   "stops": {
     "MGIN1": [
       {
@@ -336,6 +336,7 @@
           "FirstOrLastJourney": "unspecified",
           "Monitored": true,
           "MonitoredCall": {
+            "VehicleAtStop": true,
             "DestinationDisplay": [
               {
                 "value": "Marcel Paul",
@@ -343,10 +344,13 @@
               }
             ],
             "AimedArrivalTime": "2026-11-15T10:08:00+01:00",
-            "ExpectedArrivalTime": "2026-11-15T10:09:09+01:00",
+            "ExpectedArrivalTime": "2026-11-15T10:10:48+01:00",
             "ArrivalStatus": "delayed",
+            "ArrivalProximityText": {
+              "value": "Départ proche"
+            },
             "AimedDepartureTime": "2026-11-15T10:08:00+01:00",
-            "ExpectedDepartureTime": "2026-11-15T10:09:09+01:00",
+            "ExpectedDepartureTime": "2026-11-15T10:10:48+01:00",
             "StopPointRef": {
               "value": "MGIN1"
             },
@@ -359,7 +363,7 @@
             ]
           }
         },
-        "RecordedAtTime": "2026-11-15T09:56:15.334311803+01:00",
+        "RecordedAtTime": "2026-11-15T10:10:25.433349152+01:00",
         "ItemIdentifier": "3-MGIN1-A-2026-11-15T10:08+01:00[Europe/Paris]"
       },
       {
@@ -586,6 +590,78 @@
         },
         "MonitoredVehicleJourney": {
           "LineRef": {
+            "value": "3"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
+            "DatedVehicleJourneyRef": "50601654-CR_26_27-HW27BA17-Dimanche-00"
+          },
+          "VehicleMode": [
+            "tram"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Marcel Paul - Neustrie",
+              "lang": "fr"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "R"
+            }
+          ],
+          "DestinationRef": {
+            "value": "NETR2"
+          },
+          "DestinationName": [
+            {
+              "value": "Neustrie",
+              "lang": "fr"
+            }
+          ],
+          "VehicleJourneyName": [
+            {
+              "value": "Neustrie",
+              "lang": "fr"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": true,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "Neustrie",
+                "lang": "fr"
+              }
+            ],
+            "AimedArrivalTime": "2026-11-15T11:27:00+01:00",
+            "ExpectedArrivalTime": "2026-11-15T11:27:00+01:00",
+            "ArrivalStatus": "onTime",
+            "AimedDepartureTime": "2026-11-15T11:27:00+01:00",
+            "ExpectedDepartureTime": "2026-11-15T11:27:00+01:00",
+            "StopPointRef": {
+              "value": "MGIN2"
+            },
+            "Order": 22,
+            "StopPointName": [
+              {
+                "value": "Mangin",
+                "lang": "fr"
+              }
+            ]
+          }
+        },
+        "RecordedAtTime": "2026-11-15T10:09:05.42265285+01:00",
+        "ItemIdentifier": "3-MGIN2-R-2026-11-15T11:27+01:00[Europe/Paris]"
+      },
+      {
+        "MonitoringRef": {
+          "value": "MGIN2"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
             "value": "2"
           },
           "FramedVehicleJourneyRef": {
@@ -793,7 +869,7 @@
             ]
           }
         },
-        "RecordedAtTime": "2026-11-15T10:03:15.380265415+01:00",
+        "RecordedAtTime": "2026-11-15T10:10:15.430926621+01:00",
         "ItemIdentifier": "3-MGIN2-R-2026-11-15T10:27+01:00[Europe/Paris]"
       },
       {
@@ -1024,78 +1100,6 @@
             "DataFrameRef": {
               "value": "any"
             },
-            "DatedVehicleJourneyRef": "50601646-CR_26_27-HW27BA17-Dimanche-00"
-          },
-          "VehicleMode": [
-            "tram"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Marcel Paul - Neustrie",
-              "lang": "fr"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "R"
-            }
-          ],
-          "DestinationRef": {
-            "value": "NETR2"
-          },
-          "DestinationName": [
-            {
-              "value": "Neustrie",
-              "lang": "fr"
-            }
-          ],
-          "VehicleJourneyName": [
-            {
-              "value": "Neustrie",
-              "lang": "fr"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Neustrie",
-                "lang": "fr"
-              }
-            ],
-            "AimedArrivalTime": "2026-11-15T10:07:00+01:00",
-            "ExpectedArrivalTime": "2026-11-15T10:09:08+01:00",
-            "ArrivalStatus": "delayed",
-            "AimedDepartureTime": "2026-11-15T10:07:00+01:00",
-            "ExpectedDepartureTime": "2026-11-15T10:09:08+01:00",
-            "StopPointRef": {
-              "value": "MGIN2"
-            },
-            "Order": 22,
-            "StopPointName": [
-              {
-                "value": "Mangin",
-                "lang": "fr"
-              }
-            ]
-          }
-        },
-        "RecordedAtTime": "2026-11-15T10:04:25.38914302+01:00",
-        "ItemIdentifier": "3-MGIN2-R-2026-11-15T10:07+01:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "MGIN2"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "3"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
             "DatedVehicleJourneyRef": "50601652-CR_26_27-HW27BA17-Dimanche-00"
           },
           "VehicleMode": [
@@ -1229,366 +1233,6 @@
         },
         "RecordedAtTime": "2026-11-15T09:59:20.230421832+01:00",
         "ItemIdentifier": "4-IDNA1-A-2026-11-15T10:59+01:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "IDNA1"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "26"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "49639763-CR_26_27-HT27BA27-Dimanche-02"
-          },
-          "VehicleMode": [
-            "bus"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Jonelière - Hôtel de Région",
-              "lang": "fr"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "A"
-            }
-          ],
-          "DestinationRef": {
-            "value": "JNLI2"
-          },
-          "DestinationName": [
-            {
-              "value": "Jonelière",
-              "lang": "fr"
-            }
-          ],
-          "VehicleJourneyName": [
-            {
-              "value": "Jonelière",
-              "lang": "fr"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Jonelière",
-                "lang": "fr"
-              }
-            ],
-            "AimedArrivalTime": "2026-11-15T10:11:00+01:00",
-            "ExpectedArrivalTime": "2026-11-15T10:10:50+01:00",
-            "ArrivalStatus": "early",
-            "AimedDepartureTime": "2026-11-15T10:11:00+01:00",
-            "ExpectedDepartureTime": "2026-11-15T10:10:50+01:00",
-            "StopPointRef": {
-              "value": "IDNA1"
-            },
-            "Order": 5,
-            "StopPointName": [
-              {
-                "value": "Île de Nantes",
-                "lang": "fr"
-              }
-            ]
-          }
-        },
-        "RecordedAtTime": "2026-11-15T08:46:18.703928143+01:00",
-        "ItemIdentifier": "26-IDNA1-A-2026-11-15T10:11+01:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "IDNA1"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "5"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "49432806-CR_26_27-HT27BA27-Dimanche-02"
-          },
-          "VehicleMode": [
-            "bus"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Hangar à Bananes - Gare Sud",
-              "lang": "fr"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "A"
-            }
-          ],
-          "DestinationRef": {
-            "value": "HBAN1"
-          },
-          "DestinationName": [
-            {
-              "value": "Hangar à Bananes",
-              "lang": "fr"
-            }
-          ],
-          "VehicleJourneyName": [
-            {
-              "value": "Hangar à Bananes",
-              "lang": "fr"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Hangar à Bananes",
-                "lang": "fr"
-              }
-            ],
-            "AimedArrivalTime": "2026-11-15T11:38:00+01:00",
-            "ExpectedArrivalTime": "2026-11-15T11:38:18+01:00",
-            "ArrivalStatus": "delayed",
-            "AimedDepartureTime": "2026-11-15T11:38:00+01:00",
-            "ExpectedDepartureTime": "2026-11-15T11:38:18+01:00",
-            "StopPointRef": {
-              "value": "IDNA1"
-            },
-            "Order": 7,
-            "StopPointName": [
-              {
-                "value": "Île de Nantes",
-                "lang": "fr"
-              }
-            ]
-          }
-        },
-        "RecordedAtTime": "2026-11-15T09:58:20.227614558+01:00",
-        "ItemIdentifier": "5-IDNA1-A-2026-11-15T11:38+01:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "IDNA1"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "26"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "49639768-CR_26_27-HT27BA27-Dimanche-02"
-          },
-          "VehicleMode": [
-            "bus"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Jonelière - Hôtel de Région",
-              "lang": "fr"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "A"
-            }
-          ],
-          "DestinationRef": {
-            "value": "JNLI2"
-          },
-          "DestinationName": [
-            {
-              "value": "Jonelière",
-              "lang": "fr"
-            }
-          ],
-          "VehicleJourneyName": [
-            {
-              "value": "Jonelière",
-              "lang": "fr"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Jonelière",
-                "lang": "fr"
-              }
-            ],
-            "AimedArrivalTime": "2026-11-15T11:55:00+01:00",
-            "ExpectedArrivalTime": "2026-11-15T11:55:18+01:00",
-            "ArrivalStatus": "delayed",
-            "AimedDepartureTime": "2026-11-15T11:55:00+01:00",
-            "ExpectedDepartureTime": "2026-11-15T11:55:18+01:00",
-            "StopPointRef": {
-              "value": "IDNA1"
-            },
-            "Order": 5,
-            "StopPointName": [
-              {
-                "value": "Île de Nantes",
-                "lang": "fr"
-              }
-            ]
-          }
-        },
-        "RecordedAtTime": "2026-11-15T09:55:50.204942406+01:00",
-        "ItemIdentifier": "26-IDNA1-A-2026-11-15T11:55+01:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "IDNA1"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "5"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "49432807-CR_26_27-HT27BA27-Dimanche-02"
-          },
-          "VehicleMode": [
-            "bus"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Hangar à Bananes - Gare Sud",
-              "lang": "fr"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "A"
-            }
-          ],
-          "DestinationRef": {
-            "value": "HBAN1"
-          },
-          "DestinationName": [
-            {
-              "value": "Hangar à Bananes",
-              "lang": "fr"
-            }
-          ],
-          "VehicleJourneyName": [
-            {
-              "value": "Hangar à Bananes",
-              "lang": "fr"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Hangar à Bananes",
-                "lang": "fr"
-              }
-            ],
-            "AimedArrivalTime": "2026-11-15T10:23:00+01:00",
-            "ExpectedArrivalTime": "2026-11-15T10:22:50+01:00",
-            "ArrivalStatus": "early",
-            "AimedDepartureTime": "2026-11-15T10:23:00+01:00",
-            "ExpectedDepartureTime": "2026-11-15T10:22:50+01:00",
-            "StopPointRef": {
-              "value": "IDNA1"
-            },
-            "Order": 7,
-            "StopPointName": [
-              {
-                "value": "Île de Nantes",
-                "lang": "fr"
-              }
-            ]
-          }
-        },
-        "RecordedAtTime": "2026-11-15T08:42:18.662266897+01:00",
-        "ItemIdentifier": "5-IDNA1-A-2026-11-15T10:23+01:00[Europe/Paris]"
-      },
-      {
-        "MonitoringRef": {
-          "value": "IDNA1"
-        },
-        "MonitoredVehicleJourney": {
-          "LineRef": {
-            "value": "5"
-          },
-          "FramedVehicleJourneyRef": {
-            "DataFrameRef": {
-              "value": "any"
-            },
-            "DatedVehicleJourneyRef": "49432809-CR_26_27-HT27BA27-Dimanche-02"
-          },
-          "VehicleMode": [
-            "bus"
-          ],
-          "PublishedLineName": [
-            {
-              "value": "Hangar à Bananes - Gare Sud",
-              "lang": "fr"
-            }
-          ],
-          "DirectionName": [
-            {
-              "value": "A"
-            }
-          ],
-          "DestinationRef": {
-            "value": "HBAN1"
-          },
-          "DestinationName": [
-            {
-              "value": "Hangar à Bananes",
-              "lang": "fr"
-            }
-          ],
-          "VehicleJourneyName": [
-            {
-              "value": "Hangar à Bananes",
-              "lang": "fr"
-            }
-          ],
-          "FirstOrLastJourney": "unspecified",
-          "Monitored": true,
-          "MonitoredCall": {
-            "DestinationDisplay": [
-              {
-                "value": "Hangar à Bananes",
-                "lang": "fr"
-              }
-            ],
-            "AimedArrivalTime": "2026-11-15T11:13:00+01:00",
-            "ExpectedArrivalTime": "2026-11-15T11:13:18+01:00",
-            "ArrivalStatus": "delayed",
-            "AimedDepartureTime": "2026-11-15T11:13:00+01:00",
-            "ExpectedDepartureTime": "2026-11-15T11:13:18+01:00",
-            "StopPointRef": {
-              "value": "IDNA1"
-            },
-            "Order": 7,
-            "StopPointName": [
-              {
-                "value": "Île de Nantes",
-                "lang": "fr"
-              }
-            ]
-          }
-        },
-        "RecordedAtTime": "2026-11-15T09:32:20.021552722+01:00",
-        "ItemIdentifier": "5-IDNA1-A-2026-11-15T11:13+01:00[Europe/Paris]"
       },
       {
         "MonitoringRef": {
@@ -1740,6 +1384,78 @@
         },
         "MonitoredVehicleJourney": {
           "LineRef": {
+            "value": "5"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
+            "DatedVehicleJourneyRef": "49432806-CR_26_27-HT27BA27-Dimanche-02"
+          },
+          "VehicleMode": [
+            "bus"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Hangar à Bananes - Gare Sud",
+              "lang": "fr"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "A"
+            }
+          ],
+          "DestinationRef": {
+            "value": "HBAN1"
+          },
+          "DestinationName": [
+            {
+              "value": "Hangar à Bananes",
+              "lang": "fr"
+            }
+          ],
+          "VehicleJourneyName": [
+            {
+              "value": "Hangar à Bananes",
+              "lang": "fr"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": true,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "Hangar à Bananes",
+                "lang": "fr"
+              }
+            ],
+            "AimedArrivalTime": "2026-11-15T11:38:00+01:00",
+            "ExpectedArrivalTime": "2026-11-15T11:38:18+01:00",
+            "ArrivalStatus": "delayed",
+            "AimedDepartureTime": "2026-11-15T11:38:00+01:00",
+            "ExpectedDepartureTime": "2026-11-15T11:38:18+01:00",
+            "StopPointRef": {
+              "value": "IDNA1"
+            },
+            "Order": 7,
+            "StopPointName": [
+              {
+                "value": "Île de Nantes",
+                "lang": "fr"
+              }
+            ]
+          }
+        },
+        "RecordedAtTime": "2026-11-15T09:58:20.227614558+01:00",
+        "ItemIdentifier": "5-IDNA1-A-2026-11-15T11:38+01:00[Europe/Paris]"
+      },
+      {
+        "MonitoringRef": {
+          "value": "IDNA1"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
             "value": "26"
           },
           "FramedVehicleJourneyRef": {
@@ -1805,6 +1521,78 @@
         },
         "RecordedAtTime": "2026-11-15T08:47:48.716177979+01:00",
         "ItemIdentifier": "26-IDNA1-A-2026-11-15T10:46+01:00[Europe/Paris]"
+      },
+      {
+        "MonitoringRef": {
+          "value": "IDNA1"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
+            "value": "26"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
+            "DatedVehicleJourneyRef": "49639768-CR_26_27-HT27BA27-Dimanche-02"
+          },
+          "VehicleMode": [
+            "bus"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Jonelière - Hôtel de Région",
+              "lang": "fr"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "A"
+            }
+          ],
+          "DestinationRef": {
+            "value": "JNLI2"
+          },
+          "DestinationName": [
+            {
+              "value": "Jonelière",
+              "lang": "fr"
+            }
+          ],
+          "VehicleJourneyName": [
+            {
+              "value": "Jonelière",
+              "lang": "fr"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": true,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "Jonelière",
+                "lang": "fr"
+              }
+            ],
+            "AimedArrivalTime": "2026-11-15T11:55:00+01:00",
+            "ExpectedArrivalTime": "2026-11-15T11:55:18+01:00",
+            "ArrivalStatus": "delayed",
+            "AimedDepartureTime": "2026-11-15T11:55:00+01:00",
+            "ExpectedDepartureTime": "2026-11-15T11:55:18+01:00",
+            "StopPointRef": {
+              "value": "IDNA1"
+            },
+            "Order": 5,
+            "StopPointName": [
+              {
+                "value": "Île de Nantes",
+                "lang": "fr"
+              }
+            ]
+          }
+        },
+        "RecordedAtTime": "2026-11-15T09:55:50.204942406+01:00",
+        "ItemIdentifier": "26-IDNA1-A-2026-11-15T11:55+01:00[Europe/Paris]"
       },
       {
         "MonitoringRef": {
@@ -2021,6 +1809,150 @@
         },
         "RecordedAtTime": "2026-11-15T09:42:50.115612448+01:00",
         "ItemIdentifier": "4-IDNA1-A-2026-11-15T10:44+01:00[Europe/Paris]"
+      },
+      {
+        "MonitoringRef": {
+          "value": "IDNA1"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
+            "value": "5"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
+            "DatedVehicleJourneyRef": "49432807-CR_26_27-HT27BA27-Dimanche-02"
+          },
+          "VehicleMode": [
+            "bus"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Hangar à Bananes - Gare Sud",
+              "lang": "fr"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "A"
+            }
+          ],
+          "DestinationRef": {
+            "value": "HBAN1"
+          },
+          "DestinationName": [
+            {
+              "value": "Hangar à Bananes",
+              "lang": "fr"
+            }
+          ],
+          "VehicleJourneyName": [
+            {
+              "value": "Hangar à Bananes",
+              "lang": "fr"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": true,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "Hangar à Bananes",
+                "lang": "fr"
+              }
+            ],
+            "AimedArrivalTime": "2026-11-15T10:23:00+01:00",
+            "ExpectedArrivalTime": "2026-11-15T10:22:50+01:00",
+            "ArrivalStatus": "early",
+            "AimedDepartureTime": "2026-11-15T10:23:00+01:00",
+            "ExpectedDepartureTime": "2026-11-15T10:22:50+01:00",
+            "StopPointRef": {
+              "value": "IDNA1"
+            },
+            "Order": 7,
+            "StopPointName": [
+              {
+                "value": "Île de Nantes",
+                "lang": "fr"
+              }
+            ]
+          }
+        },
+        "RecordedAtTime": "2026-11-15T08:42:18.662266897+01:00",
+        "ItemIdentifier": "5-IDNA1-A-2026-11-15T10:23+01:00[Europe/Paris]"
+      },
+      {
+        "MonitoringRef": {
+          "value": "IDNA1"
+        },
+        "MonitoredVehicleJourney": {
+          "LineRef": {
+            "value": "5"
+          },
+          "FramedVehicleJourneyRef": {
+            "DataFrameRef": {
+              "value": "any"
+            },
+            "DatedVehicleJourneyRef": "49432809-CR_26_27-HT27BA27-Dimanche-02"
+          },
+          "VehicleMode": [
+            "bus"
+          ],
+          "PublishedLineName": [
+            {
+              "value": "Hangar à Bananes - Gare Sud",
+              "lang": "fr"
+            }
+          ],
+          "DirectionName": [
+            {
+              "value": "A"
+            }
+          ],
+          "DestinationRef": {
+            "value": "HBAN1"
+          },
+          "DestinationName": [
+            {
+              "value": "Hangar à Bananes",
+              "lang": "fr"
+            }
+          ],
+          "VehicleJourneyName": [
+            {
+              "value": "Hangar à Bananes",
+              "lang": "fr"
+            }
+          ],
+          "FirstOrLastJourney": "unspecified",
+          "Monitored": true,
+          "MonitoredCall": {
+            "DestinationDisplay": [
+              {
+                "value": "Hangar à Bananes",
+                "lang": "fr"
+              }
+            ],
+            "AimedArrivalTime": "2026-11-15T11:13:00+01:00",
+            "ExpectedArrivalTime": "2026-11-15T11:13:18+01:00",
+            "ArrivalStatus": "delayed",
+            "AimedDepartureTime": "2026-11-15T11:13:00+01:00",
+            "ExpectedDepartureTime": "2026-11-15T11:13:18+01:00",
+            "StopPointRef": {
+              "value": "IDNA1"
+            },
+            "Order": 7,
+            "StopPointName": [
+              {
+                "value": "Île de Nantes",
+                "lang": "fr"
+              }
+            ]
+          }
+        },
+        "RecordedAtTime": "2026-11-15T09:32:20.021552722+01:00",
+        "ItemIdentifier": "5-IDNA1-A-2026-11-15T11:13+01:00[Europe/Paris]"
       }
     ],
     "GNRA4": [
@@ -3235,10 +3167,10 @@
               }
             ],
             "AimedArrivalTime": "2026-11-15T10:13:00+01:00",
-            "ExpectedArrivalTime": "2026-11-15T10:14:11+01:00",
+            "ExpectedArrivalTime": "2026-11-15T10:13:01+01:00",
             "ArrivalStatus": "delayed",
             "AimedDepartureTime": "2026-11-15T10:13:00+01:00",
-            "ExpectedDepartureTime": "2026-11-15T10:14:11+01:00",
+            "ExpectedDepartureTime": "2026-11-15T10:13:01+01:00",
             "StopPointRef": {
               "value": "RPBL1"
             },
@@ -3251,7 +3183,7 @@
             ]
           }
         },
-        "RecordedAtTime": "2026-11-15T09:55:50.206538343+01:00",
+        "RecordedAtTime": "2026-11-15T10:06:20.287139485+01:00",
         "ItemIdentifier": "26-RPBL1-R-2026-11-15T10:13+01:00[Europe/Paris]"
       }
     ],
